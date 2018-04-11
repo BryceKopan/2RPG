@@ -1,0 +1,157 @@
+[
+{
+  "directory": "/home/bryce/2RPG/build",
+  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/core/item/Equipment.cpp.o -c /home/bryce/2RPG/src/core/item/Equipment.cpp",
+  "file": "/home/bryce/2RPG/src/core/item/Equipment.cpp"
+},
+{
+  "directory": "/home/bryce/2RPG/build",
+  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/core/item/Weapon.cpp.o -c /home/bryce/2RPG/src/core/item/Weapon.cpp",
+  "file": "/home/bryce/2RPG/src/core/item/Weapon.cpp"
+},
+{
+  "directory": "/home/bryce/2RPG/build",
+  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/core/item/Item.cpp.o -c /home/bryce/2RPG/src/core/item/Item.cpp",
+  "file": "/home/bryce/2RPG/src/core/item/Item.cpp"
+},
+{
+  "directory": "/home/bryce/2RPG/build",
+  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/core/item/Armor.cpp.o -c /home/bryce/2RPG/src/core/item/Armor.cpp",
+  "file": "/home/bryce/2RPG/src/core/item/Armor.cpp"
+},
+{
+  "directory": "/home/bryce/2RPG/build",
+  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/core/Sprite.cpp.o -c /home/bryce/2RPG/src/core/Sprite.cpp",
+  "file": "/home/bryce/2RPG/src/core/Sprite.cpp"
+},
+{
+  "directory": "/home/bryce/2RPG/build",
+  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/core/gameobject/GameObject.cpp.o -c /home/bryce/2RPG/src/core/gameobject/GameObject.cpp",
+  "file": "/home/bryce/2RPG/src/core/gameobject/GameObject.cpp"
+},
+{
+  "directory": "/home/bryce/2RPG/build",
+  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/core/gameobject/agent/Agent.cpp.o -c /home/bryce/2RPG/src/core/gameobject/agent/Agent.cpp",
+  "file": "/home/bryce/2RPG/src/core/gameobject/agent/Agent.cpp"
+},
+{
+  "directory": "/home/bryce/2RPG/build",
+  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/core/gameobject/agent/NPC.cpp.o -c /home/bryce/2RPG/src/core/gameobject/agent/NPC.cpp",
+  "file": "/home/bryce/2RPG/src/core/gameobject/agent/NPC.cpp"
+},
+{
+  "directory": "/home/bryce/2RPG/build",
+  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/core/gameobject/agent/Player.cpp.o -c /home/bryce/2RPG/src/core/gameobject/agent/Player.cpp",
+  "file": "/home/bryce/2RPG/src/core/gameobject/agent/Player.cpp"
+},
+{
+  "directory": "/home/bryce/2RPG/build",
+  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/core/gameobject/agent/AI.cpp.o -c /home/bryce/2RPG/src/core/gameobject/agent/AI.cpp",
+  "file": "/home/bryce/2RPG/src/core/gameobject/agent/AI.cpp"
+},
+{
+  "directory": "/home/bryce/2RPG/build",
+  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/core/world/TileMap.cpp.o -c /home/bryce/2RPG/src/core/world/TileMap.cpp",
+  "file": "/home/bryce/2RPG/src/core/world/TileMap.cpp"
+},
+{
+  "directory": "/home/bryce/2RPG/build",
+  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/core/world/Chunk.cpp.o -c /home/bryce/2RPG/src/core/world/Chunk.cpp",
+  "file": "/home/bryce/2RPG/src/core/world/Chunk.cpp"
+},
+{
+  "directory": "/home/bryce/2RPG/build",
+  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/core/world/Tile.cpp.o -c /home/bryce/2RPG/src/core/world/Tile.cpp",
+  "file": "/home/bryce/2RPG/src/core/world/Tile.cpp"
+},
+{
+  "directory": "/home/bryce/2RPG/build",
+  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/core/GameState.cpp.o -c /home/bryce/2RPG/src/core/GameState.cpp",
+  "file": "/home/bryce/2RPG/src/core/GameState.cpp"
+},
+{
+  "directory": "/home/bryce/2RPG/build",
+  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/resources/TMXParser.cpp.o -c /home/bryce/2RPG/src/resources/TMXParser.cpp",
+  "file": "/home/bryce/2RPG/src/resources/TMXParser.cpp"
+},
+{
+  "directory": "/home/bryce/2RPG/build",
+  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/graphics/particles/TextParticle.cpp.o -c /home/bryce/2RPG/src/graphics/particles/TextParticle.cpp",
+  "file": "/home/bryce/2RPG/src/graphics/particles/TextParticle.cpp"
+},
+{
+  "directory": "/home/bryce/2RPG/build",
+  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/graphics/particles/TextPool.cpp.o -c /home/bryce/2RPG/src/graphics/particles/TextPool.cpp",
+  "file": "/home/bryce/2RPG/src/graphics/particles/TextPool.cpp"
+},
+{
+  "directory": "/home/bryce/2RPG/build",
+  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/graphics/ui/GameView.cpp.o -c /home/bryce/2RPG/src/graphics/ui/GameView.cpp",
+  "file": "/home/bryce/2RPG/src/graphics/ui/GameView.cpp"
+},
+{
+  "directory": "/home/bryce/2RPG/build",
+  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/graphics/ui/CharacterMenuView.cpp.o -c /home/bryce/2RPG/src/graphics/ui/CharacterMenuView.cpp",
+  "file": "/home/bryce/2RPG/src/graphics/ui/CharacterMenuView.cpp"
+},
+{
+  "directory": "/home/bryce/2RPG/build",
+  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/graphics/ui/UIElement.cpp.o -c /home/bryce/2RPG/src/graphics/ui/UIElement.cpp",
+  "file": "/home/bryce/2RPG/src/graphics/ui/UIElement.cpp"
+},
+{
+  "directory": "/home/bryce/2RPG/build",
+  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/graphics/ui/SelectorElement.cpp.o -c /home/bryce/2RPG/src/graphics/ui/SelectorElement.cpp",
+  "file": "/home/bryce/2RPG/src/graphics/ui/SelectorElement.cpp"
+},
+{
+  "directory": "/home/bryce/2RPG/build",
+  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/graphics/ui/RectangleElement.cpp.o -c /home/bryce/2RPG/src/graphics/ui/RectangleElement.cpp",
+  "file": "/home/bryce/2RPG/src/graphics/ui/RectangleElement.cpp"
+},
+{
+  "directory": "/home/bryce/2RPG/build",
+  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/graphics/ui/TextElement.cpp.o -c /home/bryce/2RPG/src/graphics/ui/TextElement.cpp",
+  "file": "/home/bryce/2RPG/src/graphics/ui/TextElement.cpp"
+},
+{
+  "directory": "/home/bryce/2RPG/build",
+  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/graphics/ui/InventoryMenuView.cpp.o -c /home/bryce/2RPG/src/graphics/ui/InventoryMenuView.cpp",
+  "file": "/home/bryce/2RPG/src/graphics/ui/InventoryMenuView.cpp"
+},
+{
+  "directory": "/home/bryce/2RPG/build",
+  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/graphics/ui/View.cpp.o -c /home/bryce/2RPG/src/graphics/ui/View.cpp",
+  "file": "/home/bryce/2RPG/src/graphics/ui/View.cpp"
+},
+{
+  "directory": "/home/bryce/2RPG/build",
+  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/game.cpp.o -c /home/bryce/2RPG/src/game.cpp",
+  "file": "/home/bryce/2RPG/src/game.cpp"
+},
+{
+  "directory": "/home/bryce/2RPG/build",
+  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/managers/GameManager.cpp.o -c /home/bryce/2RPG/src/managers/GameManager.cpp",
+  "file": "/home/bryce/2RPG/src/managers/GameManager.cpp"
+},
+{
+  "directory": "/home/bryce/2RPG/build",
+  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/managers/DrawManager.cpp.o -c /home/bryce/2RPG/src/managers/DrawManager.cpp",
+  "file": "/home/bryce/2RPG/src/managers/DrawManager.cpp"
+},
+{
+  "directory": "/home/bryce/2RPG/build",
+  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/managers/InputManager.cpp.o -c /home/bryce/2RPG/src/managers/InputManager.cpp",
+  "file": "/home/bryce/2RPG/src/managers/InputManager.cpp"
+},
+{
+  "directory": "/home/bryce/2RPG/build",
+  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/managers/LogicManager.cpp.o -c /home/bryce/2RPG/src/managers/LogicManager.cpp",
+  "file": "/home/bryce/2RPG/src/managers/LogicManager.cpp"
+},
+{
+  "directory": "/home/bryce/2RPG/build",
+  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/managers/ResourceManager.cpp.o -c /home/bryce/2RPG/src/managers/ResourceManager.cpp",
+  "file": "/home/bryce/2RPG/src/managers/ResourceManager.cpp"
+}
+]
