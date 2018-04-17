@@ -1,3 +1,0 @@
-/home/bryce/2RPG/build/CMakeFiles/edit_cache.dir
-/home/bryce/2RPG/build/CMakeFiles/rebuild_cache.dir
-/home/bryce/2RPG/build/CMakeFiles/game.dir
