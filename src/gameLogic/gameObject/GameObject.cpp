@@ -1,5 +1,7 @@
 #include "GameObject.h"
 
+#include "../../core/GameState.h"
+
 GameObject::GameObject()
 {
 }
@@ -19,4 +21,28 @@ void GameObject::draw()
 BoundingBox GameObject::getHitBox()
 {
     return BoundingBox(x, y, sprite.spriteWidth, sprite.spriteHeight);
+}
+
+void GameObject::death()
+{
+    GameState* gameState = GameState::instance;
+
+    gameState->deadObjects.push_back(this);
+
+    onDeath();
+}
+
+void GameObject::deathCleanup()
+{
+    GameState* gameState = GameState::instance;
+
+    for(int i = 0; i < gameState->aliveObjects.size(); i++)
+    {
+        if(this == gameState->aliveObjects[i])
+        {
+            gameState->aliveObjects.erase(gameState->aliveObjects.begin() + i)
+        }
+    }
+
+    delete this;
 }

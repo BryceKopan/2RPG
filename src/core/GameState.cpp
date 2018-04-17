@@ -9,7 +9,9 @@ GameState::GameState()
     Sprite sprite("res/dungeon1.png", 96, 192, 32, 32);
     player = new Player(50, 50, sprite);
     aliveObjects.push_back(player);
+
     currentView = new GameView();
+
 }
 
 GameState::~GameState()

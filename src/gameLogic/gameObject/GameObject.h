@@ -19,5 +19,8 @@ class GameObject
         void draw();
         BoundingBox getHitBox();
         virtual void update(){};
+        void death();
+        virtual void onDeath(){};
+        void deathCleanup();
 };
 #endif
