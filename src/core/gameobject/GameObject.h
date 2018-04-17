@@ -3,15 +3,21 @@
 
 #include <string>
 
-#include "../Sprite.h"
+#include "../BoundingBox.h"
+#include "../../graphics/Sprite.h"
 
 class GameObject
 {
     public:
         Sprite sprite;
         std::string name;
-        int x, y;
+        int x = 0, y = 0;
 
-        GameObject(int x, int y);
+        GameObject();
+        GameObject(int x, int y, Sprite sprite);
+
+        void draw();
+        BoundingBox getHitBox();
+        virtual void update(){};
 };
 #endif

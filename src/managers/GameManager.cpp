@@ -8,7 +8,6 @@
 #include "InputManager.h"
 #include "LogicManager.h"
 #include "DrawManager.h"
-#include "../resources/TMXParser.h"
 #include "../graphics/ui/GameView.h"
 
 bool GameManager::isRunning = true;

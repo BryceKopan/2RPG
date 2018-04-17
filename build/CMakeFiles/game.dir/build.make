@@ -153,28 +153,28 @@ CMakeFiles/game.dir/src/core/item/Armor.cpp.o.provides: CMakeFiles/game.dir/src/
 CMakeFiles/game.dir/src/core/item/Armor.cpp.o.provides.build: CMakeFiles/game.dir/src/core/item/Armor.cpp.o
 
 
-CMakeFiles/game.dir/src/core/Sprite.cpp.o: CMakeFiles/game.dir/flags.make
-CMakeFiles/game.dir/src/core/Sprite.cpp.o: ../src/core/Sprite.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/game.dir/src/core/Sprite.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/core/Sprite.cpp.o -c /home/bryce/2RPG/src/core/Sprite.cpp
+CMakeFiles/game.dir/src/core/BoundingBox.cpp.o: CMakeFiles/game.dir/flags.make
+CMakeFiles/game.dir/src/core/BoundingBox.cpp.o: ../src/core/BoundingBox.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/game.dir/src/core/BoundingBox.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/core/BoundingBox.cpp.o -c /home/bryce/2RPG/src/core/BoundingBox.cpp
 
-CMakeFiles/game.dir/src/core/Sprite.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/src/core/Sprite.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bryce/2RPG/src/core/Sprite.cpp > CMakeFiles/game.dir/src/core/Sprite.cpp.i
+CMakeFiles/game.dir/src/core/BoundingBox.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/src/core/BoundingBox.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bryce/2RPG/src/core/BoundingBox.cpp > CMakeFiles/game.dir/src/core/BoundingBox.cpp.i
 
-CMakeFiles/game.dir/src/core/Sprite.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/src/core/Sprite.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bryce/2RPG/src/core/Sprite.cpp -o CMakeFiles/game.dir/src/core/Sprite.cpp.s
+CMakeFiles/game.dir/src/core/BoundingBox.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/src/core/BoundingBox.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bryce/2RPG/src/core/BoundingBox.cpp -o CMakeFiles/game.dir/src/core/BoundingBox.cpp.s
 
-CMakeFiles/game.dir/src/core/Sprite.cpp.o.requires:
+CMakeFiles/game.dir/src/core/BoundingBox.cpp.o.requires:
 
-.PHONY : CMakeFiles/game.dir/src/core/Sprite.cpp.o.requires
+.PHONY : CMakeFiles/game.dir/src/core/BoundingBox.cpp.o.requires
 
-CMakeFiles/game.dir/src/core/Sprite.cpp.o.provides: CMakeFiles/game.dir/src/core/Sprite.cpp.o.requires
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/Sprite.cpp.o.provides.build
-.PHONY : CMakeFiles/game.dir/src/core/Sprite.cpp.o.provides
+CMakeFiles/game.dir/src/core/BoundingBox.cpp.o.provides: CMakeFiles/game.dir/src/core/BoundingBox.cpp.o.requires
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/BoundingBox.cpp.o.provides.build
+.PHONY : CMakeFiles/game.dir/src/core/BoundingBox.cpp.o.provides
 
-CMakeFiles/game.dir/src/core/Sprite.cpp.o.provides.build: CMakeFiles/game.dir/src/core/Sprite.cpp.o
+CMakeFiles/game.dir/src/core/BoundingBox.cpp.o.provides.build: CMakeFiles/game.dir/src/core/BoundingBox.cpp.o
 
 
 CMakeFiles/game.dir/src/core/gameobject/GameObject.cpp.o: CMakeFiles/game.dir/flags.make
@@ -225,81 +225,33 @@ CMakeFiles/game.dir/src/core/gameobject/agent/Agent.cpp.o.provides: CMakeFiles/g
 CMakeFiles/game.dir/src/core/gameobject/agent/Agent.cpp.o.provides.build: CMakeFiles/game.dir/src/core/gameobject/agent/Agent.cpp.o
 
 
-CMakeFiles/game.dir/src/core/gameobject/agent/NPC.cpp.o: CMakeFiles/game.dir/flags.make
-CMakeFiles/game.dir/src/core/gameobject/agent/NPC.cpp.o: ../src/core/gameobject/agent/NPC.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/game.dir/src/core/gameobject/agent/NPC.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/core/gameobject/agent/NPC.cpp.o -c /home/bryce/2RPG/src/core/gameobject/agent/NPC.cpp
+CMakeFiles/game.dir/src/core/gameobject/agent/player/Player.cpp.o: CMakeFiles/game.dir/flags.make
+CMakeFiles/game.dir/src/core/gameobject/agent/player/Player.cpp.o: ../src/core/gameobject/agent/player/Player.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/game.dir/src/core/gameobject/agent/player/Player.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/core/gameobject/agent/player/Player.cpp.o -c /home/bryce/2RPG/src/core/gameobject/agent/player/Player.cpp
 
-CMakeFiles/game.dir/src/core/gameobject/agent/NPC.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/src/core/gameobject/agent/NPC.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bryce/2RPG/src/core/gameobject/agent/NPC.cpp > CMakeFiles/game.dir/src/core/gameobject/agent/NPC.cpp.i
+CMakeFiles/game.dir/src/core/gameobject/agent/player/Player.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/src/core/gameobject/agent/player/Player.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bryce/2RPG/src/core/gameobject/agent/player/Player.cpp > CMakeFiles/game.dir/src/core/gameobject/agent/player/Player.cpp.i
 
-CMakeFiles/game.dir/src/core/gameobject/agent/NPC.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/src/core/gameobject/agent/NPC.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bryce/2RPG/src/core/gameobject/agent/NPC.cpp -o CMakeFiles/game.dir/src/core/gameobject/agent/NPC.cpp.s
+CMakeFiles/game.dir/src/core/gameobject/agent/player/Player.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/src/core/gameobject/agent/player/Player.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bryce/2RPG/src/core/gameobject/agent/player/Player.cpp -o CMakeFiles/game.dir/src/core/gameobject/agent/player/Player.cpp.s
 
-CMakeFiles/game.dir/src/core/gameobject/agent/NPC.cpp.o.requires:
+CMakeFiles/game.dir/src/core/gameobject/agent/player/Player.cpp.o.requires:
 
-.PHONY : CMakeFiles/game.dir/src/core/gameobject/agent/NPC.cpp.o.requires
+.PHONY : CMakeFiles/game.dir/src/core/gameobject/agent/player/Player.cpp.o.requires
 
-CMakeFiles/game.dir/src/core/gameobject/agent/NPC.cpp.o.provides: CMakeFiles/game.dir/src/core/gameobject/agent/NPC.cpp.o.requires
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/gameobject/agent/NPC.cpp.o.provides.build
-.PHONY : CMakeFiles/game.dir/src/core/gameobject/agent/NPC.cpp.o.provides
+CMakeFiles/game.dir/src/core/gameobject/agent/player/Player.cpp.o.provides: CMakeFiles/game.dir/src/core/gameobject/agent/player/Player.cpp.o.requires
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/gameobject/agent/player/Player.cpp.o.provides.build
+.PHONY : CMakeFiles/game.dir/src/core/gameobject/agent/player/Player.cpp.o.provides
 
-CMakeFiles/game.dir/src/core/gameobject/agent/NPC.cpp.o.provides.build: CMakeFiles/game.dir/src/core/gameobject/agent/NPC.cpp.o
-
-
-CMakeFiles/game.dir/src/core/gameobject/agent/Player.cpp.o: CMakeFiles/game.dir/flags.make
-CMakeFiles/game.dir/src/core/gameobject/agent/Player.cpp.o: ../src/core/gameobject/agent/Player.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/game.dir/src/core/gameobject/agent/Player.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/core/gameobject/agent/Player.cpp.o -c /home/bryce/2RPG/src/core/gameobject/agent/Player.cpp
-
-CMakeFiles/game.dir/src/core/gameobject/agent/Player.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/src/core/gameobject/agent/Player.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bryce/2RPG/src/core/gameobject/agent/Player.cpp > CMakeFiles/game.dir/src/core/gameobject/agent/Player.cpp.i
-
-CMakeFiles/game.dir/src/core/gameobject/agent/Player.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/src/core/gameobject/agent/Player.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bryce/2RPG/src/core/gameobject/agent/Player.cpp -o CMakeFiles/game.dir/src/core/gameobject/agent/Player.cpp.s
-
-CMakeFiles/game.dir/src/core/gameobject/agent/Player.cpp.o.requires:
-
-.PHONY : CMakeFiles/game.dir/src/core/gameobject/agent/Player.cpp.o.requires
-
-CMakeFiles/game.dir/src/core/gameobject/agent/Player.cpp.o.provides: CMakeFiles/game.dir/src/core/gameobject/agent/Player.cpp.o.requires
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/gameobject/agent/Player.cpp.o.provides.build
-.PHONY : CMakeFiles/game.dir/src/core/gameobject/agent/Player.cpp.o.provides
-
-CMakeFiles/game.dir/src/core/gameobject/agent/Player.cpp.o.provides.build: CMakeFiles/game.dir/src/core/gameobject/agent/Player.cpp.o
-
-
-CMakeFiles/game.dir/src/core/gameobject/agent/AI.cpp.o: CMakeFiles/game.dir/flags.make
-CMakeFiles/game.dir/src/core/gameobject/agent/AI.cpp.o: ../src/core/gameobject/agent/AI.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/game.dir/src/core/gameobject/agent/AI.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/core/gameobject/agent/AI.cpp.o -c /home/bryce/2RPG/src/core/gameobject/agent/AI.cpp
-
-CMakeFiles/game.dir/src/core/gameobject/agent/AI.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/src/core/gameobject/agent/AI.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bryce/2RPG/src/core/gameobject/agent/AI.cpp > CMakeFiles/game.dir/src/core/gameobject/agent/AI.cpp.i
-
-CMakeFiles/game.dir/src/core/gameobject/agent/AI.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/src/core/gameobject/agent/AI.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bryce/2RPG/src/core/gameobject/agent/AI.cpp -o CMakeFiles/game.dir/src/core/gameobject/agent/AI.cpp.s
-
-CMakeFiles/game.dir/src/core/gameobject/agent/AI.cpp.o.requires:
-
-.PHONY : CMakeFiles/game.dir/src/core/gameobject/agent/AI.cpp.o.requires
-
-CMakeFiles/game.dir/src/core/gameobject/agent/AI.cpp.o.provides: CMakeFiles/game.dir/src/core/gameobject/agent/AI.cpp.o.requires
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/gameobject/agent/AI.cpp.o.provides.build
-.PHONY : CMakeFiles/game.dir/src/core/gameobject/agent/AI.cpp.o.provides
-
-CMakeFiles/game.dir/src/core/gameobject/agent/AI.cpp.o.provides.build: CMakeFiles/game.dir/src/core/gameobject/agent/AI.cpp.o
+CMakeFiles/game.dir/src/core/gameobject/agent/player/Player.cpp.o.provides.build: CMakeFiles/game.dir/src/core/gameobject/agent/player/Player.cpp.o
 
 
 CMakeFiles/game.dir/src/core/world/TileMap.cpp.o: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/src/core/world/TileMap.cpp.o: ../src/core/world/TileMap.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/game.dir/src/core/world/TileMap.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/game.dir/src/core/world/TileMap.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/core/world/TileMap.cpp.o -c /home/bryce/2RPG/src/core/world/TileMap.cpp
 
 CMakeFiles/game.dir/src/core/world/TileMap.cpp.i: cmake_force
@@ -323,7 +275,7 @@ CMakeFiles/game.dir/src/core/world/TileMap.cpp.o.provides.build: CMakeFiles/game
 
 CMakeFiles/game.dir/src/core/world/Chunk.cpp.o: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/src/core/world/Chunk.cpp.o: ../src/core/world/Chunk.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/game.dir/src/core/world/Chunk.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/game.dir/src/core/world/Chunk.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/core/world/Chunk.cpp.o -c /home/bryce/2RPG/src/core/world/Chunk.cpp
 
 CMakeFiles/game.dir/src/core/world/Chunk.cpp.i: cmake_force
@@ -347,7 +299,7 @@ CMakeFiles/game.dir/src/core/world/Chunk.cpp.o.provides.build: CMakeFiles/game.d
 
 CMakeFiles/game.dir/src/core/world/Tile.cpp.o: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/src/core/world/Tile.cpp.o: ../src/core/world/Tile.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/game.dir/src/core/world/Tile.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/game.dir/src/core/world/Tile.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/core/world/Tile.cpp.o -c /home/bryce/2RPG/src/core/world/Tile.cpp
 
 CMakeFiles/game.dir/src/core/world/Tile.cpp.i: cmake_force
@@ -371,7 +323,7 @@ CMakeFiles/game.dir/src/core/world/Tile.cpp.o.provides.build: CMakeFiles/game.di
 
 CMakeFiles/game.dir/src/core/GameState.cpp.o: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/src/core/GameState.cpp.o: ../src/core/GameState.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/game.dir/src/core/GameState.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/game.dir/src/core/GameState.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/core/GameState.cpp.o -c /home/bryce/2RPG/src/core/GameState.cpp
 
 CMakeFiles/game.dir/src/core/GameState.cpp.i: cmake_force
@@ -393,33 +345,33 @@ CMakeFiles/game.dir/src/core/GameState.cpp.o.provides: CMakeFiles/game.dir/src/c
 CMakeFiles/game.dir/src/core/GameState.cpp.o.provides.build: CMakeFiles/game.dir/src/core/GameState.cpp.o
 
 
-CMakeFiles/game.dir/src/resources/TMXParser.cpp.o: CMakeFiles/game.dir/flags.make
-CMakeFiles/game.dir/src/resources/TMXParser.cpp.o: ../src/resources/TMXParser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/game.dir/src/resources/TMXParser.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/resources/TMXParser.cpp.o -c /home/bryce/2RPG/src/resources/TMXParser.cpp
+CMakeFiles/game.dir/src/graphics/Sprite.cpp.o: CMakeFiles/game.dir/flags.make
+CMakeFiles/game.dir/src/graphics/Sprite.cpp.o: ../src/graphics/Sprite.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/game.dir/src/graphics/Sprite.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/graphics/Sprite.cpp.o -c /home/bryce/2RPG/src/graphics/Sprite.cpp
 
-CMakeFiles/game.dir/src/resources/TMXParser.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/src/resources/TMXParser.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bryce/2RPG/src/resources/TMXParser.cpp > CMakeFiles/game.dir/src/resources/TMXParser.cpp.i
+CMakeFiles/game.dir/src/graphics/Sprite.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/src/graphics/Sprite.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bryce/2RPG/src/graphics/Sprite.cpp > CMakeFiles/game.dir/src/graphics/Sprite.cpp.i
 
-CMakeFiles/game.dir/src/resources/TMXParser.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/src/resources/TMXParser.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bryce/2RPG/src/resources/TMXParser.cpp -o CMakeFiles/game.dir/src/resources/TMXParser.cpp.s
+CMakeFiles/game.dir/src/graphics/Sprite.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/src/graphics/Sprite.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bryce/2RPG/src/graphics/Sprite.cpp -o CMakeFiles/game.dir/src/graphics/Sprite.cpp.s
 
-CMakeFiles/game.dir/src/resources/TMXParser.cpp.o.requires:
+CMakeFiles/game.dir/src/graphics/Sprite.cpp.o.requires:
 
-.PHONY : CMakeFiles/game.dir/src/resources/TMXParser.cpp.o.requires
+.PHONY : CMakeFiles/game.dir/src/graphics/Sprite.cpp.o.requires
 
-CMakeFiles/game.dir/src/resources/TMXParser.cpp.o.provides: CMakeFiles/game.dir/src/resources/TMXParser.cpp.o.requires
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/resources/TMXParser.cpp.o.provides.build
-.PHONY : CMakeFiles/game.dir/src/resources/TMXParser.cpp.o.provides
+CMakeFiles/game.dir/src/graphics/Sprite.cpp.o.provides: CMakeFiles/game.dir/src/graphics/Sprite.cpp.o.requires
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/graphics/Sprite.cpp.o.provides.build
+.PHONY : CMakeFiles/game.dir/src/graphics/Sprite.cpp.o.provides
 
-CMakeFiles/game.dir/src/resources/TMXParser.cpp.o.provides.build: CMakeFiles/game.dir/src/resources/TMXParser.cpp.o
+CMakeFiles/game.dir/src/graphics/Sprite.cpp.o.provides.build: CMakeFiles/game.dir/src/graphics/Sprite.cpp.o
 
 
 CMakeFiles/game.dir/src/graphics/particles/TextParticle.cpp.o: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/src/graphics/particles/TextParticle.cpp.o: ../src/graphics/particles/TextParticle.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/game.dir/src/graphics/particles/TextParticle.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/game.dir/src/graphics/particles/TextParticle.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/graphics/particles/TextParticle.cpp.o -c /home/bryce/2RPG/src/graphics/particles/TextParticle.cpp
 
 CMakeFiles/game.dir/src/graphics/particles/TextParticle.cpp.i: cmake_force
@@ -443,7 +395,7 @@ CMakeFiles/game.dir/src/graphics/particles/TextParticle.cpp.o.provides.build: CM
 
 CMakeFiles/game.dir/src/graphics/particles/TextPool.cpp.o: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/src/graphics/particles/TextPool.cpp.o: ../src/graphics/particles/TextPool.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/game.dir/src/graphics/particles/TextPool.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/game.dir/src/graphics/particles/TextPool.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/graphics/particles/TextPool.cpp.o -c /home/bryce/2RPG/src/graphics/particles/TextPool.cpp
 
 CMakeFiles/game.dir/src/graphics/particles/TextPool.cpp.i: cmake_force
@@ -467,7 +419,7 @@ CMakeFiles/game.dir/src/graphics/particles/TextPool.cpp.o.provides.build: CMakeF
 
 CMakeFiles/game.dir/src/graphics/ui/GameView.cpp.o: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/src/graphics/ui/GameView.cpp.o: ../src/graphics/ui/GameView.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/game.dir/src/graphics/ui/GameView.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/game.dir/src/graphics/ui/GameView.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/graphics/ui/GameView.cpp.o -c /home/bryce/2RPG/src/graphics/ui/GameView.cpp
 
 CMakeFiles/game.dir/src/graphics/ui/GameView.cpp.i: cmake_force
@@ -491,7 +443,7 @@ CMakeFiles/game.dir/src/graphics/ui/GameView.cpp.o.provides.build: CMakeFiles/ga
 
 CMakeFiles/game.dir/src/graphics/ui/CharacterMenuView.cpp.o: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/src/graphics/ui/CharacterMenuView.cpp.o: ../src/graphics/ui/CharacterMenuView.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/game.dir/src/graphics/ui/CharacterMenuView.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/game.dir/src/graphics/ui/CharacterMenuView.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/graphics/ui/CharacterMenuView.cpp.o -c /home/bryce/2RPG/src/graphics/ui/CharacterMenuView.cpp
 
 CMakeFiles/game.dir/src/graphics/ui/CharacterMenuView.cpp.i: cmake_force
@@ -515,7 +467,7 @@ CMakeFiles/game.dir/src/graphics/ui/CharacterMenuView.cpp.o.provides.build: CMak
 
 CMakeFiles/game.dir/src/graphics/ui/UIElement.cpp.o: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/src/graphics/ui/UIElement.cpp.o: ../src/graphics/ui/UIElement.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/game.dir/src/graphics/ui/UIElement.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/game.dir/src/graphics/ui/UIElement.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/graphics/ui/UIElement.cpp.o -c /home/bryce/2RPG/src/graphics/ui/UIElement.cpp
 
 CMakeFiles/game.dir/src/graphics/ui/UIElement.cpp.i: cmake_force
@@ -539,7 +491,7 @@ CMakeFiles/game.dir/src/graphics/ui/UIElement.cpp.o.provides.build: CMakeFiles/g
 
 CMakeFiles/game.dir/src/graphics/ui/SelectorElement.cpp.o: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/src/graphics/ui/SelectorElement.cpp.o: ../src/graphics/ui/SelectorElement.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/game.dir/src/graphics/ui/SelectorElement.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/game.dir/src/graphics/ui/SelectorElement.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/graphics/ui/SelectorElement.cpp.o -c /home/bryce/2RPG/src/graphics/ui/SelectorElement.cpp
 
 CMakeFiles/game.dir/src/graphics/ui/SelectorElement.cpp.i: cmake_force
@@ -563,7 +515,7 @@ CMakeFiles/game.dir/src/graphics/ui/SelectorElement.cpp.o.provides.build: CMakeF
 
 CMakeFiles/game.dir/src/graphics/ui/RectangleElement.cpp.o: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/src/graphics/ui/RectangleElement.cpp.o: ../src/graphics/ui/RectangleElement.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/game.dir/src/graphics/ui/RectangleElement.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/game.dir/src/graphics/ui/RectangleElement.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/graphics/ui/RectangleElement.cpp.o -c /home/bryce/2RPG/src/graphics/ui/RectangleElement.cpp
 
 CMakeFiles/game.dir/src/graphics/ui/RectangleElement.cpp.i: cmake_force
@@ -587,7 +539,7 @@ CMakeFiles/game.dir/src/graphics/ui/RectangleElement.cpp.o.provides.build: CMake
 
 CMakeFiles/game.dir/src/graphics/ui/TextElement.cpp.o: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/src/graphics/ui/TextElement.cpp.o: ../src/graphics/ui/TextElement.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/game.dir/src/graphics/ui/TextElement.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/game.dir/src/graphics/ui/TextElement.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/graphics/ui/TextElement.cpp.o -c /home/bryce/2RPG/src/graphics/ui/TextElement.cpp
 
 CMakeFiles/game.dir/src/graphics/ui/TextElement.cpp.i: cmake_force
@@ -611,7 +563,7 @@ CMakeFiles/game.dir/src/graphics/ui/TextElement.cpp.o.provides.build: CMakeFiles
 
 CMakeFiles/game.dir/src/graphics/ui/InventoryMenuView.cpp.o: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/src/graphics/ui/InventoryMenuView.cpp.o: ../src/graphics/ui/InventoryMenuView.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/game.dir/src/graphics/ui/InventoryMenuView.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/game.dir/src/graphics/ui/InventoryMenuView.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/graphics/ui/InventoryMenuView.cpp.o -c /home/bryce/2RPG/src/graphics/ui/InventoryMenuView.cpp
 
 CMakeFiles/game.dir/src/graphics/ui/InventoryMenuView.cpp.i: cmake_force
@@ -635,7 +587,7 @@ CMakeFiles/game.dir/src/graphics/ui/InventoryMenuView.cpp.o.provides.build: CMak
 
 CMakeFiles/game.dir/src/graphics/ui/View.cpp.o: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/src/graphics/ui/View.cpp.o: ../src/graphics/ui/View.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/game.dir/src/graphics/ui/View.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/game.dir/src/graphics/ui/View.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/graphics/ui/View.cpp.o -c /home/bryce/2RPG/src/graphics/ui/View.cpp
 
 CMakeFiles/game.dir/src/graphics/ui/View.cpp.i: cmake_force
@@ -659,7 +611,7 @@ CMakeFiles/game.dir/src/graphics/ui/View.cpp.o.provides.build: CMakeFiles/game.d
 
 CMakeFiles/game.dir/src/game.cpp.o: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/src/game.cpp.o: ../src/game.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/game.dir/src/game.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/game.dir/src/game.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/game.cpp.o -c /home/bryce/2RPG/src/game.cpp
 
 CMakeFiles/game.dir/src/game.cpp.i: cmake_force
@@ -683,7 +635,7 @@ CMakeFiles/game.dir/src/game.cpp.o.provides.build: CMakeFiles/game.dir/src/game.
 
 CMakeFiles/game.dir/src/managers/GameManager.cpp.o: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/src/managers/GameManager.cpp.o: ../src/managers/GameManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/game.dir/src/managers/GameManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/game.dir/src/managers/GameManager.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/managers/GameManager.cpp.o -c /home/bryce/2RPG/src/managers/GameManager.cpp
 
 CMakeFiles/game.dir/src/managers/GameManager.cpp.i: cmake_force
@@ -707,7 +659,7 @@ CMakeFiles/game.dir/src/managers/GameManager.cpp.o.provides.build: CMakeFiles/ga
 
 CMakeFiles/game.dir/src/managers/DrawManager.cpp.o: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/src/managers/DrawManager.cpp.o: ../src/managers/DrawManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/game.dir/src/managers/DrawManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/game.dir/src/managers/DrawManager.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/managers/DrawManager.cpp.o -c /home/bryce/2RPG/src/managers/DrawManager.cpp
 
 CMakeFiles/game.dir/src/managers/DrawManager.cpp.i: cmake_force
@@ -731,7 +683,7 @@ CMakeFiles/game.dir/src/managers/DrawManager.cpp.o.provides.build: CMakeFiles/ga
 
 CMakeFiles/game.dir/src/managers/InputManager.cpp.o: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/src/managers/InputManager.cpp.o: ../src/managers/InputManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/game.dir/src/managers/InputManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/game.dir/src/managers/InputManager.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/managers/InputManager.cpp.o -c /home/bryce/2RPG/src/managers/InputManager.cpp
 
 CMakeFiles/game.dir/src/managers/InputManager.cpp.i: cmake_force
@@ -755,7 +707,7 @@ CMakeFiles/game.dir/src/managers/InputManager.cpp.o.provides.build: CMakeFiles/g
 
 CMakeFiles/game.dir/src/managers/LogicManager.cpp.o: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/src/managers/LogicManager.cpp.o: ../src/managers/LogicManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/game.dir/src/managers/LogicManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/game.dir/src/managers/LogicManager.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/managers/LogicManager.cpp.o -c /home/bryce/2RPG/src/managers/LogicManager.cpp
 
 CMakeFiles/game.dir/src/managers/LogicManager.cpp.i: cmake_force
@@ -779,7 +731,7 @@ CMakeFiles/game.dir/src/managers/LogicManager.cpp.o.provides.build: CMakeFiles/g
 
 CMakeFiles/game.dir/src/managers/ResourceManager.cpp.o: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/src/managers/ResourceManager.cpp.o: ../src/managers/ResourceManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/game.dir/src/managers/ResourceManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/game.dir/src/managers/ResourceManager.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/managers/ResourceManager.cpp.o -c /home/bryce/2RPG/src/managers/ResourceManager.cpp
 
 CMakeFiles/game.dir/src/managers/ResourceManager.cpp.i: cmake_force
@@ -807,17 +759,15 @@ game_OBJECTS = \
 "CMakeFiles/game.dir/src/core/item/Weapon.cpp.o" \
 "CMakeFiles/game.dir/src/core/item/Item.cpp.o" \
 "CMakeFiles/game.dir/src/core/item/Armor.cpp.o" \
-"CMakeFiles/game.dir/src/core/Sprite.cpp.o" \
+"CMakeFiles/game.dir/src/core/BoundingBox.cpp.o" \
 "CMakeFiles/game.dir/src/core/gameobject/GameObject.cpp.o" \
 "CMakeFiles/game.dir/src/core/gameobject/agent/Agent.cpp.o" \
-"CMakeFiles/game.dir/src/core/gameobject/agent/NPC.cpp.o" \
-"CMakeFiles/game.dir/src/core/gameobject/agent/Player.cpp.o" \
-"CMakeFiles/game.dir/src/core/gameobject/agent/AI.cpp.o" \
+"CMakeFiles/game.dir/src/core/gameobject/agent/player/Player.cpp.o" \
 "CMakeFiles/game.dir/src/core/world/TileMap.cpp.o" \
 "CMakeFiles/game.dir/src/core/world/Chunk.cpp.o" \
 "CMakeFiles/game.dir/src/core/world/Tile.cpp.o" \
 "CMakeFiles/game.dir/src/core/GameState.cpp.o" \
-"CMakeFiles/game.dir/src/resources/TMXParser.cpp.o" \
+"CMakeFiles/game.dir/src/graphics/Sprite.cpp.o" \
 "CMakeFiles/game.dir/src/graphics/particles/TextParticle.cpp.o" \
 "CMakeFiles/game.dir/src/graphics/particles/TextPool.cpp.o" \
 "CMakeFiles/game.dir/src/graphics/ui/GameView.cpp.o" \
@@ -842,17 +792,15 @@ game: CMakeFiles/game.dir/src/core/item/Equipment.cpp.o
 game: CMakeFiles/game.dir/src/core/item/Weapon.cpp.o
 game: CMakeFiles/game.dir/src/core/item/Item.cpp.o
 game: CMakeFiles/game.dir/src/core/item/Armor.cpp.o
-game: CMakeFiles/game.dir/src/core/Sprite.cpp.o
+game: CMakeFiles/game.dir/src/core/BoundingBox.cpp.o
 game: CMakeFiles/game.dir/src/core/gameobject/GameObject.cpp.o
 game: CMakeFiles/game.dir/src/core/gameobject/agent/Agent.cpp.o
-game: CMakeFiles/game.dir/src/core/gameobject/agent/NPC.cpp.o
-game: CMakeFiles/game.dir/src/core/gameobject/agent/Player.cpp.o
-game: CMakeFiles/game.dir/src/core/gameobject/agent/AI.cpp.o
+game: CMakeFiles/game.dir/src/core/gameobject/agent/player/Player.cpp.o
 game: CMakeFiles/game.dir/src/core/world/TileMap.cpp.o
 game: CMakeFiles/game.dir/src/core/world/Chunk.cpp.o
 game: CMakeFiles/game.dir/src/core/world/Tile.cpp.o
 game: CMakeFiles/game.dir/src/core/GameState.cpp.o
-game: CMakeFiles/game.dir/src/resources/TMXParser.cpp.o
+game: CMakeFiles/game.dir/src/graphics/Sprite.cpp.o
 game: CMakeFiles/game.dir/src/graphics/particles/TextParticle.cpp.o
 game: CMakeFiles/game.dir/src/graphics/particles/TextPool.cpp.o
 game: CMakeFiles/game.dir/src/graphics/ui/GameView.cpp.o
@@ -872,7 +820,7 @@ game: CMakeFiles/game.dir/src/managers/ResourceManager.cpp.o
 game: CMakeFiles/game.dir/build.make
 game: /usr/lib/x86_64-linux-gnu/libpugixml.so
 game: CMakeFiles/game.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Linking CXX executable game"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bryce/2RPG/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Linking CXX executable game"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/game.dir/link.txt --verbose=$(VERBOSE)
 	/usr/bin/cmake -E copy_directory /home/bryce/2RPG/res /home/bryce/2RPG/build/res
 
@@ -885,17 +833,15 @@ CMakeFiles/game.dir/requires: CMakeFiles/game.dir/src/core/item/Equipment.cpp.o.
 CMakeFiles/game.dir/requires: CMakeFiles/game.dir/src/core/item/Weapon.cpp.o.requires
 CMakeFiles/game.dir/requires: CMakeFiles/game.dir/src/core/item/Item.cpp.o.requires
 CMakeFiles/game.dir/requires: CMakeFiles/game.dir/src/core/item/Armor.cpp.o.requires
-CMakeFiles/game.dir/requires: CMakeFiles/game.dir/src/core/Sprite.cpp.o.requires
+CMakeFiles/game.dir/requires: CMakeFiles/game.dir/src/core/BoundingBox.cpp.o.requires
 CMakeFiles/game.dir/requires: CMakeFiles/game.dir/src/core/gameobject/GameObject.cpp.o.requires
 CMakeFiles/game.dir/requires: CMakeFiles/game.dir/src/core/gameobject/agent/Agent.cpp.o.requires
-CMakeFiles/game.dir/requires: CMakeFiles/game.dir/src/core/gameobject/agent/NPC.cpp.o.requires
-CMakeFiles/game.dir/requires: CMakeFiles/game.dir/src/core/gameobject/agent/Player.cpp.o.requires
-CMakeFiles/game.dir/requires: CMakeFiles/game.dir/src/core/gameobject/agent/AI.cpp.o.requires
+CMakeFiles/game.dir/requires: CMakeFiles/game.dir/src/core/gameobject/agent/player/Player.cpp.o.requires
 CMakeFiles/game.dir/requires: CMakeFiles/game.dir/src/core/world/TileMap.cpp.o.requires
 CMakeFiles/game.dir/requires: CMakeFiles/game.dir/src/core/world/Chunk.cpp.o.requires
 CMakeFiles/game.dir/requires: CMakeFiles/game.dir/src/core/world/Tile.cpp.o.requires
 CMakeFiles/game.dir/requires: CMakeFiles/game.dir/src/core/GameState.cpp.o.requires
-CMakeFiles/game.dir/requires: CMakeFiles/game.dir/src/resources/TMXParser.cpp.o.requires
+CMakeFiles/game.dir/requires: CMakeFiles/game.dir/src/graphics/Sprite.cpp.o.requires
 CMakeFiles/game.dir/requires: CMakeFiles/game.dir/src/graphics/particles/TextParticle.cpp.o.requires
 CMakeFiles/game.dir/requires: CMakeFiles/game.dir/src/graphics/particles/TextPool.cpp.o.requires
 CMakeFiles/game.dir/requires: CMakeFiles/game.dir/src/graphics/ui/GameView.cpp.o.requires

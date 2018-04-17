@@ -8,6 +8,11 @@ void LogicManager::update()
 {
     GameState* gameState = GameState::instance;
 
-    gameState->textPool.update();
+    for(int i = 0; i < gameState->aliveObjects.size(); i++)
+    {
+        gameState->aliveObjects[i]->update();
+    }
+
+    //gameState->textPool.update();
     gameState->currentView->update();
 }

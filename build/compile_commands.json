@@ -21,8 +21,8 @@
 },
 {
   "directory": "/home/bryce/2RPG/build",
-  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/core/Sprite.cpp.o -c /home/bryce/2RPG/src/core/Sprite.cpp",
-  "file": "/home/bryce/2RPG/src/core/Sprite.cpp"
+  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/core/BoundingBox.cpp.o -c /home/bryce/2RPG/src/core/BoundingBox.cpp",
+  "file": "/home/bryce/2RPG/src/core/BoundingBox.cpp"
 },
 {
   "directory": "/home/bryce/2RPG/build",
@@ -36,18 +36,8 @@
 },
 {
   "directory": "/home/bryce/2RPG/build",
-  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/core/gameobject/agent/NPC.cpp.o -c /home/bryce/2RPG/src/core/gameobject/agent/NPC.cpp",
-  "file": "/home/bryce/2RPG/src/core/gameobject/agent/NPC.cpp"
-},
-{
-  "directory": "/home/bryce/2RPG/build",
-  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/core/gameobject/agent/Player.cpp.o -c /home/bryce/2RPG/src/core/gameobject/agent/Player.cpp",
-  "file": "/home/bryce/2RPG/src/core/gameobject/agent/Player.cpp"
-},
-{
-  "directory": "/home/bryce/2RPG/build",
-  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/core/gameobject/agent/AI.cpp.o -c /home/bryce/2RPG/src/core/gameobject/agent/AI.cpp",
-  "file": "/home/bryce/2RPG/src/core/gameobject/agent/AI.cpp"
+  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/core/gameobject/agent/player/Player.cpp.o -c /home/bryce/2RPG/src/core/gameobject/agent/player/Player.cpp",
+  "file": "/home/bryce/2RPG/src/core/gameobject/agent/player/Player.cpp"
 },
 {
   "directory": "/home/bryce/2RPG/build",
@@ -71,8 +61,8 @@
 },
 {
   "directory": "/home/bryce/2RPG/build",
-  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/resources/TMXParser.cpp.o -c /home/bryce/2RPG/src/resources/TMXParser.cpp",
-  "file": "/home/bryce/2RPG/src/resources/TMXParser.cpp"
+  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/graphics/Sprite.cpp.o -c /home/bryce/2RPG/src/graphics/Sprite.cpp",
+  "file": "/home/bryce/2RPG/src/graphics/Sprite.cpp"
 },
 {
   "directory": "/home/bryce/2RPG/build",

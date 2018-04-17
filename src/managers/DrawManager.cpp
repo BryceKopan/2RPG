@@ -1,53 +1,54 @@
 #include "DrawManager.h"
 
+#include <allegro5/allegro5.h>
+#include <allegro5/allegro_font.h>
+#include <allegro5/allegro_primitives.h>
+
 #include "GameManager.h"
 #include "ResourceManager.h"
 #include "../core/CONSTANTS.h"
 
 void DrawManager::draw()
 {
-    ALLEGRO_FONT* font1 = ResourceManager::loadFont("res/fonts/merienda/Merienda-Regular.ttf", 72);
+    /*ALLEGRO_FONT* font1 = ResourceManager::loadFont("res/fonts/merienda/Merienda-Regular.ttf", 72);
     ALLEGRO_FONT* font2 = ResourceManager::loadFont("res/fonts/merienda/Merienda-Regular.ttf", 20);
-    ALLEGRO_FONT* font3 = ResourceManager::loadFont("res/fonts/merienda/Merienda-Regular.ttf", 40);
+    ALLEGRO_FONT* font3 = ResourceManager::loadFont("res/fonts/merienda/Merienda-Regular.ttf", 40);*/
+
     ALLEGRO_TRANSFORM transform;
 
     GameState* gameState = GameState::instance;
 
     Player* player = gameState->player;
 
+
+    //Screen Grid
+    /*al_draw_line(GameManager::SCREEN_WIDTH/2, 0, 
+            GameManager::SCREEN_WIDTH/2, GameManager::SCREEN_HEIGHT,
+            al_map_rgb(255, 0, 0), 1);
+    al_draw_line(0, GameManager::SCREEN_HEIGHT/2,
+            GameManager::SCREEN_WIDTH, GameManager::SCREEN_HEIGHT/2,
+            al_map_rgb(255, 0, 0), 1);*/ 
+
     //Set up transform to set camera over player
     al_identity_transform(&transform);
     al_translate_transform(&transform, 
             (-(player->x + 1)) +
-            (GameManager::SCREEN_WIDTH / 2) + 
+            (GameManager::SCREEN_WIDTH / 2) - 
             (player->sprite.spriteWidth / 2),
             (-(player->y + 1)) + 
-            (GameManager::SCREEN_HEIGHT / 2) + 
-            (player->sprite.spriteHeight / 2));
+            (GameManager::SCREEN_HEIGHT / 2) - 
+            (player->sprite.spriteHeight / 2)
+            );
     al_use_transform(&transform);
 
-    //Draw Game World
-    for(int k = 0; k < CHUNK_SIZE; k++)
+    //Draw Alive Objects
+    for(int i = 0; i < gameState->aliveObjects.size(); i++)
     {
-        for(int i = 0; i < CHUNK_SIZE; i++)
-        {
-            //Draw TileMap
-            Sprite sprite = gameState->chunk.tileMap.tileSet[gameState->chunk.tileMap.map[i][k]].sprite;
-
-            al_draw_bitmap_region(
-                    sprite.spriteSheet,
-                    sprite.spriteSheetX,
-                    sprite.spriteSheetY,
-                    sprite.spriteWidth,
-                    sprite.spriteHeight,
-                    i,
-                    k,
-                    0);
-        }
+        gameState->aliveObjects[i]->draw();
     }
 
     //Draw Particles
-    for(int i = 0; i < gameState->textPool.particleCount; i++)
+    /*for(int i = 0; i < gameState->textPool.particleCount; i++)
     {
         TextParticle text = gameState->textPool.pool[i];
 
@@ -58,7 +59,7 @@ void DrawManager::draw()
                 text.y, 
                 ALLEGRO_ALIGN_CENTER, 
                 text.text.c_str());
-    }
+    }*/
 
     //Remove transform
     //Everything after this point x and y limited to screen size

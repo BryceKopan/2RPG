@@ -6,33 +6,29 @@
 
 #IncludeRegexTransform: 
 
+/home/bryce/2RPG/src/core/BoundingBox.cpp
+BoundingBox.h
+/home/bryce/2RPG/src/core/BoundingBox.h
+
+/home/bryce/2RPG/src/core/BoundingBox.h
+
 /home/bryce/2RPG/src/core/CONSTANTS.h
 
 /home/bryce/2RPG/src/core/GameState.cpp
 GameState.h
 /home/bryce/2RPG/src/core/GameState.h
+../graphics/ui/GameView.h
+/home/bryce/2RPG/src/graphics/ui/GameView.h
 
 /home/bryce/2RPG/src/core/GameState.h
 vector
 -
-world/Chunk.h
-/home/bryce/2RPG/src/core/world/Chunk.h
-gameobject/agent/Agent.h
-/home/bryce/2RPG/src/core/gameobject/agent/Agent.h
-gameobject/agent/Player.h
-/home/bryce/2RPG/src/core/gameobject/agent/Player.h
+gameobject/GameObject.h
+/home/bryce/2RPG/src/core/gameobject/GameObject.h
+gameobject/agent/player/Player.h
+/home/bryce/2RPG/src/core/gameobject/agent/player/Player.h
 ../graphics/ui/View.h
 /home/bryce/2RPG/src/graphics/ui/View.h
-../graphics/particles/TextPool.h
-/home/bryce/2RPG/src/graphics/particles/TextPool.h
-
-/home/bryce/2RPG/src/core/Sprite.cpp
-Sprite.h
-/home/bryce/2RPG/src/core/Sprite.h
-
-/home/bryce/2RPG/src/core/Sprite.h
-allegro5/allegro5.h
--
 
 /home/bryce/2RPG/src/core/gameobject/GameObject.cpp
 GameObject.h
@@ -41,63 +37,25 @@ GameObject.h
 /home/bryce/2RPG/src/core/gameobject/GameObject.h
 string
 -
-../Sprite.h
-/home/bryce/2RPG/src/core/Sprite.h
-
-/home/bryce/2RPG/src/core/gameobject/agent/AI.cpp
-AI.h
-/home/bryce/2RPG/src/core/gameobject/agent/AI.h
-math.h
--
-Player.h
-/home/bryce/2RPG/src/core/gameobject/agent/Player.h
-../../GameState.h
-/home/bryce/2RPG/src/core/GameState.h
-
-/home/bryce/2RPG/src/core/gameobject/agent/AI.h
-Agent.h
-/home/bryce/2RPG/src/core/gameobject/agent/Agent.h
+../BoundingBox.h
+/home/bryce/2RPG/src/core/BoundingBox.h
+../../graphics/Sprite.h
+/home/bryce/2RPG/src/graphics/Sprite.h
 
 /home/bryce/2RPG/src/core/gameobject/agent/Agent.cpp
 Agent.h
 /home/bryce/2RPG/src/core/gameobject/agent/Agent.h
-cmath
--
-stdlib.h
--
-../../GameState.h
-/home/bryce/2RPG/src/core/GameState.h
-../../world/Chunk.h
-/home/bryce/2RPG/src/core/world/Chunk.h
 
 /home/bryce/2RPG/src/core/gameobject/agent/Agent.h
 ../GameObject.h
 /home/bryce/2RPG/src/core/gameobject/GameObject.h
 
-/home/bryce/2RPG/src/core/gameobject/agent/NPC.cpp
-NPC.h
-/home/bryce/2RPG/src/core/gameobject/agent/NPC.h
-../../GameState.h
-/home/bryce/2RPG/src/core/GameState.h
-../../../managers/ResourceManager.h
-/home/bryce/2RPG/src/managers/ResourceManager.h
-
-/home/bryce/2RPG/src/core/gameobject/agent/NPC.h
-AI.h
-/home/bryce/2RPG/src/core/gameobject/agent/AI.h
-Agent.h
-/home/bryce/2RPG/src/core/gameobject/agent/Agent.h
-
-/home/bryce/2RPG/src/core/gameobject/agent/Player.cpp
+/home/bryce/2RPG/src/core/gameobject/agent/player/Player.cpp
 Player.h
-/home/bryce/2RPG/src/core/gameobject/agent/Player.h
-../../../managers/GameManager.h
-/home/bryce/2RPG/src/managers/GameManager.h
-../../../managers/ResourceManager.h
-/home/bryce/2RPG/src/managers/ResourceManager.h
+/home/bryce/2RPG/src/core/gameobject/agent/player/Player.h
 
-/home/bryce/2RPG/src/core/gameobject/agent/Player.h
-Agent.h
+/home/bryce/2RPG/src/core/gameobject/agent/player/Player.h
+../Agent.h
 /home/bryce/2RPG/src/core/gameobject/agent/Agent.h
 
 /home/bryce/2RPG/src/core/item/Armor.cpp
@@ -153,8 +111,8 @@ Tile.h
 /home/bryce/2RPG/src/core/world/Tile.h
 string
 -
-../Sprite.h
-/home/bryce/2RPG/src/core/Sprite.h
+../../graphics/Sprite.h
+/home/bryce/2RPG/src/graphics/Sprite.h
 
 /home/bryce/2RPG/src/core/world/TileMap.cpp
 TileMap.h
@@ -171,8 +129,18 @@ Tile.h
 /home/bryce/2RPG/src/game.cpp
 managers/GameManager.h
 /home/bryce/2RPG/src/managers/GameManager.h
-resources/TMXParser.h
-/home/bryce/2RPG/src/resources/TMXParser.h
+
+/home/bryce/2RPG/src/graphics/Sprite.cpp
+Sprite.h
+/home/bryce/2RPG/src/graphics/Sprite.h
+../managers/ResourceManager.h
+/home/bryce/2RPG/src/managers/ResourceManager.h
+
+/home/bryce/2RPG/src/graphics/Sprite.h
+string
+-
+allegro5/allegro5.h
+-
 
 /home/bryce/2RPG/src/graphics/particles/TextParticle.cpp
 TextParticle.h
@@ -315,6 +283,12 @@ UIElement.h
 /home/bryce/2RPG/src/managers/DrawManager.cpp
 DrawManager.h
 /home/bryce/2RPG/src/managers/DrawManager.h
+allegro5/allegro5.h
+-
+allegro5/allegro_font.h
+-
+allegro5/allegro_primitives.h
+-
 GameManager.h
 /home/bryce/2RPG/src/managers/GameManager.h
 ResourceManager.h
@@ -323,10 +297,6 @@ ResourceManager.h
 /home/bryce/2RPG/src/core/CONSTANTS.h
 
 /home/bryce/2RPG/src/managers/DrawManager.h
-allegro5/allegro5.h
--
-allegro5/allegro_font.h
--
 ../core/GameState.h
 /home/bryce/2RPG/src/core/GameState.h
 
@@ -347,8 +317,6 @@ LogicManager.h
 /home/bryce/2RPG/src/managers/LogicManager.h
 DrawManager.h
 /home/bryce/2RPG/src/managers/DrawManager.h
-../resources/TMXParser.h
-/home/bryce/2RPG/src/resources/TMXParser.h
 ../graphics/ui/GameView.h
 /home/bryce/2RPG/src/graphics/ui/GameView.h
 
@@ -392,23 +360,5 @@ unordered_map
 allegro5/allegro.h
 -
 allegro5/allegro_font.h
--
-
-/home/bryce/2RPG/src/resources/TMXParser.cpp
-TMXParser.h
-/home/bryce/2RPG/src/resources/TMXParser.h
-pugixml.hpp
--
-../core/GameState.h
-/home/bryce/2RPG/src/core/GameState.h
-../core/CONSTANTS.h
-/home/bryce/2RPG/src/core/CONSTANTS.h
-../core/gameobject/agent/NPC.h
-/home/bryce/2RPG/src/core/gameobject/agent/NPC.h
-../managers/ResourceManager.h
-/home/bryce/2RPG/src/managers/ResourceManager.h
-
-/home/bryce/2RPG/src/resources/TMXParser.h
-string
 -
 

@@ -3,14 +3,15 @@
 
 #include "../GameObject.h"
 
-class Equipment;
-
 class Agent : public GameObject
 {
     public:
-        Agent(int x, int y);
+        int dX = 0, dY = 0;
 
-        virtual void onDeath(){};
+        Agent(int x, int y, Sprite sprite);
+
+        void update();
+        virtual void doUpdate(){};
 };
 
 #endif

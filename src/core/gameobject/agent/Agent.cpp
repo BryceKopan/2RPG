@@ -1,12 +1,14 @@
 #include "Agent.h"
 
-#include <cmath>
-#include <stdlib.h>
-
-#include "../../GameState.h"
-#include "../../world/Chunk.h"
-
-Agent::Agent (int x, int y) :
-    GameObject(x, y)
+Agent::Agent(int x, int y, Sprite sprite) : 
+    GameObject(x, y, sprite)
 {
+}
+
+void Agent::update()
+{
+    x += dX;
+    y += dY;
+
+    doUpdate();
 }

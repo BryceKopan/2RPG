@@ -4,13 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/bryce/2RPG/src/core/BoundingBox.cpp" "/home/bryce/2RPG/build/CMakeFiles/game.dir/src/core/BoundingBox.cpp.o"
   "/home/bryce/2RPG/src/core/GameState.cpp" "/home/bryce/2RPG/build/CMakeFiles/game.dir/src/core/GameState.cpp.o"
-  "/home/bryce/2RPG/src/core/Sprite.cpp" "/home/bryce/2RPG/build/CMakeFiles/game.dir/src/core/Sprite.cpp.o"
   "/home/bryce/2RPG/src/core/gameobject/GameObject.cpp" "/home/bryce/2RPG/build/CMakeFiles/game.dir/src/core/gameobject/GameObject.cpp.o"
-  "/home/bryce/2RPG/src/core/gameobject/agent/AI.cpp" "/home/bryce/2RPG/build/CMakeFiles/game.dir/src/core/gameobject/agent/AI.cpp.o"
   "/home/bryce/2RPG/src/core/gameobject/agent/Agent.cpp" "/home/bryce/2RPG/build/CMakeFiles/game.dir/src/core/gameobject/agent/Agent.cpp.o"
-  "/home/bryce/2RPG/src/core/gameobject/agent/NPC.cpp" "/home/bryce/2RPG/build/CMakeFiles/game.dir/src/core/gameobject/agent/NPC.cpp.o"
-  "/home/bryce/2RPG/src/core/gameobject/agent/Player.cpp" "/home/bryce/2RPG/build/CMakeFiles/game.dir/src/core/gameobject/agent/Player.cpp.o"
+  "/home/bryce/2RPG/src/core/gameobject/agent/player/Player.cpp" "/home/bryce/2RPG/build/CMakeFiles/game.dir/src/core/gameobject/agent/player/Player.cpp.o"
   "/home/bryce/2RPG/src/core/item/Armor.cpp" "/home/bryce/2RPG/build/CMakeFiles/game.dir/src/core/item/Armor.cpp.o"
   "/home/bryce/2RPG/src/core/item/Equipment.cpp" "/home/bryce/2RPG/build/CMakeFiles/game.dir/src/core/item/Equipment.cpp.o"
   "/home/bryce/2RPG/src/core/item/Item.cpp" "/home/bryce/2RPG/build/CMakeFiles/game.dir/src/core/item/Item.cpp.o"
@@ -19,6 +17,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/bryce/2RPG/src/core/world/Tile.cpp" "/home/bryce/2RPG/build/CMakeFiles/game.dir/src/core/world/Tile.cpp.o"
   "/home/bryce/2RPG/src/core/world/TileMap.cpp" "/home/bryce/2RPG/build/CMakeFiles/game.dir/src/core/world/TileMap.cpp.o"
   "/home/bryce/2RPG/src/game.cpp" "/home/bryce/2RPG/build/CMakeFiles/game.dir/src/game.cpp.o"
+  "/home/bryce/2RPG/src/graphics/Sprite.cpp" "/home/bryce/2RPG/build/CMakeFiles/game.dir/src/graphics/Sprite.cpp.o"
   "/home/bryce/2RPG/src/graphics/particles/TextParticle.cpp" "/home/bryce/2RPG/build/CMakeFiles/game.dir/src/graphics/particles/TextParticle.cpp.o"
   "/home/bryce/2RPG/src/graphics/particles/TextPool.cpp" "/home/bryce/2RPG/build/CMakeFiles/game.dir/src/graphics/particles/TextPool.cpp.o"
   "/home/bryce/2RPG/src/graphics/ui/CharacterMenuView.cpp" "/home/bryce/2RPG/build/CMakeFiles/game.dir/src/graphics/ui/CharacterMenuView.cpp.o"
@@ -34,7 +33,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/bryce/2RPG/src/managers/InputManager.cpp" "/home/bryce/2RPG/build/CMakeFiles/game.dir/src/managers/InputManager.cpp.o"
   "/home/bryce/2RPG/src/managers/LogicManager.cpp" "/home/bryce/2RPG/build/CMakeFiles/game.dir/src/managers/LogicManager.cpp.o"
   "/home/bryce/2RPG/src/managers/ResourceManager.cpp" "/home/bryce/2RPG/build/CMakeFiles/game.dir/src/managers/ResourceManager.cpp.o"
-  "/home/bryce/2RPG/src/resources/TMXParser.cpp" "/home/bryce/2RPG/build/CMakeFiles/game.dir/src/resources/TMXParser.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

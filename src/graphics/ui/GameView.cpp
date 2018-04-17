@@ -39,10 +39,13 @@ void GameView::processInput(ALLEGRO_EVENT event)
     {    
         switch(event.keyboard.keycode)
         {
+            //Movement
+            case ALLEGRO_KEY_W:
+                gameState->player->dX = 1;
+                break;
+
             //Utility Input
             case ALLEGRO_KEY_F7:
-                gameState->debugMode = true;
-                printf("DebugMode activated \n");
                 break;
 
             case ALLEGRO_KEY_ESCAPE:

@@ -123,6 +123,33 @@ game/fast:
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/build
 .PHONY : game/fast
 
+src/core/BoundingBox.o: src/core/BoundingBox.cpp.o
+
+.PHONY : src/core/BoundingBox.o
+
+# target to build an object file
+src/core/BoundingBox.cpp.o:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/BoundingBox.cpp.o
+.PHONY : src/core/BoundingBox.cpp.o
+
+src/core/BoundingBox.i: src/core/BoundingBox.cpp.i
+
+.PHONY : src/core/BoundingBox.i
+
+# target to preprocess a source file
+src/core/BoundingBox.cpp.i:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/BoundingBox.cpp.i
+.PHONY : src/core/BoundingBox.cpp.i
+
+src/core/BoundingBox.s: src/core/BoundingBox.cpp.s
+
+.PHONY : src/core/BoundingBox.s
+
+# target to generate assembly for a file
+src/core/BoundingBox.cpp.s:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/BoundingBox.cpp.s
+.PHONY : src/core/BoundingBox.cpp.s
+
 src/core/GameState.o: src/core/GameState.cpp.o
 
 .PHONY : src/core/GameState.o
@@ -149,33 +176,6 @@ src/core/GameState.s: src/core/GameState.cpp.s
 src/core/GameState.cpp.s:
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/GameState.cpp.s
 .PHONY : src/core/GameState.cpp.s
-
-src/core/Sprite.o: src/core/Sprite.cpp.o
-
-.PHONY : src/core/Sprite.o
-
-# target to build an object file
-src/core/Sprite.cpp.o:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/Sprite.cpp.o
-.PHONY : src/core/Sprite.cpp.o
-
-src/core/Sprite.i: src/core/Sprite.cpp.i
-
-.PHONY : src/core/Sprite.i
-
-# target to preprocess a source file
-src/core/Sprite.cpp.i:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/Sprite.cpp.i
-.PHONY : src/core/Sprite.cpp.i
-
-src/core/Sprite.s: src/core/Sprite.cpp.s
-
-.PHONY : src/core/Sprite.s
-
-# target to generate assembly for a file
-src/core/Sprite.cpp.s:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/Sprite.cpp.s
-.PHONY : src/core/Sprite.cpp.s
 
 src/core/gameobject/GameObject.o: src/core/gameobject/GameObject.cpp.o
 
@@ -204,33 +204,6 @@ src/core/gameobject/GameObject.cpp.s:
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/gameobject/GameObject.cpp.s
 .PHONY : src/core/gameobject/GameObject.cpp.s
 
-src/core/gameobject/agent/AI.o: src/core/gameobject/agent/AI.cpp.o
-
-.PHONY : src/core/gameobject/agent/AI.o
-
-# target to build an object file
-src/core/gameobject/agent/AI.cpp.o:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/gameobject/agent/AI.cpp.o
-.PHONY : src/core/gameobject/agent/AI.cpp.o
-
-src/core/gameobject/agent/AI.i: src/core/gameobject/agent/AI.cpp.i
-
-.PHONY : src/core/gameobject/agent/AI.i
-
-# target to preprocess a source file
-src/core/gameobject/agent/AI.cpp.i:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/gameobject/agent/AI.cpp.i
-.PHONY : src/core/gameobject/agent/AI.cpp.i
-
-src/core/gameobject/agent/AI.s: src/core/gameobject/agent/AI.cpp.s
-
-.PHONY : src/core/gameobject/agent/AI.s
-
-# target to generate assembly for a file
-src/core/gameobject/agent/AI.cpp.s:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/gameobject/agent/AI.cpp.s
-.PHONY : src/core/gameobject/agent/AI.cpp.s
-
 src/core/gameobject/agent/Agent.o: src/core/gameobject/agent/Agent.cpp.o
 
 .PHONY : src/core/gameobject/agent/Agent.o
@@ -258,59 +231,32 @@ src/core/gameobject/agent/Agent.cpp.s:
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/gameobject/agent/Agent.cpp.s
 .PHONY : src/core/gameobject/agent/Agent.cpp.s
 
-src/core/gameobject/agent/NPC.o: src/core/gameobject/agent/NPC.cpp.o
+src/core/gameobject/agent/player/Player.o: src/core/gameobject/agent/player/Player.cpp.o
 
-.PHONY : src/core/gameobject/agent/NPC.o
-
-# target to build an object file
-src/core/gameobject/agent/NPC.cpp.o:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/gameobject/agent/NPC.cpp.o
-.PHONY : src/core/gameobject/agent/NPC.cpp.o
-
-src/core/gameobject/agent/NPC.i: src/core/gameobject/agent/NPC.cpp.i
-
-.PHONY : src/core/gameobject/agent/NPC.i
-
-# target to preprocess a source file
-src/core/gameobject/agent/NPC.cpp.i:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/gameobject/agent/NPC.cpp.i
-.PHONY : src/core/gameobject/agent/NPC.cpp.i
-
-src/core/gameobject/agent/NPC.s: src/core/gameobject/agent/NPC.cpp.s
-
-.PHONY : src/core/gameobject/agent/NPC.s
-
-# target to generate assembly for a file
-src/core/gameobject/agent/NPC.cpp.s:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/gameobject/agent/NPC.cpp.s
-.PHONY : src/core/gameobject/agent/NPC.cpp.s
-
-src/core/gameobject/agent/Player.o: src/core/gameobject/agent/Player.cpp.o
-
-.PHONY : src/core/gameobject/agent/Player.o
+.PHONY : src/core/gameobject/agent/player/Player.o
 
 # target to build an object file
-src/core/gameobject/agent/Player.cpp.o:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/gameobject/agent/Player.cpp.o
-.PHONY : src/core/gameobject/agent/Player.cpp.o
+src/core/gameobject/agent/player/Player.cpp.o:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/gameobject/agent/player/Player.cpp.o
+.PHONY : src/core/gameobject/agent/player/Player.cpp.o
 
-src/core/gameobject/agent/Player.i: src/core/gameobject/agent/Player.cpp.i
+src/core/gameobject/agent/player/Player.i: src/core/gameobject/agent/player/Player.cpp.i
 
-.PHONY : src/core/gameobject/agent/Player.i
+.PHONY : src/core/gameobject/agent/player/Player.i
 
 # target to preprocess a source file
-src/core/gameobject/agent/Player.cpp.i:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/gameobject/agent/Player.cpp.i
-.PHONY : src/core/gameobject/agent/Player.cpp.i
+src/core/gameobject/agent/player/Player.cpp.i:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/gameobject/agent/player/Player.cpp.i
+.PHONY : src/core/gameobject/agent/player/Player.cpp.i
 
-src/core/gameobject/agent/Player.s: src/core/gameobject/agent/Player.cpp.s
+src/core/gameobject/agent/player/Player.s: src/core/gameobject/agent/player/Player.cpp.s
 
-.PHONY : src/core/gameobject/agent/Player.s
+.PHONY : src/core/gameobject/agent/player/Player.s
 
 # target to generate assembly for a file
-src/core/gameobject/agent/Player.cpp.s:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/gameobject/agent/Player.cpp.s
-.PHONY : src/core/gameobject/agent/Player.cpp.s
+src/core/gameobject/agent/player/Player.cpp.s:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/gameobject/agent/player/Player.cpp.s
+.PHONY : src/core/gameobject/agent/player/Player.cpp.s
 
 src/core/item/Armor.o: src/core/item/Armor.cpp.o
 
@@ -527,6 +473,33 @@ src/game.s: src/game.cpp.s
 src/game.cpp.s:
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/game.cpp.s
 .PHONY : src/game.cpp.s
+
+src/graphics/Sprite.o: src/graphics/Sprite.cpp.o
+
+.PHONY : src/graphics/Sprite.o
+
+# target to build an object file
+src/graphics/Sprite.cpp.o:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/graphics/Sprite.cpp.o
+.PHONY : src/graphics/Sprite.cpp.o
+
+src/graphics/Sprite.i: src/graphics/Sprite.cpp.i
+
+.PHONY : src/graphics/Sprite.i
+
+# target to preprocess a source file
+src/graphics/Sprite.cpp.i:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/graphics/Sprite.cpp.i
+.PHONY : src/graphics/Sprite.cpp.i
+
+src/graphics/Sprite.s: src/graphics/Sprite.cpp.s
+
+.PHONY : src/graphics/Sprite.s
+
+# target to generate assembly for a file
+src/graphics/Sprite.cpp.s:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/graphics/Sprite.cpp.s
+.PHONY : src/graphics/Sprite.cpp.s
 
 src/graphics/particles/TextParticle.o: src/graphics/particles/TextParticle.cpp.o
 
@@ -933,33 +906,6 @@ src/managers/ResourceManager.cpp.s:
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/managers/ResourceManager.cpp.s
 .PHONY : src/managers/ResourceManager.cpp.s
 
-src/resources/TMXParser.o: src/resources/TMXParser.cpp.o
-
-.PHONY : src/resources/TMXParser.o
-
-# target to build an object file
-src/resources/TMXParser.cpp.o:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/resources/TMXParser.cpp.o
-.PHONY : src/resources/TMXParser.cpp.o
-
-src/resources/TMXParser.i: src/resources/TMXParser.cpp.i
-
-.PHONY : src/resources/TMXParser.i
-
-# target to preprocess a source file
-src/resources/TMXParser.cpp.i:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/resources/TMXParser.cpp.i
-.PHONY : src/resources/TMXParser.cpp.i
-
-src/resources/TMXParser.s: src/resources/TMXParser.cpp.s
-
-.PHONY : src/resources/TMXParser.s
-
-# target to generate assembly for a file
-src/resources/TMXParser.cpp.s:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/resources/TMXParser.cpp.s
-.PHONY : src/resources/TMXParser.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -969,27 +915,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... game"
+	@echo "... src/core/BoundingBox.o"
+	@echo "... src/core/BoundingBox.i"
+	@echo "... src/core/BoundingBox.s"
 	@echo "... src/core/GameState.o"
 	@echo "... src/core/GameState.i"
 	@echo "... src/core/GameState.s"
-	@echo "... src/core/Sprite.o"
-	@echo "... src/core/Sprite.i"
-	@echo "... src/core/Sprite.s"
 	@echo "... src/core/gameobject/GameObject.o"
 	@echo "... src/core/gameobject/GameObject.i"
 	@echo "... src/core/gameobject/GameObject.s"
-	@echo "... src/core/gameobject/agent/AI.o"
-	@echo "... src/core/gameobject/agent/AI.i"
-	@echo "... src/core/gameobject/agent/AI.s"
 	@echo "... src/core/gameobject/agent/Agent.o"
 	@echo "... src/core/gameobject/agent/Agent.i"
 	@echo "... src/core/gameobject/agent/Agent.s"
-	@echo "... src/core/gameobject/agent/NPC.o"
-	@echo "... src/core/gameobject/agent/NPC.i"
-	@echo "... src/core/gameobject/agent/NPC.s"
-	@echo "... src/core/gameobject/agent/Player.o"
-	@echo "... src/core/gameobject/agent/Player.i"
-	@echo "... src/core/gameobject/agent/Player.s"
+	@echo "... src/core/gameobject/agent/player/Player.o"
+	@echo "... src/core/gameobject/agent/player/Player.i"
+	@echo "... src/core/gameobject/agent/player/Player.s"
 	@echo "... src/core/item/Armor.o"
 	@echo "... src/core/item/Armor.i"
 	@echo "... src/core/item/Armor.s"
@@ -1014,6 +954,9 @@ help:
 	@echo "... src/game.o"
 	@echo "... src/game.i"
 	@echo "... src/game.s"
+	@echo "... src/graphics/Sprite.o"
+	@echo "... src/graphics/Sprite.i"
+	@echo "... src/graphics/Sprite.s"
 	@echo "... src/graphics/particles/TextParticle.o"
 	@echo "... src/graphics/particles/TextParticle.i"
 	@echo "... src/graphics/particles/TextParticle.s"
@@ -1059,9 +1002,6 @@ help:
 	@echo "... src/managers/ResourceManager.o"
 	@echo "... src/managers/ResourceManager.i"
 	@echo "... src/managers/ResourceManager.s"
-	@echo "... src/resources/TMXParser.o"
-	@echo "... src/resources/TMXParser.i"
-	@echo "... src/resources/TMXParser.s"
 .PHONY : help
 
 

@@ -1,9 +1,6 @@
 #ifndef DRAWMANAGER_H
 #define DRAWMANAGER_H
 
-#include <allegro5/allegro5.h>
-#include <allegro5/allegro_font.h>
-
 #include "../core/GameState.h"
 
 class DrawManager

@@ -3,7 +3,7 @@
 
 #include <string>
 
-#include "../Sprite.h"
+#include "../../graphics/Sprite.h"
 
 class Tile
 {

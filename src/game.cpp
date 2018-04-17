@@ -1,5 +1,4 @@
 #include "managers/GameManager.h"
-#include "resources/TMXParser.h"
 
 int main(int argc, char **argv)
 {   
