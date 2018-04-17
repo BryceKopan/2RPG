@@ -3,9 +3,9 @@
 
 #include <vector>
 
-#include "gameobject/GameObject.h"
-#include "gameobject/agent/player/Player.h"
+#include "player/Player.h"
 #include "../graphics/ui/View.h"
+#include "../gameLogic/gameObject/GameObject.h"
 
 class GameState
 {

@@ -6,7 +6,6 @@
 
 #include "GameManager.h"
 #include "ResourceManager.h"
-#include "../core/CONSTANTS.h"
 
 void DrawManager::draw()
 {

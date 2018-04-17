@@ -1,7 +1,7 @@
 #ifndef AGENT_H
 #define AGENT_H
 
-#include "../GameObject.h"
+#include "GameObject.h"
 
 class Agent : public GameObject
 {

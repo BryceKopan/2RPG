@@ -123,33 +123,6 @@ game/fast:
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/build
 .PHONY : game/fast
 
-src/core/BoundingBox.o: src/core/BoundingBox.cpp.o
-
-.PHONY : src/core/BoundingBox.o
-
-# target to build an object file
-src/core/BoundingBox.cpp.o:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/BoundingBox.cpp.o
-.PHONY : src/core/BoundingBox.cpp.o
-
-src/core/BoundingBox.i: src/core/BoundingBox.cpp.i
-
-.PHONY : src/core/BoundingBox.i
-
-# target to preprocess a source file
-src/core/BoundingBox.cpp.i:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/BoundingBox.cpp.i
-.PHONY : src/core/BoundingBox.cpp.i
-
-src/core/BoundingBox.s: src/core/BoundingBox.cpp.s
-
-.PHONY : src/core/BoundingBox.s
-
-# target to generate assembly for a file
-src/core/BoundingBox.cpp.s:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/BoundingBox.cpp.s
-.PHONY : src/core/BoundingBox.cpp.s
-
 src/core/GameState.o: src/core/GameState.cpp.o
 
 .PHONY : src/core/GameState.o
@@ -176,87 +149,6 @@ src/core/GameState.s: src/core/GameState.cpp.s
 src/core/GameState.cpp.s:
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/GameState.cpp.s
 .PHONY : src/core/GameState.cpp.s
-
-src/core/gameobject/GameObject.o: src/core/gameobject/GameObject.cpp.o
-
-.PHONY : src/core/gameobject/GameObject.o
-
-# target to build an object file
-src/core/gameobject/GameObject.cpp.o:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/gameobject/GameObject.cpp.o
-.PHONY : src/core/gameobject/GameObject.cpp.o
-
-src/core/gameobject/GameObject.i: src/core/gameobject/GameObject.cpp.i
-
-.PHONY : src/core/gameobject/GameObject.i
-
-# target to preprocess a source file
-src/core/gameobject/GameObject.cpp.i:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/gameobject/GameObject.cpp.i
-.PHONY : src/core/gameobject/GameObject.cpp.i
-
-src/core/gameobject/GameObject.s: src/core/gameobject/GameObject.cpp.s
-
-.PHONY : src/core/gameobject/GameObject.s
-
-# target to generate assembly for a file
-src/core/gameobject/GameObject.cpp.s:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/gameobject/GameObject.cpp.s
-.PHONY : src/core/gameobject/GameObject.cpp.s
-
-src/core/gameobject/agent/Agent.o: src/core/gameobject/agent/Agent.cpp.o
-
-.PHONY : src/core/gameobject/agent/Agent.o
-
-# target to build an object file
-src/core/gameobject/agent/Agent.cpp.o:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/gameobject/agent/Agent.cpp.o
-.PHONY : src/core/gameobject/agent/Agent.cpp.o
-
-src/core/gameobject/agent/Agent.i: src/core/gameobject/agent/Agent.cpp.i
-
-.PHONY : src/core/gameobject/agent/Agent.i
-
-# target to preprocess a source file
-src/core/gameobject/agent/Agent.cpp.i:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/gameobject/agent/Agent.cpp.i
-.PHONY : src/core/gameobject/agent/Agent.cpp.i
-
-src/core/gameobject/agent/Agent.s: src/core/gameobject/agent/Agent.cpp.s
-
-.PHONY : src/core/gameobject/agent/Agent.s
-
-# target to generate assembly for a file
-src/core/gameobject/agent/Agent.cpp.s:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/gameobject/agent/Agent.cpp.s
-.PHONY : src/core/gameobject/agent/Agent.cpp.s
-
-src/core/gameobject/agent/player/Player.o: src/core/gameobject/agent/player/Player.cpp.o
-
-.PHONY : src/core/gameobject/agent/player/Player.o
-
-# target to build an object file
-src/core/gameobject/agent/player/Player.cpp.o:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/gameobject/agent/player/Player.cpp.o
-.PHONY : src/core/gameobject/agent/player/Player.cpp.o
-
-src/core/gameobject/agent/player/Player.i: src/core/gameobject/agent/player/Player.cpp.i
-
-.PHONY : src/core/gameobject/agent/player/Player.i
-
-# target to preprocess a source file
-src/core/gameobject/agent/player/Player.cpp.i:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/gameobject/agent/player/Player.cpp.i
-.PHONY : src/core/gameobject/agent/player/Player.cpp.i
-
-src/core/gameobject/agent/player/Player.s: src/core/gameobject/agent/player/Player.cpp.s
-
-.PHONY : src/core/gameobject/agent/player/Player.s
-
-# target to generate assembly for a file
-src/core/gameobject/agent/player/Player.cpp.s:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/gameobject/agent/player/Player.cpp.s
-.PHONY : src/core/gameobject/agent/player/Player.cpp.s
 
 src/core/item/Armor.o: src/core/item/Armor.cpp.o
 
@@ -366,86 +258,32 @@ src/core/item/Weapon.cpp.s:
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/item/Weapon.cpp.s
 .PHONY : src/core/item/Weapon.cpp.s
 
-src/core/world/Chunk.o: src/core/world/Chunk.cpp.o
+src/core/player/Player.o: src/core/player/Player.cpp.o
 
-.PHONY : src/core/world/Chunk.o
-
-# target to build an object file
-src/core/world/Chunk.cpp.o:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/world/Chunk.cpp.o
-.PHONY : src/core/world/Chunk.cpp.o
-
-src/core/world/Chunk.i: src/core/world/Chunk.cpp.i
-
-.PHONY : src/core/world/Chunk.i
-
-# target to preprocess a source file
-src/core/world/Chunk.cpp.i:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/world/Chunk.cpp.i
-.PHONY : src/core/world/Chunk.cpp.i
-
-src/core/world/Chunk.s: src/core/world/Chunk.cpp.s
-
-.PHONY : src/core/world/Chunk.s
-
-# target to generate assembly for a file
-src/core/world/Chunk.cpp.s:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/world/Chunk.cpp.s
-.PHONY : src/core/world/Chunk.cpp.s
-
-src/core/world/Tile.o: src/core/world/Tile.cpp.o
-
-.PHONY : src/core/world/Tile.o
+.PHONY : src/core/player/Player.o
 
 # target to build an object file
-src/core/world/Tile.cpp.o:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/world/Tile.cpp.o
-.PHONY : src/core/world/Tile.cpp.o
+src/core/player/Player.cpp.o:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/player/Player.cpp.o
+.PHONY : src/core/player/Player.cpp.o
 
-src/core/world/Tile.i: src/core/world/Tile.cpp.i
+src/core/player/Player.i: src/core/player/Player.cpp.i
 
-.PHONY : src/core/world/Tile.i
-
-# target to preprocess a source file
-src/core/world/Tile.cpp.i:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/world/Tile.cpp.i
-.PHONY : src/core/world/Tile.cpp.i
-
-src/core/world/Tile.s: src/core/world/Tile.cpp.s
-
-.PHONY : src/core/world/Tile.s
-
-# target to generate assembly for a file
-src/core/world/Tile.cpp.s:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/world/Tile.cpp.s
-.PHONY : src/core/world/Tile.cpp.s
-
-src/core/world/TileMap.o: src/core/world/TileMap.cpp.o
-
-.PHONY : src/core/world/TileMap.o
-
-# target to build an object file
-src/core/world/TileMap.cpp.o:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/world/TileMap.cpp.o
-.PHONY : src/core/world/TileMap.cpp.o
-
-src/core/world/TileMap.i: src/core/world/TileMap.cpp.i
-
-.PHONY : src/core/world/TileMap.i
+.PHONY : src/core/player/Player.i
 
 # target to preprocess a source file
-src/core/world/TileMap.cpp.i:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/world/TileMap.cpp.i
-.PHONY : src/core/world/TileMap.cpp.i
+src/core/player/Player.cpp.i:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/player/Player.cpp.i
+.PHONY : src/core/player/Player.cpp.i
 
-src/core/world/TileMap.s: src/core/world/TileMap.cpp.s
+src/core/player/Player.s: src/core/player/Player.cpp.s
 
-.PHONY : src/core/world/TileMap.s
+.PHONY : src/core/player/Player.s
 
 # target to generate assembly for a file
-src/core/world/TileMap.cpp.s:
-	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/world/TileMap.cpp.s
-.PHONY : src/core/world/TileMap.cpp.s
+src/core/player/Player.cpp.s:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/core/player/Player.cpp.s
+.PHONY : src/core/player/Player.cpp.s
 
 src/game.o: src/game.cpp.o
 
@@ -473,6 +311,168 @@ src/game.s: src/game.cpp.s
 src/game.cpp.s:
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/game.cpp.s
 .PHONY : src/game.cpp.s
+
+src/gameLogic/BoundingBox.o: src/gameLogic/BoundingBox.cpp.o
+
+.PHONY : src/gameLogic/BoundingBox.o
+
+# target to build an object file
+src/gameLogic/BoundingBox.cpp.o:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/gameLogic/BoundingBox.cpp.o
+.PHONY : src/gameLogic/BoundingBox.cpp.o
+
+src/gameLogic/BoundingBox.i: src/gameLogic/BoundingBox.cpp.i
+
+.PHONY : src/gameLogic/BoundingBox.i
+
+# target to preprocess a source file
+src/gameLogic/BoundingBox.cpp.i:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/gameLogic/BoundingBox.cpp.i
+.PHONY : src/gameLogic/BoundingBox.cpp.i
+
+src/gameLogic/BoundingBox.s: src/gameLogic/BoundingBox.cpp.s
+
+.PHONY : src/gameLogic/BoundingBox.s
+
+# target to generate assembly for a file
+src/gameLogic/BoundingBox.cpp.s:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/gameLogic/BoundingBox.cpp.s
+.PHONY : src/gameLogic/BoundingBox.cpp.s
+
+src/gameLogic/gameObject/Agent.o: src/gameLogic/gameObject/Agent.cpp.o
+
+.PHONY : src/gameLogic/gameObject/Agent.o
+
+# target to build an object file
+src/gameLogic/gameObject/Agent.cpp.o:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/gameLogic/gameObject/Agent.cpp.o
+.PHONY : src/gameLogic/gameObject/Agent.cpp.o
+
+src/gameLogic/gameObject/Agent.i: src/gameLogic/gameObject/Agent.cpp.i
+
+.PHONY : src/gameLogic/gameObject/Agent.i
+
+# target to preprocess a source file
+src/gameLogic/gameObject/Agent.cpp.i:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/gameLogic/gameObject/Agent.cpp.i
+.PHONY : src/gameLogic/gameObject/Agent.cpp.i
+
+src/gameLogic/gameObject/Agent.s: src/gameLogic/gameObject/Agent.cpp.s
+
+.PHONY : src/gameLogic/gameObject/Agent.s
+
+# target to generate assembly for a file
+src/gameLogic/gameObject/Agent.cpp.s:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/gameLogic/gameObject/Agent.cpp.s
+.PHONY : src/gameLogic/gameObject/Agent.cpp.s
+
+src/gameLogic/gameObject/GameObject.o: src/gameLogic/gameObject/GameObject.cpp.o
+
+.PHONY : src/gameLogic/gameObject/GameObject.o
+
+# target to build an object file
+src/gameLogic/gameObject/GameObject.cpp.o:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/gameLogic/gameObject/GameObject.cpp.o
+.PHONY : src/gameLogic/gameObject/GameObject.cpp.o
+
+src/gameLogic/gameObject/GameObject.i: src/gameLogic/gameObject/GameObject.cpp.i
+
+.PHONY : src/gameLogic/gameObject/GameObject.i
+
+# target to preprocess a source file
+src/gameLogic/gameObject/GameObject.cpp.i:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/gameLogic/gameObject/GameObject.cpp.i
+.PHONY : src/gameLogic/gameObject/GameObject.cpp.i
+
+src/gameLogic/gameObject/GameObject.s: src/gameLogic/gameObject/GameObject.cpp.s
+
+.PHONY : src/gameLogic/gameObject/GameObject.s
+
+# target to generate assembly for a file
+src/gameLogic/gameObject/GameObject.cpp.s:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/gameLogic/gameObject/GameObject.cpp.s
+.PHONY : src/gameLogic/gameObject/GameObject.cpp.s
+
+src/gameLogic/world/Chunk.o: src/gameLogic/world/Chunk.cpp.o
+
+.PHONY : src/gameLogic/world/Chunk.o
+
+# target to build an object file
+src/gameLogic/world/Chunk.cpp.o:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/gameLogic/world/Chunk.cpp.o
+.PHONY : src/gameLogic/world/Chunk.cpp.o
+
+src/gameLogic/world/Chunk.i: src/gameLogic/world/Chunk.cpp.i
+
+.PHONY : src/gameLogic/world/Chunk.i
+
+# target to preprocess a source file
+src/gameLogic/world/Chunk.cpp.i:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/gameLogic/world/Chunk.cpp.i
+.PHONY : src/gameLogic/world/Chunk.cpp.i
+
+src/gameLogic/world/Chunk.s: src/gameLogic/world/Chunk.cpp.s
+
+.PHONY : src/gameLogic/world/Chunk.s
+
+# target to generate assembly for a file
+src/gameLogic/world/Chunk.cpp.s:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/gameLogic/world/Chunk.cpp.s
+.PHONY : src/gameLogic/world/Chunk.cpp.s
+
+src/gameLogic/world/Tile.o: src/gameLogic/world/Tile.cpp.o
+
+.PHONY : src/gameLogic/world/Tile.o
+
+# target to build an object file
+src/gameLogic/world/Tile.cpp.o:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/gameLogic/world/Tile.cpp.o
+.PHONY : src/gameLogic/world/Tile.cpp.o
+
+src/gameLogic/world/Tile.i: src/gameLogic/world/Tile.cpp.i
+
+.PHONY : src/gameLogic/world/Tile.i
+
+# target to preprocess a source file
+src/gameLogic/world/Tile.cpp.i:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/gameLogic/world/Tile.cpp.i
+.PHONY : src/gameLogic/world/Tile.cpp.i
+
+src/gameLogic/world/Tile.s: src/gameLogic/world/Tile.cpp.s
+
+.PHONY : src/gameLogic/world/Tile.s
+
+# target to generate assembly for a file
+src/gameLogic/world/Tile.cpp.s:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/gameLogic/world/Tile.cpp.s
+.PHONY : src/gameLogic/world/Tile.cpp.s
+
+src/gameLogic/world/TileMap.o: src/gameLogic/world/TileMap.cpp.o
+
+.PHONY : src/gameLogic/world/TileMap.o
+
+# target to build an object file
+src/gameLogic/world/TileMap.cpp.o:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/gameLogic/world/TileMap.cpp.o
+.PHONY : src/gameLogic/world/TileMap.cpp.o
+
+src/gameLogic/world/TileMap.i: src/gameLogic/world/TileMap.cpp.i
+
+.PHONY : src/gameLogic/world/TileMap.i
+
+# target to preprocess a source file
+src/gameLogic/world/TileMap.cpp.i:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/gameLogic/world/TileMap.cpp.i
+.PHONY : src/gameLogic/world/TileMap.cpp.i
+
+src/gameLogic/world/TileMap.s: src/gameLogic/world/TileMap.cpp.s
+
+.PHONY : src/gameLogic/world/TileMap.s
+
+# target to generate assembly for a file
+src/gameLogic/world/TileMap.cpp.s:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/gameLogic/world/TileMap.cpp.s
+.PHONY : src/gameLogic/world/TileMap.cpp.s
 
 src/graphics/Sprite.o: src/graphics/Sprite.cpp.o
 
@@ -915,21 +915,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... game"
-	@echo "... src/core/BoundingBox.o"
-	@echo "... src/core/BoundingBox.i"
-	@echo "... src/core/BoundingBox.s"
 	@echo "... src/core/GameState.o"
 	@echo "... src/core/GameState.i"
 	@echo "... src/core/GameState.s"
-	@echo "... src/core/gameobject/GameObject.o"
-	@echo "... src/core/gameobject/GameObject.i"
-	@echo "... src/core/gameobject/GameObject.s"
-	@echo "... src/core/gameobject/agent/Agent.o"
-	@echo "... src/core/gameobject/agent/Agent.i"
-	@echo "... src/core/gameobject/agent/Agent.s"
-	@echo "... src/core/gameobject/agent/player/Player.o"
-	@echo "... src/core/gameobject/agent/player/Player.i"
-	@echo "... src/core/gameobject/agent/player/Player.s"
 	@echo "... src/core/item/Armor.o"
 	@echo "... src/core/item/Armor.i"
 	@echo "... src/core/item/Armor.s"
@@ -942,18 +930,30 @@ help:
 	@echo "... src/core/item/Weapon.o"
 	@echo "... src/core/item/Weapon.i"
 	@echo "... src/core/item/Weapon.s"
-	@echo "... src/core/world/Chunk.o"
-	@echo "... src/core/world/Chunk.i"
-	@echo "... src/core/world/Chunk.s"
-	@echo "... src/core/world/Tile.o"
-	@echo "... src/core/world/Tile.i"
-	@echo "... src/core/world/Tile.s"
-	@echo "... src/core/world/TileMap.o"
-	@echo "... src/core/world/TileMap.i"
-	@echo "... src/core/world/TileMap.s"
+	@echo "... src/core/player/Player.o"
+	@echo "... src/core/player/Player.i"
+	@echo "... src/core/player/Player.s"
 	@echo "... src/game.o"
 	@echo "... src/game.i"
 	@echo "... src/game.s"
+	@echo "... src/gameLogic/BoundingBox.o"
+	@echo "... src/gameLogic/BoundingBox.i"
+	@echo "... src/gameLogic/BoundingBox.s"
+	@echo "... src/gameLogic/gameObject/Agent.o"
+	@echo "... src/gameLogic/gameObject/Agent.i"
+	@echo "... src/gameLogic/gameObject/Agent.s"
+	@echo "... src/gameLogic/gameObject/GameObject.o"
+	@echo "... src/gameLogic/gameObject/GameObject.i"
+	@echo "... src/gameLogic/gameObject/GameObject.s"
+	@echo "... src/gameLogic/world/Chunk.o"
+	@echo "... src/gameLogic/world/Chunk.i"
+	@echo "... src/gameLogic/world/Chunk.s"
+	@echo "... src/gameLogic/world/Tile.o"
+	@echo "... src/gameLogic/world/Tile.i"
+	@echo "... src/gameLogic/world/Tile.s"
+	@echo "... src/gameLogic/world/TileMap.o"
+	@echo "... src/gameLogic/world/TileMap.i"
+	@echo "... src/gameLogic/world/TileMap.s"
 	@echo "... src/graphics/Sprite.o"
 	@echo "... src/graphics/Sprite.i"
 	@echo "... src/graphics/Sprite.s"

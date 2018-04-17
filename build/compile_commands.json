@@ -21,43 +21,43 @@
 },
 {
   "directory": "/home/bryce/2RPG/build",
-  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/core/BoundingBox.cpp.o -c /home/bryce/2RPG/src/core/BoundingBox.cpp",
-  "file": "/home/bryce/2RPG/src/core/BoundingBox.cpp"
-},
-{
-  "directory": "/home/bryce/2RPG/build",
-  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/core/gameobject/GameObject.cpp.o -c /home/bryce/2RPG/src/core/gameobject/GameObject.cpp",
-  "file": "/home/bryce/2RPG/src/core/gameobject/GameObject.cpp"
-},
-{
-  "directory": "/home/bryce/2RPG/build",
-  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/core/gameobject/agent/Agent.cpp.o -c /home/bryce/2RPG/src/core/gameobject/agent/Agent.cpp",
-  "file": "/home/bryce/2RPG/src/core/gameobject/agent/Agent.cpp"
-},
-{
-  "directory": "/home/bryce/2RPG/build",
-  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/core/gameobject/agent/player/Player.cpp.o -c /home/bryce/2RPG/src/core/gameobject/agent/player/Player.cpp",
-  "file": "/home/bryce/2RPG/src/core/gameobject/agent/player/Player.cpp"
-},
-{
-  "directory": "/home/bryce/2RPG/build",
-  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/core/world/TileMap.cpp.o -c /home/bryce/2RPG/src/core/world/TileMap.cpp",
-  "file": "/home/bryce/2RPG/src/core/world/TileMap.cpp"
-},
-{
-  "directory": "/home/bryce/2RPG/build",
-  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/core/world/Chunk.cpp.o -c /home/bryce/2RPG/src/core/world/Chunk.cpp",
-  "file": "/home/bryce/2RPG/src/core/world/Chunk.cpp"
-},
-{
-  "directory": "/home/bryce/2RPG/build",
-  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/core/world/Tile.cpp.o -c /home/bryce/2RPG/src/core/world/Tile.cpp",
-  "file": "/home/bryce/2RPG/src/core/world/Tile.cpp"
+  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/core/player/Player.cpp.o -c /home/bryce/2RPG/src/core/player/Player.cpp",
+  "file": "/home/bryce/2RPG/src/core/player/Player.cpp"
 },
 {
   "directory": "/home/bryce/2RPG/build",
   "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/core/GameState.cpp.o -c /home/bryce/2RPG/src/core/GameState.cpp",
   "file": "/home/bryce/2RPG/src/core/GameState.cpp"
+},
+{
+  "directory": "/home/bryce/2RPG/build",
+  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/gameLogic/gameObject/GameObject.cpp.o -c /home/bryce/2RPG/src/gameLogic/gameObject/GameObject.cpp",
+  "file": "/home/bryce/2RPG/src/gameLogic/gameObject/GameObject.cpp"
+},
+{
+  "directory": "/home/bryce/2RPG/build",
+  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/gameLogic/gameObject/Agent.cpp.o -c /home/bryce/2RPG/src/gameLogic/gameObject/Agent.cpp",
+  "file": "/home/bryce/2RPG/src/gameLogic/gameObject/Agent.cpp"
+},
+{
+  "directory": "/home/bryce/2RPG/build",
+  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/gameLogic/BoundingBox.cpp.o -c /home/bryce/2RPG/src/gameLogic/BoundingBox.cpp",
+  "file": "/home/bryce/2RPG/src/gameLogic/BoundingBox.cpp"
+},
+{
+  "directory": "/home/bryce/2RPG/build",
+  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/gameLogic/world/TileMap.cpp.o -c /home/bryce/2RPG/src/gameLogic/world/TileMap.cpp",
+  "file": "/home/bryce/2RPG/src/gameLogic/world/TileMap.cpp"
+},
+{
+  "directory": "/home/bryce/2RPG/build",
+  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/gameLogic/world/Chunk.cpp.o -c /home/bryce/2RPG/src/gameLogic/world/Chunk.cpp",
+  "file": "/home/bryce/2RPG/src/gameLogic/world/Chunk.cpp"
+},
+{
+  "directory": "/home/bryce/2RPG/build",
+  "command": "/usr/bin/c++    -I/home/bryce/2RPG/game -I/home/bryce/2RPG/PUBLIC -I/usr/include/x86_64-linux-gnu    -std=gnu++11 -o CMakeFiles/game.dir/src/gameLogic/world/Tile.cpp.o -c /home/bryce/2RPG/src/gameLogic/world/Tile.cpp",
+  "file": "/home/bryce/2RPG/src/gameLogic/world/Tile.cpp"
 },
 {
   "directory": "/home/bryce/2RPG/build",
