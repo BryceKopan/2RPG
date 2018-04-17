@@ -1,8 +1,13 @@
 #include "NPC.h"
 
-NPC::NPC(int x, int y, Sprite sprite) :
+#include <math.h>
+
+#include "../../core/GameState.h"
+
+NPC::NPC(int x, int y, Sprite sprite, int detectionRange) :
     Agent(x, y, sprite)
 {
+    this->detectionRange = detectionRange;
 }
 
 //Duplicate Agent Update and call npcUpdate
@@ -13,10 +18,60 @@ void NPC::update()
     npcUpdate();
 
     x += dX;
-    y += dY
+    y += dY;
 }
 
-void NPC:npcUpdate()
+void NPC::npcUpdate()
 {
-    
+    setMovement();
+}
+
+void NPC::setMovement()
+{
+    Agent player = *GameState::instance->player;
+
+    if(sqrt(pow(player.x - x, 2) + pow(player.y - y, 2)) <= 
+            detectionRange)
+    {
+        if(player.x < x && player.y < y)
+        {
+            dX = -1;
+            dY = -1;
+        }
+        else if(player.x == x && player.y < y)
+        {
+            dX = 0;
+            dY = -1;
+        }
+        else if(player.x > x && player.y < y)
+        {
+            dX = 1;
+            dY = -1;
+        }
+        else if(player.x > x && player.y == y)
+        {
+            dX = 1;
+            dY = 0;
+        }
+        else if(player.x > x && player.y > y)
+        {
+            dX = 1;
+            dY = 1;
+        }
+        else if(player.x == x && player.y > y)
+        {
+            dX = 0;
+            dY = 1;
+        }
+        else if(player.x < x && player.y > y)
+        {
+            dX = -1;
+            dY = 1;
+        }
+        else if(player.x < x && player.y == y)
+        {
+            dX = -1;
+            dY = 0;
+        }
+    }
 }

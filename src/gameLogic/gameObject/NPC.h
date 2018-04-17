@@ -6,12 +6,15 @@
 class NPC : public Agent
 {
     public:
-        NPC(int x, int y, Sprite sprite);
+        int detectionRange = 0;
+
+        NPC(int x, int y, Sprite sprite, int detectionRange);
 
         void update();
         void doUpdate(){};
     private:
         void npcUpdate();
+        void setMovement();
 };
 
 #endif

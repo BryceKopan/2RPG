@@ -40,7 +40,7 @@ void GameObject::deathCleanup()
     {
         if(this == gameState->aliveObjects[i])
         {
-            gameState->aliveObjects.erase(gameState->aliveObjects.begin() + i)
+            gameState->aliveObjects.erase(gameState->aliveObjects.begin() + i);
         }
     }
 
