@@ -5,7 +5,6 @@ class LogicManager
 {
     public:
         static void update();
-    private:
 };
 
 #endif

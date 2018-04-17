@@ -10,7 +10,7 @@ class Agent : public GameObject
 
         Agent(int x, int y, Sprite sprite);
 
-        void update();
+        virtual void update();
         virtual void doUpdate(){};
 };
 
