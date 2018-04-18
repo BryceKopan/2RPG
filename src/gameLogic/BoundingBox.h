@@ -4,11 +4,15 @@
 class BoundingBox
 {
     public:
-        int x, y, xMax, yMax;
+        int x, y, width, height, xMax, yMax;
 
+        BoundingBox(){};
         BoundingBox(int x, int y, int width, int height);
 
+        void update(int x, int y);
+        BoundingBox at(int x, int y);
         bool intersects(BoundingBox bbox);
+        void draw();
 };
 
 #endif

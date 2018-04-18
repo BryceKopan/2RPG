@@ -14,11 +14,9 @@ NPC::NPC(int x, int y, Sprite sprite, int detectionRange) :
 //Done to solve the multi-level hook problem
 void NPC::update()
 {
-    doUpdate();
     npcUpdate();
-
-    x += dX;
-    y += dY;
+    Agent::update();
+    doUpdate();
 }
 
 void NPC::npcUpdate()
@@ -73,5 +71,10 @@ void NPC::setMovement()
             dX = -1;
             dY = 0;
         }
+    }
+    else
+    {
+        dX = 0;
+        dY = 0;
     }
 }

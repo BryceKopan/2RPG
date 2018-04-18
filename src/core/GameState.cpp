@@ -12,7 +12,7 @@ GameState::GameState()
     aliveObjects.push_back(player);
 
     Sprite goblinSprite("res/dungeon1.png", 64, 192, 32, 32);
-    aliveObjects.push_back(new NPC(120, 120, goblinSprite, 30));
+    aliveObjects.push_back(new NPC(120, 120, goblinSprite, 100));
     aliveObjects.push_back(new NPC(0, 0, goblinSprite, 30));
     aliveObjects.push_back(new NPC(200, 120, goblinSprite, 30));
     aliveObjects.push_back(new NPC(1000, 20, goblinSprite, 30));

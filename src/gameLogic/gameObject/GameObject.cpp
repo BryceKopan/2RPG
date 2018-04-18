@@ -11,16 +11,23 @@ GameObject::GameObject(int x, int y, Sprite sprite)
     this->x = x;
     this->y = y;
     this->sprite = sprite;
+    hitBox = BoundingBox(x, y, sprite.spriteWidth, sprite.spriteHeight);
 }
 
 void GameObject::draw()
 {
     sprite.draw(x, y);
+
+    if(GameState::instance->drawHitBoxes)
+    {
+        getHitBox().draw();
+    }
 }
 
 BoundingBox GameObject::getHitBox()
 {
-    return BoundingBox(x, y, sprite.spriteWidth, sprite.spriteHeight);
+    hitBox.update(x, y);
+    return hitBox;
 }
 
 void GameObject::death()

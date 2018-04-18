@@ -12,6 +12,7 @@ class GameObject
         Sprite sprite;
         std::string name;
         int x = 0, y = 0;
+        BoundingBox hitBox;
 
         GameObject();
         GameObject(int x, int y, Sprite sprite);

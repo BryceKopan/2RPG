@@ -3,6 +3,8 @@
 
 #include "GameObject.h"
 
+#include <vector>
+
 class Agent : public GameObject
 {
     public:
@@ -12,6 +14,9 @@ class Agent : public GameObject
 
         virtual void update();
         virtual void doUpdate(){};
+
+    private:
+        std::vector<GameObject*> getCollisions(BoundingBox hitBox);
 };
 
 #endif

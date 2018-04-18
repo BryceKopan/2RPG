@@ -12,6 +12,8 @@ class GameState
     public:
         static GameState* instance;
 
+        bool drawHitBoxes = true;
+
         Player* player;
         std::vector<GameObject*> aliveObjects;
         std::vector<GameObject*> deadObjects;

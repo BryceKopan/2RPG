@@ -56,6 +56,10 @@ void GameView::processInput(ALLEGRO_EVENT event)
 
             //Utility Input
             case ALLEGRO_KEY_F7:
+                if(gameState->drawHitBoxes)
+                    gameState->drawHitBoxes = false;
+                else
+                    gameState->drawHitBoxes = true;                
                 break;
 
             case ALLEGRO_KEY_ESCAPE:
@@ -70,6 +74,7 @@ void GameView::processInput(ALLEGRO_EVENT event)
     {
         switch(event.keyboard.keycode)
         {
+            //Movement
             case ALLEGRO_KEY_W:
                 gameState->player->dY = 0;
                 break;
@@ -85,7 +90,6 @@ void GameView::processInput(ALLEGRO_EVENT event)
             case ALLEGRO_KEY_D:
                 gameState->player->dX = 0;
                 break;
-
         }
     }
 }
