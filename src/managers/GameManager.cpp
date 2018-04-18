@@ -8,7 +8,6 @@
 #include "InputManager.h"
 #include "LogicManager.h"
 #include "DrawManager.h"
-#include "../graphics/ui/GameView.h"
 
 bool GameManager::isRunning = true;
 ALLEGRO_EVENT_QUEUE* GameManager::eventQueue;
@@ -59,9 +58,6 @@ void GameManager::init()
     al_register_event_source(eventQueue, al_get_display_event_source(display));
 
     GameState::instance = new GameState();
-
-    //Temp
-    GameState::instance->currentView = new GameView();
 }
 
 void GameManager::loadGameData()
@@ -85,6 +81,7 @@ void GameManager::gameLoop()
             redraw = true;
         }
         else if (event.type == ALLEGRO_EVENT_KEY_DOWN ||
+                event.type == ALLEGRO_EVENT_KEY_UP ||
                 event.type == ALLEGRO_EVENT_MOUSE_BUTTON_DOWN ||
                 event.type == ALLEGRO_EVENT_MOUSE_BUTTON_UP)
         {

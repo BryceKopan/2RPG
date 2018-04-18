@@ -1,12 +1,10 @@
 #include "GameView.h"
 
-#include "TextElement.h"
-#include "CharacterMenuView.h"
-#include "InventoryMenuView.h"
+#include "../../graphics/ui/TextElement.h"
 #include "../../managers/GameManager.h"
 #include "../../managers/LogicManager.h"
 #include "../../managers/ResourceManager.h"
-#include "../../core/GameState.h"
+#include "../GameState.h"
 
 GameView::GameView()
 {
@@ -36,12 +34,24 @@ void GameView::processInput(ALLEGRO_EVENT event)
     GameState* gameState = GameState::instance;
 
     if(event.type == ALLEGRO_EVENT_KEY_DOWN)
-    {    
+    {
         switch(event.keyboard.keycode)
         {
             //Movement
             case ALLEGRO_KEY_W:
-                gameState->player->dX = 1;
+                gameState->player->dY = -2;
+                break;
+
+            case ALLEGRO_KEY_A:
+                gameState->player->dX = -2;
+                break;
+
+            case ALLEGRO_KEY_S:
+                gameState->player->dY = 2;
+                break;
+
+            case ALLEGRO_KEY_D:
+                gameState->player->dX = 2;
                 break;
 
             //Utility Input
@@ -52,18 +62,30 @@ void GameView::processInput(ALLEGRO_EVENT event)
                 GameManager::isRunning = false;
                 break;
 
-            case ALLEGRO_KEY_X:
-                delete gameState->currentView;
-                gameState->currentView = new CharacterMenuView(); 
-                break;
-
-            case ALLEGRO_KEY_I:
-                delete gameState->currentView;
-                gameState->currentView = new InventoryMenuView();
-                break;
-
             case ALLEGRO_KEY_L:
                 break;
+        }
+    }
+    else if(event.type == ALLEGRO_EVENT_KEY_UP)
+    {
+        switch(event.keyboard.keycode)
+        {
+            case ALLEGRO_KEY_W:
+                gameState->player->dY = 0;
+                break;
+
+            case ALLEGRO_KEY_A:
+                gameState->player->dX = 0;
+                break;
+
+            case ALLEGRO_KEY_S:
+                gameState->player->dY = 0;
+                break;
+
+            case ALLEGRO_KEY_D:
+                gameState->player->dX = 0;
+                break;
+
         }
     }
 }

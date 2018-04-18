@@ -1,7 +1,7 @@
 #ifndef GAME_VIEW_H
 #define GAME_VIEW_H
 
-#include "View.h"
+#include "../../graphics/ui/View.h"
 
 class GameView : public View
 {

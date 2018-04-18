@@ -1,7 +1,7 @@
 #include "GameState.h"
 
 #include "../gameLogic/gameObject/NPC.h"
-#include "../graphics/ui/GameView.h"
+#include "views/GameView.h"
 
 GameState* GameState::instance;
 
@@ -13,6 +13,9 @@ GameState::GameState()
 
     Sprite goblinSprite("res/dungeon1.png", 64, 192, 32, 32);
     aliveObjects.push_back(new NPC(120, 120, goblinSprite, 30));
+    aliveObjects.push_back(new NPC(0, 0, goblinSprite, 30));
+    aliveObjects.push_back(new NPC(200, 120, goblinSprite, 30));
+    aliveObjects.push_back(new NPC(1000, 20, goblinSprite, 30));
 
     currentView = new GameView();
 }
