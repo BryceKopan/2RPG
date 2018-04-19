@@ -6,6 +6,7 @@
 #include "player/Player.h"
 #include "../graphics/ui/View.h"
 #include "../gameLogic/gameObject/GameObject.h"
+#include "../gameLogic/world/TileMap.h"
 
 class GameState
 {
@@ -13,6 +14,8 @@ class GameState
         static GameState* instance;
 
         bool drawHitBoxes = true;
+
+        TileMap tileMap;
 
         Player* player;
         std::vector<GameObject*> aliveObjects;

@@ -11,12 +11,14 @@ class TileMap
     public:
         int tileWidth, tileHeight;
         std::unordered_map<int , Tile> tileSet;
+        int map[CHUNK_SIZE][CHUNK_SIZE] = {};      
 
         TileMap(){};
         TileMap(int tileWidth, int tileHeight);
 
-        int map[CHUNK_SIZE][CHUNK_SIZE] = {};      
-    private:
+        void draw();
+        void draw(int x, int y);
+        Tile getTile(int x, int y);
 };
 
 #endif
