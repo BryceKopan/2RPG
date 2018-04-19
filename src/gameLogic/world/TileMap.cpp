@@ -16,7 +16,6 @@ void TileMap::draw()
             getTile(x, y).draw(x * tileWidth, y * tileHeight);
         }
     }
-
 }
 
 void TileMap::draw(int x, int y)
@@ -25,5 +24,5 @@ void TileMap::draw(int x, int y)
 
 Tile TileMap::getTile(int x, int y)
 {
-    return tileSet[map[y][x]];
+    return tileSet[map[x][y]];
 }

@@ -19,7 +19,6 @@ void DrawManager::draw()
 
     Player* player = gameState->player;
 
-
     //Screen Grid
     /*al_draw_line(GameManager::SCREEN_WIDTH/2, 0, 
             GameManager::SCREEN_WIDTH/2, GameManager::SCREEN_HEIGHT,
@@ -39,6 +38,9 @@ void DrawManager::draw()
             (player->sprite.spriteHeight / 2)
             );
     al_use_transform(&transform);
+
+    //Draw TileMap
+    gameState->tileMap.draw();
 
     //Draw Alive Objects
     for(int i = 0; i < gameState->aliveObjects.size(); i++)

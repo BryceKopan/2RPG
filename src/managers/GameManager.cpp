@@ -8,6 +8,7 @@
 #include "InputManager.h"
 #include "LogicManager.h"
 #include "DrawManager.h"
+#include "../resources/TMXParser.h"
 
 bool GameManager::isRunning = true;
 ALLEGRO_EVENT_QUEUE* GameManager::eventQueue;
@@ -62,7 +63,7 @@ void GameManager::init()
 
 void GameManager::loadGameData()
 {
-    //TMXParser::parseTMXFile("res/StartTemple2.tmx");
+    TMXParser::parseTMXFile("res/StartTemple2.tmx");
 } 
 
 void GameManager::gameLoop()
