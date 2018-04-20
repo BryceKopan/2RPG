@@ -12,10 +12,12 @@ void Agent::update()
 {
     doUpdate();
 
-    std::vector<GameObject*> collidedObjects = 
-        getCollisions(hitBox.at(x + dX, y + dY));
+    BoundingBox nextHitBox = hitBox.at(x + dX, y + dY);
 
-    if(collidedObjects.size() == 0)
+    std::vector<GameObject*> collidedObjects = 
+        getCollisions(nextHitBox);
+
+    if(collidedObjects.size() == 0 && !collidedWithWall(nextHitBox))
     {
         x += dX;
         y += dY;
@@ -37,4 +39,32 @@ std::vector<GameObject*> Agent::getCollisions(BoundingBox hitBox)
     }
 
     return collidedObjects;
+}
+
+bool Agent::collidedWithWall(BoundingBox hitBox)
+{
+    GameState* gameState = GameState::instance;
+    TileMap* tileMap = &gameState->tileMap;
+
+    int leftTile = hitBox.x / tileMap->tileWidth;
+    int rightTile = hitBox.xMax / tileMap->tileWidth;
+    int topTile = hitBox.y / tileMap->tileHeight;
+    int bottomTile = hitBox.yMax / tileMap->tileHeight;
+
+    bool collision = false;
+
+    for(int x = leftTile; x <= rightTile; x++)
+    {
+        for(int y = topTile; y <= bottomTile; y++)
+        {
+            Tile tile = tileMap->getTile(x, y);
+
+            if(tile.collidable)
+            {
+                collision = true;
+            }
+        }
+    }
+
+    return collision;
 }

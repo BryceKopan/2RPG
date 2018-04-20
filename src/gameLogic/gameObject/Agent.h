@@ -17,6 +17,7 @@ class Agent : public GameObject
 
     private:
         std::vector<GameObject*> getCollisions(BoundingBox hitBox);
+        bool collidedWithWall(BoundingBox hitBox);
 };
 
 #endif
