@@ -1,6 +1,8 @@
 #include "BoundingBox.h"
 
-#include "allegro5/allegro_primitives.h"
+#include <allegro5/allegro_primitives.h>
+
+#include "../core/GameState.h"
 
 BoundingBox::BoundingBox(int x, int y, int width, int height)
 {
@@ -16,12 +18,6 @@ void BoundingBox::update(int x, int y)
     this->xMax = x + width;
     this->yMax = y + height;
 }
-
-BoundingBox BoundingBox::at(int x, int y)
-{
-    return BoundingBox(x, y, width, height);
-}
-
 
 bool BoundingBox::intersects(BoundingBox bbox)
 {

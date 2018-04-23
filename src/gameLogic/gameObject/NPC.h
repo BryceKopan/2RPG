@@ -8,7 +8,7 @@ class NPC : public Agent
     public:
         int detectionRange = 0;
 
-        NPC(int x, int y, Sprite sprite, int detectionRange);
+        NPC(int x, int y, bool collidable, Sprite sprite, int detectionRange);
 
         void update();
         void doUpdate(){};

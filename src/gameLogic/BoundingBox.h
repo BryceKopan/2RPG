@@ -10,7 +10,6 @@ class BoundingBox
         BoundingBox(int x, int y, int width, int height);
 
         void update(int x, int y);
-        BoundingBox at(int x, int y);
         bool intersects(BoundingBox bbox);
         void draw();
 };

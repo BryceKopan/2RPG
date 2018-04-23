@@ -1,9 +1,11 @@
 #include "Agent.h"
 
+#include <cmath>
+
 #include "../../core/GameState.h"
 
-Agent::Agent(int x, int y, Sprite sprite) : 
-    GameObject(x, y, sprite)
+Agent::Agent(int x, int y, bool collidable, Sprite sprite) : 
+    GameObject(x, y, collidable, sprite)
 {
 }
 
@@ -12,59 +14,40 @@ void Agent::update()
 {
     doUpdate();
 
-    BoundingBox nextHitBox = hitBox.at(x + dX, y + dY);
+    move(dX, dY);
+}
+
+void Agent::move(int dX, int dY)
+{
+    GameState* gameState = GameState::instance;
+
+    int oldX = x;
+    x += dX;
+    hitBox.update(x, y);
 
     std::vector<GameObject*> collidedObjects = 
-        getCollisions(nextHitBox);
+        getCollidedObjects(gameState->aliveObjects, hitBox);
 
-    if(collidedObjects.size() == 0 && !collidedWithWall(nextHitBox))
+    bool collided = (collidedWithTiles(hitBox) || 
+            collidedObjects.size() != 0);
+
+    if(collided)
     {
-        x += dX;
-        y += dY;
-    }
-}
-
-std::vector<GameObject*> Agent::getCollisions(BoundingBox hitBox)
-{
-    GameState* gameState = GameState::instance;
-    std::vector<GameObject*> collidedObjects;
-
-    for(int i = 0; i < gameState->aliveObjects.size(); i++)
-    {
-        if(hitBox.intersects(gameState->aliveObjects[i]->getHitBox()) &&
-                this != gameState->aliveObjects[i])
-        {
-            collidedObjects.push_back(gameState->aliveObjects[i]);
-        }
+        x = oldX;
     }
 
-    return collidedObjects;
-}
+    int oldY = y;
+    y += dY;
+    hitBox.update(x, y);
 
-bool Agent::collidedWithWall(BoundingBox hitBox)
-{
-    GameState* gameState = GameState::instance;
-    TileMap* tileMap = &gameState->tileMap;
+    collidedObjects = 
+        getCollidedObjects(gameState->aliveObjects, hitBox);
 
-    int leftTile = hitBox.x / tileMap->tileWidth;
-    int rightTile = hitBox.xMax / tileMap->tileWidth;
-    int topTile = hitBox.y / tileMap->tileHeight;
-    int bottomTile = hitBox.yMax / tileMap->tileHeight;
+    collided = (collidedWithTiles(hitBox) || 
+                collidedObjects.size() != 0);
 
-    bool collision = false;
-
-    for(int x = leftTile; x <= rightTile; x++)
+    if(collided)
     {
-        for(int y = topTile; y <= bottomTile; y++)
-        {
-            Tile tile = tileMap->getTile(x, y);
-
-            if(tile.collidable)
-            {
-                collision = true;
-            }
-        }
+        y = oldY;
     }
-
-    return collision;
 }
