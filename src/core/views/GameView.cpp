@@ -1,5 +1,7 @@
 #include "GameView.h"
 
+#include <math.h>
+
 #include "../../graphics/ui/TextElement.h"
 #include "../../managers/GameManager.h"
 #include "../../managers/LogicManager.h"
@@ -8,12 +10,6 @@
 
 GameView::GameView()
 {
-    ALLEGRO_FONT* font1 = ResourceManager::loadFont("res/fonts/merienda/Merienda-Regular.ttf", 72);
-    int screenWidth = GameManager::SCREEN_WIDTH;
-
-    elements.push_back(new TextElement(25, 0, font1, al_map_rgb(0, 255, 0), ALLEGRO_ALIGN_LEFT));
-
-    elements.push_back(new TextElement(screenWidth - 25, 0, font1, al_map_rgb(255, 255, 255), ALLEGRO_ALIGN_RIGHT));
 }
 
 void GameView::draw()
@@ -32,26 +28,38 @@ void GameView::update()
 void GameView::processInput(ALLEGRO_EVENT event)
 {
     GameState* gameState = GameState::instance;
+    Player* player = gameState->player;
 
-    if(event.type == ALLEGRO_EVENT_KEY_DOWN)
+    if(event.type == ALLEGRO_EVENT_MOUSE_AXES)
+    {
+        int tanY = (event.mouse.y - (GameManager::SCREEN_HEIGHT/2));
+        int tanX = (event.mouse.x - (GameManager::SCREEN_WIDTH/2));
+        int angle = atan2(tanY, tanX) * (180/M_PI);
+
+        if(angle < 0)
+            angle = 360 - (-angle);
+
+        player->facingAngle = angle;
+    }
+    else if(event.type == ALLEGRO_EVENT_KEY_DOWN)
     {
         switch(event.keyboard.keycode)
         {
             //Movement
             case ALLEGRO_KEY_W:
-                gameState->player->dY = -2;
+                player->dY = -2;
                 break;
 
             case ALLEGRO_KEY_A:
-                gameState->player->dX = -2;
+                player->dX = -2;
                 break;
 
             case ALLEGRO_KEY_S:
-                gameState->player->dY = 2;
+                player->dY = 2;
                 break;
 
             case ALLEGRO_KEY_D:
-                gameState->player->dX = 2;
+                player->dX = 2;
                 break;
 
             //Utility Input
@@ -76,19 +84,19 @@ void GameView::processInput(ALLEGRO_EVENT event)
         {
             //Movement
             case ALLEGRO_KEY_W:
-                gameState->player->dY = 0;
+                player->dY = 0;
                 break;
 
             case ALLEGRO_KEY_A:
-                gameState->player->dX = 0;
+                player->dX = 0;
                 break;
 
             case ALLEGRO_KEY_S:
-                gameState->player->dY = 0;
+                player->dY = 0;
                 break;
 
             case ALLEGRO_KEY_D:
-                gameState->player->dX = 0;
+                player->dX = 0;
                 break;
         }
     }

@@ -41,6 +41,9 @@ void GameManager::init()
     if(!al_install_keyboard())
         abortGame("Failed to install keyboard");
 
+    if(!al_install_mouse())
+        abortGame("Failed to install mouse");
+
     timer = al_create_timer(1.0 / FPS);
     if (!timer)
         abortGame("Failed to create timer");
@@ -54,9 +57,10 @@ void GameManager::init()
     if (!eventQueue)
         abortGame("Failed to create event queue");
 
-    al_register_event_source(eventQueue, al_get_keyboard_event_source());
-    al_register_event_source(eventQueue, al_get_timer_event_source(timer)); 
     al_register_event_source(eventQueue, al_get_display_event_source(display));
+    al_register_event_source(eventQueue, al_get_keyboard_event_source());
+    al_register_event_source(eventQueue, al_get_mouse_event_source());
+    al_register_event_source(eventQueue, al_get_timer_event_source(timer)); 
 
     GameState::instance = new GameState();
 }
@@ -84,7 +88,8 @@ void GameManager::gameLoop()
         else if (event.type == ALLEGRO_EVENT_KEY_DOWN ||
                 event.type == ALLEGRO_EVENT_KEY_UP ||
                 event.type == ALLEGRO_EVENT_MOUSE_BUTTON_DOWN ||
-                event.type == ALLEGRO_EVENT_MOUSE_BUTTON_UP)
+                event.type == ALLEGRO_EVENT_MOUSE_BUTTON_UP ||
+                event.type == ALLEGRO_EVENT_MOUSE_AXES)
         {
             InputManager::Process(event);
         }

@@ -9,7 +9,6 @@ Agent::Agent(int x, int y, bool collidable, Sprite sprite) :
 {
 }
 
-//TODO move agent up to where the collision is
 void Agent::update()
 {
     doUpdate();
@@ -17,37 +16,46 @@ void Agent::update()
     move(dX, dY);
 }
 
+//TODO move agent up to where the collision is
 void Agent::move(int dX, int dY)
 {
     GameState* gameState = GameState::instance;
+    std::vector<GameObject*> collidedObjects;
+    bool collided;
 
-    int oldX = x;
-    x += dX;
-    hitBox.update(x, y);
-
-    std::vector<GameObject*> collidedObjects = 
-        getCollidedObjects(gameState->aliveObjects, hitBox);
-
-    bool collided = (collidedWithTiles(hitBox) || 
-            collidedObjects.size() != 0);
-
-    if(collided)
+    if(dX != 0)
     {
-        x = oldX;
-    }
+        int oldX = x;
+        x += dX;
+        hitBox.update(x, y);
 
-    int oldY = y;
-    y += dY;
-    hitBox.update(x, y);
+        collidedObjects = 
+            getCollidedObjects(gameState->aliveObjects, hitBox);
 
-    collidedObjects = 
-        getCollidedObjects(gameState->aliveObjects, hitBox);
-
-    collided = (collidedWithTiles(hitBox) || 
+        collided = (collidedWithTiles(hitBox) || 
                 collidedObjects.size() != 0);
 
-    if(collided)
+        if(collided)
+        {
+            x = oldX;
+        }
+    }
+
+    if(dY != 0)
     {
-        y = oldY;
+        int oldY = y;
+        y += dY;
+        hitBox.update(x, y);
+
+        collidedObjects = 
+            getCollidedObjects(gameState->aliveObjects, hitBox);
+
+        collided = (collidedWithTiles(hitBox) || 
+                collidedObjects.size() != 0);
+
+        if(collided)
+        {
+            y = oldY;
+        }
     }
 }

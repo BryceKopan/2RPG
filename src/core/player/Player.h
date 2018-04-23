@@ -6,6 +6,8 @@
 class Player : public Agent
 {
     public:
+        int facingAngle;
+
         Player(int x, int y, Sprite sprite);
 };
 
