@@ -12,7 +12,6 @@ class GameObject
 {
     public:
         Sprite sprite;
-        std::string name;
         int x = 0, y = 0;
         BoundingBox hitBox;
         bool collidable;

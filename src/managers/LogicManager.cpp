@@ -15,7 +15,7 @@ void LogicManager::update()
     //gameState->textPool.update();
     gameState->currentView->update();
 
-    for(int i = 9; i < gameState->deadObjects.size(); i++)
+    for(int i = 0; i < gameState->deadObjects.size(); i++)
     {
         gameState->deadObjects[i]->deathCleanup();
     }

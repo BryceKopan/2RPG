@@ -41,6 +41,16 @@ void GameView::processInput(ALLEGRO_EVENT event)
 
         player->facingAngle = angle;
     }
+    else if(event.type == ALLEGRO_EVENT_MOUSE_BUTTON_DOWN)
+    {
+        //printf("%d\n", event.mouse.button);
+        switch(event.mouse.button)
+        {
+            case 1:
+                player->action->useAction();
+                break;
+        }
+    }
     else if(event.type == ALLEGRO_EVENT_KEY_DOWN)
     {
         switch(event.keyboard.keycode)
