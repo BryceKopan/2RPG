@@ -1,5 +1,6 @@
 #include "Attack.h"
 
+#include "../../Util.h"
 #include "../gameObject/NPC.h"
 #include "../../core/GameState.h"
 
@@ -8,14 +9,16 @@ Attack::Attack(int x, int y, Sprite sprite, bool playerFriendly, int lifeTime) :
 {
     this->playerFriendly = playerFriendly;
     this->lifeTime = lifeTime;
-    creationTime = std::time(nullptr);
+    creationTime = Util::getMillisecondTime();
 }
 
 void Attack::update()
 {
     GameState* gameState = GameState::instance;
 
-    if(std::time(nullptr) - creationTime > lifeTime)
+    long currentTime = Util::getMillisecondTime();
+
+    if(currentTime - creationTime > lifeTime)
     {
         death();
     }

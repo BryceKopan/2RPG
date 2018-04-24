@@ -1,19 +1,21 @@
 #include "Action.h"
 
+#include "../../Util.h"
+
 Action::Action(GameObject* user, int cooldown)
 {
     this->user = user;
     this->cooldown = cooldown;
-    lastTimeUsed = std::time(nullptr);
+    timeLastUsed = 0;
 }
 
 void Action::useAction()
 {
-    std::time_t currentTime = std::time(nullptr);
+    long currentTime = Util::getMillisecondTime();
 
-    if(currentTime - lastTimeUsed > cooldown)
+    if(currentTime - timeLastUsed > cooldown)
     {
-        lastTimeUsed = currentTime;
+        timeLastUsed = currentTime;
 
         doAction();
     }

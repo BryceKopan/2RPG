@@ -9,7 +9,7 @@ class Action
 {
     public:
         GameObject* user;
-        std::time_t lastTimeUsed;
+        long timeLastUsed;
         int cooldown;
 
         Action(GameObject* user, int cooldown);

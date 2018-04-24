@@ -9,7 +9,7 @@ class Attack : public GameObject
 {
     public:
         int lifeTime;
-        std::time_t creationTime;
+        long creationTime;
         bool playerFriendly;
 
         Attack(int x, int y, Sprite sprite, bool playerFriendly, int lifeTime);
