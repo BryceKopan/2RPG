@@ -11,7 +11,7 @@ class Agent : public GameObject
         Agent(int x, int y, bool collidable, Sprite sprite);
 
         virtual void update();
-        virtual void doUpdate(){};
+        //TODO get collision working of OnCollision
 
     private:
         void move(int dX, int dY);

@@ -14,29 +14,23 @@ Attack::Attack(int x, int y, Sprite sprite, bool playerFriendly, int lifeTime) :
 
 void Attack::update()
 {
-    GameState* gameState = GameState::instance;
-
     long currentTime = Util::getMillisecondTime();
 
     if(currentTime - creationTime > lifeTime)
-    {
         death();
-    }
     else
+        GameObject::update();
+}
+
+void Attack::onObjectCollision(ObjectVector gameObjects)
+{
+    for(int i = 0; i < gameObjects.size(); i++)
     {
-        doUpdate();
-
-        std::vector<GameObject*> collidedObjects = 
-            getCollidedObjects(gameState->aliveObjects, hitBox);
-
-        for(int i = 0; i < collidedObjects.size(); i++)
+        if(playerFriendly)
         {
-            if(playerFriendly)
+            if(dynamic_cast<NPC*>(gameObjects[i]))
             {
-                if(dynamic_cast<NPC*>(collidedObjects[i]))
-                {
-                    collidedObjects[i]->death();
-                }
+                gameObjects[i]->death();
             }
         }
     }

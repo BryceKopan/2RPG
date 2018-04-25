@@ -8,28 +8,36 @@
 #include "../BoundingBox.h"
 #include "../../graphics/Sprite.h"
 
+class GameObject;
+
+typedef std::vector<GameObject*> ObjectVector;
+typedef std::vector<std::tuple<int, int>> TileVector;
+
 class GameObject
 {
     public:
         Sprite sprite;
         int x = 0, y = 0;
-        BoundingBox hitBox;
         bool collidable;
 
-        GameObject();
+        GameObject(){};
         GameObject(int x, int y, bool collidable, Sprite sprite);
+
+        virtual void update();
+
+        void death();
+        void deathCleanup();
 
         void draw();
         BoundingBox getHitBox();
-        virtual void update(){};
-        void death();
-        virtual void onDeath(){};
-        void deathCleanup();
 
-        std::vector<GameObject*> getCollidedObjects(
-                std::vector<GameObject*> gameObjects, 
-                BoundingBox hitBox);
+        virtual void onObjectCollision(ObjectVector gameObjects){};
+        virtual void onTileCollision(TileVector tileLocations){};
 
-        bool collidedWithTiles(BoundingBox hitBox);
+        ObjectVector getCollidedObjects(BoundingBox hitBox);
+        TileVector getCollidedTiles(BoundingBox hitBox);
+
+    private:
+        BoundingBox hitBox;
 };
 #endif

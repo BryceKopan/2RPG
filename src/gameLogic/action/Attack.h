@@ -15,7 +15,8 @@ class Attack : public GameObject
         Attack(int x, int y, Sprite sprite, bool playerFriendly, int lifeTime);
 
         virtual void update();
-        virtual void doUpdate(){};
+
+        virtual void onObjectCollision(ObjectVector gameObjects);
 };
 
 #endif

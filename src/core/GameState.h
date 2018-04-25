@@ -18,8 +18,7 @@ class GameState
         TileMap tileMap;
 
         Player* player;
-        std::vector<GameObject*> aliveObjects;
-        std::vector<GameObject*> deadObjects;
+        ObjectVector aliveObjects, deadObjects;
         View* currentView;
 
         //All Defualt Values set in constructor
