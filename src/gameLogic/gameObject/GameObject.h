@@ -1,7 +1,6 @@
 #ifndef GAME_OBJECT_H
 #define GAME_OBJECT_H
 
-#include <tuple>
 #include <string>
 #include <vector>
 
@@ -11,7 +10,6 @@
 class GameObject;
 
 typedef std::vector<GameObject*> ObjectVector;
-typedef std::vector<std::tuple<int, int>> TileVector;
 
 class GameObject
 {
@@ -23,7 +21,7 @@ class GameObject
         GameObject(){};
         GameObject(int x, int y, bool collidable, Sprite sprite);
 
-        virtual void update();
+        virtual void update(){};
 
         void death();
         void deathCleanup();
@@ -32,10 +30,7 @@ class GameObject
         BoundingBox getHitBox();
 
         virtual void onObjectCollision(ObjectVector gameObjects){};
-        virtual void onTileCollision(TileVector tileLocations){};
-
-        ObjectVector getCollidedObjects(BoundingBox hitBox);
-        TileVector getCollidedTiles(BoundingBox hitBox);
+        virtual void onTileCollision(){};
 
     private:
         BoundingBox hitBox;

@@ -11,10 +11,12 @@ class Agent : public GameObject
         Agent(int x, int y, bool collidable, Sprite sprite);
 
         virtual void update();
-        //TODO get collision working of OnCollision
+        virtual void onObjectCollision(ObjectVector gameObjects);
+        virtual void onTileCollision();
 
     private:
         void move(int dX, int dY);
+        void correctPosition();
 };
 
 #endif
