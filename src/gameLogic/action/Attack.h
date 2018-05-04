@@ -1,8 +1,6 @@
 #ifndef ATTACK_H
 #define ATTACK_H
 
-#include <ctime>
-
 #include "../gameObject/GameObject.h"
 
 class Attack : public GameObject
