@@ -19,22 +19,13 @@ void Projectile::update()
 
 void Projectile::onObjectCollision(ObjectVector gameObjects)
 {
-    for(int i; i < gameObjects.size(); i++)
+    for(int i = 0; i < gameObjects.size(); i++)
     {
         if(playerFriendly)
         {
             if(dynamic_cast<NPC*>(gameObjects[i]))
             {
-                gameObjects[i]->death();
-                death();
-            }
-        }
-        else 
-        {
-            if(dynamic_cast<Player*>(gameObjects[i]))
-            {
-                gameObjects[i]->death();
-                death();
+                isAlive = false;
             }
         }
     }
@@ -43,7 +34,7 @@ void Projectile::onObjectCollision(ObjectVector gameObjects)
 
 void Projectile::onTileCollision()
 {
-    death();
+    isAlive = false;
     Attack::onTileCollision();
 }
 

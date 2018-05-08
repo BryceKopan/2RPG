@@ -16,15 +16,14 @@ class GameObject
     public:
         Sprite sprite;
         int x = 0, y = 0;
-        bool collidable;
+        bool collidable, isAlive = true;
 
         GameObject(){};
         GameObject(int x, int y, bool collidable, Sprite sprite);
 
-        virtual void update(){};
+        virtual void update();
 
         void death();
-        void deathCleanup();
 
         void draw();
         BoundingBox getHitBox();

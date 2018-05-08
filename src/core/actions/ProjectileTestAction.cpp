@@ -13,7 +13,7 @@ void ProjectileTestAction::doAction()
     GameState* gameState = GameState::instance;
 
     Sprite sprite("res/TestProjectile.png", 10, 10);
-    Projectile* attack = new Projectile(user->x + 16, user->y + 16, 5, 5,
-            sprite, true, 200);
+    Projectile* attack = new Projectile(user->x + 16, user->y + 16, 
+            3, 3, sprite, true, 2000);
     gameState->aliveObjects.push_back(attack);
 }

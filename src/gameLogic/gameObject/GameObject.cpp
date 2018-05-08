@@ -11,14 +11,15 @@ GameObject::GameObject(int x, int y, bool collidable,Sprite sprite)
     hitBox = BoundingBox(x, y, sprite.spriteWidth, sprite.spriteHeight);
 }
 
-void GameObject::death()
+void GameObject::update()
 {
     GameState* gameState = GameState::instance;
-
-    gameState->deadObjects.push_back(this);
+    
+    if(!isAlive)
+        gameState->deadObjects.push_back(this);
 }
 
-void GameObject::deathCleanup()
+void GameObject::death()
 {
     GameState* gameState = GameState::instance;
 

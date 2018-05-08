@@ -13,6 +13,8 @@ Agent::Agent(int x, int y, bool collidable, Sprite sprite) :
 void Agent::update()
 {
     move(dX, dY);
+
+    GameObject::update();
 }
 
 void Agent::onObjectCollision(ObjectVector gameObjects)

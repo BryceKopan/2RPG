@@ -17,9 +17,9 @@ void Attack::update()
     long currentTime = Util::getMillisecondTime();
 
     if(currentTime - creationTime > lifeTime)
-        death();
-    else
-        GameObject::update();
+        isAlive = false;
+
+    GameObject::update();
 }
 
 void Attack::onObjectCollision(ObjectVector gameObjects)
@@ -30,7 +30,7 @@ void Attack::onObjectCollision(ObjectVector gameObjects)
         {
             if(dynamic_cast<NPC*>(gameObjects[i]))
             {
-                gameObjects[i]->death();
+                gameObjects[i]->isAlive = false;
             }
         }
     }

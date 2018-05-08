@@ -20,7 +20,7 @@ void LogicManager::update()
     //Cleanup dead objects
     for(int i = 0; i < gameState->deadObjects.size(); i++)
     {
-        gameState->deadObjects[i]->deathCleanup();
+        gameState->deadObjects[i]->death();
     }
 
     gameState->deadObjects.clear();
