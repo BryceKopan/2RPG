@@ -14,7 +14,7 @@ class Sprite
         Sprite(std::string imagePath, int spriteWidth, int spriteHeight);
         Sprite(std::string imagePath, int spriteSheetX, int spriteSheetY, int spriteWidth, int spriteHeight);
 
-        void draw(int x, int y);
+        void draw(double x, double y);
 };
 
 #endif

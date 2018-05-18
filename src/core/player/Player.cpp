@@ -4,7 +4,7 @@
 
 #include "../../Util.h"
 
-Player::Player(int x, int y, Sprite sprite) :
+Player::Player(double x, double y, Sprite sprite) :
     Agent(x, y, true, sprite)
 {
     action = new ProjectileTestAction(this);

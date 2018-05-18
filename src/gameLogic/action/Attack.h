@@ -10,7 +10,8 @@ class Attack : public GameObject
         long creationTime;
         bool playerFriendly;
 
-        Attack(int x, int y, Sprite sprite, bool playerFriendly, int lifeTime);
+        Attack(double x, double y, Sprite sprite, bool playerFriendly, 
+                int lifeTime);
 
         virtual void update();
 

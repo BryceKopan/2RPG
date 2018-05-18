@@ -69,7 +69,7 @@ void GameView::processInput(ALLEGRO_EVENT event)
                 break;
 
             case ALLEGRO_KEY_D:
-                player->dX = 2;
+                player->dX = 2.5;
                 break;
 
             //Utility Input

@@ -6,16 +6,16 @@
 class Agent : public GameObject
 {
     public:
-        int dX = 0, dY = 0;
+        double dX = 0, dY = 0;
 
-        Agent(int x, int y, bool collidable, Sprite sprite);
+        Agent(double x, double y, bool collidable, Sprite sprite);
 
         virtual void update();
         virtual void onObjectCollision(ObjectVector gameObjects);
         virtual void onTileCollision();
 
     private:
-        void move(int dX, int dY);
+        void move(double dX, double dY);
         void correctPosition();
 };
 

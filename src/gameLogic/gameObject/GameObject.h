@@ -4,7 +4,7 @@
 #include <string>
 #include <vector>
 
-#include "../BoundingBox.h"
+#include "../physics/BoundingBox.h"
 #include "../../graphics/Sprite.h"
 
 class GameObject;
@@ -15,11 +15,11 @@ class GameObject
 {
     public:
         Sprite sprite;
-        int x = 0, y = 0;
+        double x = 0, y = 0;
         bool collidable, isAlive = true;
 
         GameObject(){};
-        GameObject(int x, int y, bool collidable, Sprite sprite);
+        GameObject(double x, double y, bool collidable, Sprite sprite);
 
         virtual void update();
 

@@ -2,7 +2,8 @@
 
 #include "../../core/GameState.h"
 
-GameObject::GameObject(int x, int y, bool collidable,Sprite sprite)
+GameObject::GameObject(double x, double y, bool collidable,
+        Sprite sprite)
 {
     this->x = x;
     this->y = y;

@@ -3,7 +3,8 @@
 #include "../gameObject/NPC.h"
 #include "../../core/player/Player.h"
 
-Projectile::Projectile(int x, int y, int dX, int dY, Sprite sprite, 
+Projectile::Projectile(double x, double y, double dX, double dY, 
+        Sprite sprite, 
         bool playerFriendly, int lifeTime) :
     Attack(x, y, sprite, playerFriendly, lifeTime)
 {
@@ -38,7 +39,7 @@ void Projectile::onTileCollision()
     Attack::onTileCollision();
 }
 
-void Projectile::move(int dX, int dY)
+void Projectile::move(double dX, double dY)
 {
     x += dX;
     y += dY;

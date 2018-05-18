@@ -20,7 +20,7 @@ Sprite::Sprite(std::string imagePath, int spriteSheetX, int spriteSheetY, int sp
     this->spriteHeight = spriteHeight;
 }
 
-void Sprite::draw(int x, int y)
+void Sprite::draw(double x, double y)
 {
     al_draw_bitmap_region(
             spriteSheet,

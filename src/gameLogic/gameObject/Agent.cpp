@@ -5,7 +5,7 @@
 #include "../physics/CollisionDetector.h"
 #include "../../core/GameState.h"
 
-Agent::Agent(int x, int y, bool collidable, Sprite sprite) : 
+Agent::Agent(double x, double y, bool collidable, Sprite sprite) : 
     GameObject(x, y, collidable, sprite)
 {
 }
@@ -82,7 +82,7 @@ void Agent::onTileCollision()
     }
 }
 
-void Agent::move(int dX, int dY)
+void Agent::move(double dX, double dY)
 {
     x += dX;
     y += dY;

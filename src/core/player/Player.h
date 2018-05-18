@@ -10,7 +10,7 @@ class Player : public Agent
         int facingAngle;
         Action* action;
 
-        Player(int x, int y, Sprite sprite);
+        Player(double x, double y, Sprite sprite);
 };
 
 #endif

@@ -2,16 +2,16 @@
 
 #include <allegro5/allegro_primitives.h>
 
-#include "../core/GameState.h"
+#include "../../core/GameState.h"
 
-BoundingBox::BoundingBox(int x, int y, int width, int height)
+BoundingBox::BoundingBox(double x, double y, double width, double height)
 {
     this->width = width;
     this->height = height;
     update(x, y);
 }
 
-void BoundingBox::update(int x, int y)
+void BoundingBox::update(double x, double y)
 {
     this->x = x;
     this->y = y;

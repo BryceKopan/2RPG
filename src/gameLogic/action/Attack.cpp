@@ -4,7 +4,8 @@
 #include "../gameObject/NPC.h"
 #include "../../core/GameState.h"
 
-Attack::Attack(int x, int y, Sprite sprite, bool playerFriendly, int lifeTime) :
+Attack::Attack(double x, double y, Sprite sprite, bool playerFriendly, 
+        int lifeTime) :
     GameObject(x, y, false, sprite)
 {
     this->playerFriendly = playerFriendly;
