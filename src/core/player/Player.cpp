@@ -2,8 +2,6 @@
 
 #include "../actions/ProjectileTestAction.h"
 
-#include "../../Util.h"
-
 Player::Player(double x, double y, Sprite sprite) :
     Agent(x, y, true, sprite)
 {

@@ -1,6 +1,6 @@
 #include "Action.h"
 
-#include "../../Util.h"
+#include "../../util/Util.h"
 
 Action::Action(GameObject* user, int cooldown)
 {

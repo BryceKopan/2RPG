@@ -1,6 +1,6 @@
 #include "Attack.h"
 
-#include "../../Util.h"
+#include "../../util/Util.h"
 #include "../gameObject/NPC.h"
 #include "../../core/GameState.h"
 
