@@ -4,7 +4,11 @@
 class LogicManager
 {
     public:
+        static void initialize();
         static void update();
+
+    private:
+        static double lastFrameTime;
 };
 
 #endif

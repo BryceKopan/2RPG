@@ -14,6 +14,7 @@ class GameState
         static GameState* instance;
 
         bool drawHitBoxes = true;
+        double deltaTime = 0;
 
         TileMap tileMap;
 

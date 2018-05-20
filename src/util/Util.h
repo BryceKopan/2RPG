@@ -17,6 +17,11 @@ class Util
             
             return value.count();
         };
+
+        static double getPreciseSecondTime()
+        {   
+            return (double) getMillisecondTime() / 1000;
+        };
 };
 
 #endif

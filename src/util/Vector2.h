@@ -4,8 +4,9 @@
 class Vector2 
 {
     public:
-        double x, y;
+        double x = 0, y = 0;
 
+        Vector2(){};
         Vector2(double x, double y);
 
         void setPolarCoordinates(double magnitude, int angle);

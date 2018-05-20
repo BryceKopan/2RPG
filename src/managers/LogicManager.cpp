@@ -2,10 +2,17 @@
 
 #include "../core/GameState.h"
 #include "../gameLogic/physics/CollisionDetector.h"
+#include "../util/Util.h"
+
+double LogicManager::lastFrameTime;
 
 void LogicManager::update()
 {
     GameState* gameState = GameState::instance;
+
+    double currentTime = Util::getPreciseSecondTime();
+    gameState->deltaTime = currentTime - lastFrameTime;
+    lastFrameTime = currentTime;
 
     //Update all objects
     for(int i = 0; i < gameState->aliveObjects.size(); i++)
@@ -26,4 +33,7 @@ void LogicManager::update()
     gameState->deadObjects.clear();
 }
 
-
+void LogicManager::initialize()
+{
+    lastFrameTime = Util::getPreciseSecondTime();
+}

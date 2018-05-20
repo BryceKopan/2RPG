@@ -1,20 +1,21 @@
 #include "Projectile.h"
 
+#include "../../core/GameState.h"
 #include "../gameObject/NPC.h"
 #include "../../core/player/Player.h"
 
-Projectile::Projectile(double x, double y, double dX, double dY, 
-        Sprite sprite, 
-        bool playerFriendly, int lifeTime) :
+Projectile::Projectile(double x, double y, 
+        Vector2 velocity, double speed,
+        Sprite sprite, bool playerFriendly, int lifeTime) :
     Attack(x, y, sprite, playerFriendly, lifeTime)
 {
-    this->dX = dX;
-    this->dY = dY;
+    this->velocity = velocity;
+    this->speed = speed;
 }
 
 void Projectile::update()
 {
-    move(dX, dY);
+    move();
     Attack::update();
 }
 
@@ -39,8 +40,12 @@ void Projectile::onTileCollision()
     Attack::onTileCollision();
 }
 
-void Projectile::move(double dX, double dY)
+void Projectile::move()
 {
-    x += dX;
-    y += dY;
+    GameState* gameState = GameState::instance;
+
+    velocity.normalize();
+
+    x += velocity.x * speed * gameState->deltaTime;
+    y += velocity.y * speed * gameState->deltaTime;
 }

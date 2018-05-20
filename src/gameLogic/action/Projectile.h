@@ -3,10 +3,13 @@
 
 #include "Attack.h"
 
+#include "../../util/Vector2.h"
+
 class Projectile : public Attack
 {
     public:
-        Projectile(double x, double y, double dX, double dY, 
+        Projectile(double x, double y, 
+                Vector2 velocity, double speed, 
                 Sprite sprite, bool playerFriendly, int lifeTime);
 
         virtual void update();
@@ -14,9 +17,10 @@ class Projectile : public Attack
         virtual void onObjectCollision(ObjectVector gameObjects);
         virtual void onTileCollision();
     private:
-        double dX, dY;
+        Vector2 velocity;
+        double speed;
 
-        void move(double dX, double dY);
+        void move();
 };
 
 #endif
