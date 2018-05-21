@@ -37,7 +37,7 @@ void GameView::processInput(ALLEGRO_EVENT event)
         int angle = atan2(tanY, tanX) * (180/M_PI);
 
         if(angle < 0)
-            angle = 360 - (-angle);
+            angle = 360 + angle;
 
         player->facingAngle = angle;
     }
@@ -47,7 +47,7 @@ void GameView::processInput(ALLEGRO_EVENT event)
         switch(event.mouse.button)
         {
             case 1:
-                player->action->useAction();
+                player->action->useAction(player->facingAngle);
                 break;
         }
     }

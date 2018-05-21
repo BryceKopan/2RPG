@@ -1,6 +1,7 @@
 #include "Vector2.h"
 
-#include <math.h>
+#include <cmath>
+#include <stdio.h>
 
 Vector2::Vector2(double x, double y)
 {
@@ -10,8 +11,8 @@ Vector2::Vector2(double x, double y)
 
 void Vector2::setPolarCoordinates(double magnitude, int angle)
 {
-    x = magnitude * cos(angle);
-    y = magnitude * sin(angle);
+    x = magnitude * cos(angle * M_PI / 180);
+    y = magnitude * sin(angle * M_PI / 180);
 }
 
 double Vector2::getMagnitude()

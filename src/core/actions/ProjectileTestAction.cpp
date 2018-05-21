@@ -8,12 +8,12 @@ ProjectileTestAction::ProjectileTestAction(GameObject* user) :
 {
 }
 
-void ProjectileTestAction::doAction()
+void ProjectileTestAction::doAction(int angle)
 {
     GameState* gameState = GameState::instance;
 
-    Vector2 velocity(3, 3);
-    //velocity.setPolarCoordinates(1, 100);
+    Vector2 velocity;
+    velocity.setPolarCoordinates(1, angle);
     Sprite sprite("res/TestProjectile.png", 10, 10);
     Projectile* attack = new Projectile(user->x + 16, user->y + 16, 
             velocity, 100, sprite, true, 2000);

@@ -9,7 +9,7 @@ class ProjectileTestAction : public Action
         ProjectileTestAction(GameObject* user);
 
     private:
-        void doAction();
+        void doAction(int angle);
 };
 
 #endif

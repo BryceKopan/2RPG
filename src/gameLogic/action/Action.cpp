@@ -9,7 +9,7 @@ Action::Action(GameObject* user, int cooldown)
     timeLastUsed = 0;
 }
 
-void Action::useAction()
+void Action::useAction(int angle)
 {
     long currentTime = Util::getMillisecondTime();
 
@@ -17,6 +17,6 @@ void Action::useAction()
     {
         timeLastUsed = currentTime;
 
-        doAction();
+        doAction(angle);
     }
 }

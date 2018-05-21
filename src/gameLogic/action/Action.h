@@ -14,8 +14,8 @@ class Action
 
         Action(GameObject* user, int cooldown);
         
-        void useAction();
-        virtual void doAction() = 0;
+        void useAction(int angle);
+        virtual void doAction(int angle) = 0;
 };
 
 #endif

@@ -8,7 +8,7 @@ TestAction::TestAction(GameObject* user) :
 {
 }
 
-void TestAction::doAction()
+void TestAction::doAction(int angle)
 {
     GameState* gameState = GameState::instance;
 
