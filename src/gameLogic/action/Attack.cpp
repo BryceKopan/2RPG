@@ -5,17 +5,17 @@
 #include "../../core/GameState.h"
 
 Attack::Attack(double x, double y, Sprite sprite, bool playerFriendly, 
-        int lifeTime) :
+        double lifeTime) :
     GameObject(x, y, false, sprite)
 {
     this->playerFriendly = playerFriendly;
     this->lifeTime = lifeTime;
-    creationTime = Util::getMillisecondTime();
+    creationTime = Util::getPreciseSecondTime();
 }
 
 void Attack::update()
 {
-    long currentTime = Util::getMillisecondTime();
+    double currentTime = Util::getPreciseSecondTime();
 
     if(currentTime - creationTime > lifeTime)
         isAlive = false;

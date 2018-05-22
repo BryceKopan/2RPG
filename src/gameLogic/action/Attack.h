@@ -6,12 +6,11 @@
 class Attack : public GameObject
 {
     public:
-        int lifeTime;
-        long creationTime;
+        double lifeTime, creationTime;
         bool playerFriendly;
 
         Attack(double x, double y, Sprite sprite, bool playerFriendly, 
-                int lifeTime);
+                double lifeTime);
 
         virtual void update();
 

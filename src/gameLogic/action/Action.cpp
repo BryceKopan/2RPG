@@ -2,7 +2,7 @@
 
 #include "../../util/Util.h"
 
-Action::Action(GameObject* user, int cooldown)
+Action::Action(GameObject* user, double cooldown)
 {
     this->user = user;
     this->cooldown = cooldown;
@@ -11,7 +11,7 @@ Action::Action(GameObject* user, int cooldown)
 
 void Action::useAction(int angle)
 {
-    long currentTime = Util::getMillisecondTime();
+    double currentTime = Util::getPreciseSecondTime();
 
     if(currentTime - timeLastUsed > cooldown)
     {

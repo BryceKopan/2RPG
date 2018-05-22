@@ -9,10 +9,9 @@ class Action
 {
     public:
         GameObject* user;
-        long timeLastUsed;
-        int cooldown;
+        double cooldown, timeLastUsed;
 
-        Action(GameObject* user, int cooldown);
+        Action(GameObject* user, double cooldown);
         
         void useAction(int angle);
         virtual void doAction(int angle) = 0;

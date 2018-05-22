@@ -6,6 +6,12 @@
 class Util
 {
     public:
+        static double getPreciseSecondTime()
+        {   
+            return (double) getMillisecondTime() / 1000;
+        };
+
+    private:
         static long getMillisecondTime()
         {
             using namespace std::chrono;
@@ -16,11 +22,6 @@ class Util
             auto value = duration_cast<milliseconds>(epoch);
             
             return value.count();
-        };
-
-        static double getPreciseSecondTime()
-        {   
-            return (double) getMillisecondTime() / 1000;
         };
 };
 
