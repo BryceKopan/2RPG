@@ -6,7 +6,7 @@
 
 NPC::NPC(double x, double y, bool collidable, Sprite sprite, 
         double detectionRange) :
-    Agent(x, y, collidable, sprite)
+    Agent(x, y, 90, collidable, sprite)
 {
     this->detectionRange = detectionRange;
 }
@@ -29,53 +29,14 @@ void NPC::setMovement()
 {
     Agent player = *GameState::instance->player;
 
-    if(sqrt(pow(player.x - x, 2) + pow(player.y - y, 2)) <= 
-            detectionRange)
+    Vector2 vectorToPlayer(player.x - x, player.y - y);
+
+    if(vectorToPlayer.getMagnitude() <= detectionRange)
     {
-        if(player.x < x && player.y < y)
-        {
-            dX = -1;
-            dY = -1;
-        }
-        else if(player.x == x && player.y < y)
-        {
-            dX = 0;
-            dY = -1;
-        }
-        else if(player.x > x && player.y < y)
-        {
-            dX = 1;
-            dY = -1;
-        }
-        else if(player.x > x && player.y == y)
-        {
-            dX = 1;
-            dY = 0;
-        }
-        else if(player.x > x && player.y > y)
-        {
-            dX = 1;
-            dY = 1;
-        }
-        else if(player.x == x && player.y > y)
-        {
-            dX = 0;
-            dY = 1;
-        }
-        else if(player.x < x && player.y > y)
-        {
-            dX = -1;
-            dY = 1;
-        }
-        else if(player.x < x && player.y == y)
-        {
-            dX = -1;
-            dY = 0;
-        }
+        velocity = vectorToPlayer;
     }
     else
     {
-        dX = 0;
-        dY = 0;
+        velocity = Vector2(0, 0);
     }
 }

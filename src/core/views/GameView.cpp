@@ -57,19 +57,19 @@ void GameView::processInput(ALLEGRO_EVENT event)
         {
             //Movement
             case ALLEGRO_KEY_W:
-                player->dY = -2;
+                player->velocity += Vector2(0, -1);
                 break;
 
             case ALLEGRO_KEY_A:
-                player->dX = -2;
+                player->velocity += Vector2(-1, 0);
                 break;
 
             case ALLEGRO_KEY_S:
-                player->dY = 2;
+                player->velocity += Vector2(0, 1);
                 break;
 
             case ALLEGRO_KEY_D:
-                player->dX = 2.5;
+                player->velocity += Vector2(1, 0);
                 break;
 
             //Utility Input
@@ -94,19 +94,19 @@ void GameView::processInput(ALLEGRO_EVENT event)
         {
             //Movement
             case ALLEGRO_KEY_W:
-                player->dY = 0;
+                player->velocity -= Vector2(0, -1);
                 break;
 
             case ALLEGRO_KEY_A:
-                player->dX = 0;
+                player->velocity -= Vector2(-1, 0);
                 break;
 
             case ALLEGRO_KEY_S:
-                player->dY = 0;
+                player->velocity -= Vector2(0, 1);
                 break;
 
             case ALLEGRO_KEY_D:
-                player->dX = 0;
+                player->velocity -= Vector2(1, 0);
                 break;
         }
     }

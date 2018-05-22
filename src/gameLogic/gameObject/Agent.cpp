@@ -5,23 +5,30 @@
 #include "../physics/CollisionDetector.h"
 #include "../../core/GameState.h"
 
-Agent::Agent(double x, double y, bool collidable, Sprite sprite) : 
+Agent::Agent(double x, double y, double speed, bool collidable, 
+        Sprite sprite) : 
     GameObject(x, y, collidable, sprite)
 {
+    this->speed = speed;
 }
 
 void Agent::update()
 {
-    move(dX, dY);
+    move(velocity);
 
     GameObject::update();
 }
 
 void Agent::onObjectCollision(ObjectVector gameObjects)
 {
+    GameState* gameState = GameState::instance;
+
     if(CollisionDetector::detectObjectCollision(this, gameObjects))
     {
-        move(-dX, -dY);
+        move(-velocity);
+
+        double dX = velocity.getNormalX() * speed * gameState->deltaTime;
+        double dY = velocity.getNormalY() * speed * gameState->deltaTime;
 
         int dx, dy;
         dX != 0 ? dX > 0 ? dx = 1 : dx = -1 : dx = 0;
@@ -53,8 +60,13 @@ void Agent::onObjectCollision(ObjectVector gameObjects)
 
 void Agent::onTileCollision()
 {
-    move(-dX, -dY);
+    GameState* gameState = GameState::instance;
 
+    move(-velocity);
+
+    double dX = velocity.getNormalX() * speed * gameState->deltaTime;
+    double dY = velocity.getNormalY() * speed * gameState->deltaTime;
+    
     int dx, dy;
     dX != 0 ? dX > 0 ? dx = 1 : dx = -1 : dx = 0;
     dY != 0 ? dY > 0 ? dy = 1 : dy = -1 : dy = 0;
@@ -80,6 +92,16 @@ void Agent::onTileCollision()
             i = dY * dy;
         }
     }
+}
+
+void Agent::move(Vector2 vector)
+{
+    GameState* gameState = GameState::instance;
+
+    vector.normalize();
+
+    x += vector.x * speed * gameState->deltaTime;
+    y += vector.y * speed * gameState->deltaTime;
 }
 
 void Agent::move(double dX, double dY)

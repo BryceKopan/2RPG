@@ -10,11 +10,14 @@ class Vector2
         Vector2(double x, double y);
 
         void setPolarCoordinates(double magnitude, int angle);
-        double getMagnitude();
         void normalize();
+        double getMagnitude();
+        double getNormalX();
+        double getNormalY();
 
         Vector2 operator+(const Vector2& rhs);
         Vector2 operator-(const Vector2& rhs);
+        Vector2 operator-();
         Vector2 operator+=(const Vector2& rhs);
         Vector2 operator-=(const Vector2& rhs);
     private:
