@@ -8,9 +8,9 @@
 class Projectile : public Attack
 {
     public:
-        Projectile(double x, double y, 
-                Vector2 velocity, double speed, 
-                Sprite sprite, bool playerFriendly, int lifeTime);
+        Projectile(double x, double y, Vector2 velocity, double speed, 
+                Sprite sprite, bool playerFriendly, int lifeTime, 
+                int damage);
 
         virtual void update();
 

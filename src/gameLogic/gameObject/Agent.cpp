@@ -6,17 +6,17 @@
 #include "../../core/GameState.h"
 
 Agent::Agent(double x, double y, double speed, bool collidable, 
-        Sprite sprite) : 
+        Sprite sprite, int health) : 
     GameObject(x, y, collidable, sprite)
 {
     this->speed = speed;
+    this->health = health; 
+    this->maxHealth = health;
 }
 
 void Agent::update()
 {
     move(velocity);
-
-    GameObject::update();
 }
 
 void Agent::onObjectCollision(ObjectVector gameObjects)
@@ -92,6 +92,20 @@ void Agent::onTileCollision()
             i = dY * dy;
         }
     }
+}
+
+int Agent::getHealth()
+{
+    return health;
+}
+
+void Agent::changeHealth(int dHealth)
+{
+    health += dHealth;
+    if(health > maxHealth)
+        health = maxHealth;
+    else if(health <= 0)
+        kill();
 }
 
 void Agent::move(Vector2 vector)

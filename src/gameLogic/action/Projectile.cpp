@@ -4,10 +4,10 @@
 #include "../gameObject/NPC.h"
 #include "../../core/player/Player.h"
 
-Projectile::Projectile(double x, double y, 
-        Vector2 velocity, double speed,
-        Sprite sprite, bool playerFriendly, int lifeTime) :
-    Attack(x, y, sprite, playerFriendly, lifeTime)
+Projectile::Projectile(double x, double y, Vector2 velocity, 
+        double speed, Sprite sprite, bool playerFriendly, int lifeTime,
+        int damage) :
+    Attack(x, y, sprite, playerFriendly, lifeTime, damage)
 {
     this->velocity = velocity;
     this->speed = speed;
@@ -27,7 +27,7 @@ void Projectile::onObjectCollision(ObjectVector gameObjects)
         {
             if(dynamic_cast<NPC*>(gameObjects[i]))
             {
-                isAlive = false;
+                kill();
             }
         }
     }
@@ -36,7 +36,7 @@ void Projectile::onObjectCollision(ObjectVector gameObjects)
 
 void Projectile::onTileCollision()
 {
-    isAlive = false;
+    kill();
     Attack::onTileCollision();
 }
 

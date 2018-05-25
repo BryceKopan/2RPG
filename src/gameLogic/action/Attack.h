@@ -7,10 +7,11 @@ class Attack : public GameObject
 {
     public:
         double lifeTime, creationTime;
+        int damage;
         bool playerFriendly;
 
         Attack(double x, double y, Sprite sprite, bool playerFriendly, 
-                double lifeTime);
+                double lifeTime, int damage);
 
         virtual void update();
 

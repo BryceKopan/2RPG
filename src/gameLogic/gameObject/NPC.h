@@ -9,7 +9,7 @@ class NPC : public Agent
         double detectionRange = 0;
 
         NPC(double x, double y, bool collidable, Sprite sprite, 
-                double detectionRange);
+                int health, double detectionRange);
 
         void update();
         void doUpdate(){};

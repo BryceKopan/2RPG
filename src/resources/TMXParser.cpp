@@ -119,7 +119,7 @@ void TMXParser::parseTMXFile(std::string xmlFilePath)
                     sprite = Sprite("res/dungeon1.png", 64, 192, 32, 32);
                     gameState->aliveObjects.push_back(
                             new NPC(x * tileWidth, y * tileHeight, 
-                                true, sprite, 100)); 
+                                true, sprite, 100, 100)); 
                     break;    
 
                 defualt:

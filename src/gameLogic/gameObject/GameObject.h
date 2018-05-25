@@ -16,13 +16,14 @@ class GameObject
     public:
         Sprite sprite;
         double x = 0, y = 0;
-        bool collidable, isAlive = true;
+        bool collidable;
 
         GameObject(){};
         GameObject(double x, double y, bool collidable, Sprite sprite);
 
-        virtual void update();
+        virtual void update() = 0;
 
+        void kill();
         void death();
 
         void draw();
@@ -32,6 +33,8 @@ class GameObject
         virtual void onTileCollision(){};
 
     private:
+        bool isAlive = true;
+
         BoundingBox hitBox;
 };
 #endif

@@ -5,11 +5,12 @@
 #include "../../core/GameState.h"
 
 Attack::Attack(double x, double y, Sprite sprite, bool playerFriendly, 
-        double lifeTime) :
+        double lifeTime, int damage) :
     GameObject(x, y, false, sprite)
 {
     this->playerFriendly = playerFriendly;
     this->lifeTime = lifeTime;
+    this->damage = damage;
     creationTime = Util::getPreciseSecondTime();
 }
 
@@ -18,9 +19,7 @@ void Attack::update()
     double currentTime = Util::getPreciseSecondTime();
 
     if(currentTime - creationTime > lifeTime)
-        isAlive = false;
-
-    GameObject::update();
+        kill();
 }
 
 void Attack::onObjectCollision(ObjectVector gameObjects)
@@ -29,9 +28,9 @@ void Attack::onObjectCollision(ObjectVector gameObjects)
     {
         if(playerFriendly)
         {
-            if(dynamic_cast<NPC*>(gameObjects[i]))
+            if(NPC* npc = dynamic_cast<NPC*>(gameObjects[i]))
             {
-                gameObjects[i]->isAlive = false;
+                npc->changeHealth(-damage);
             }
         }
     }

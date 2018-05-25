@@ -12,13 +12,18 @@ class Agent : public GameObject
         double speed;
 
         Agent(double x, double y, double speed , bool collidable, 
-                Sprite sprite);
+                Sprite spritei, int health);
 
         virtual void update();
         virtual void onObjectCollision(ObjectVector gameObjects);
         virtual void onTileCollision();
 
+        int getHealth();
+        void changeHealth(int dHealth);
+
     private:
+        int health, maxHealth;
+
         void move(Vector2 vector);
         void move(double dX, double dY);
         void correctPosition();

@@ -2,6 +2,8 @@
 
 #include "../../core/GameState.h"
 
+#include "../action/Projectile.h"
+
 void CollisionDetector::resolveCollisions(GameObject* object)
 {
     GameState* gameState = GameState::instance;

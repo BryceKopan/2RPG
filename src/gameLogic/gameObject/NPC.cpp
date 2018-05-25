@@ -5,8 +5,8 @@
 #include "../../core/GameState.h"
 
 NPC::NPC(double x, double y, bool collidable, Sprite sprite, 
-        double detectionRange) :
-    Agent(x, y, 90, collidable, sprite)
+        int health, double detectionRange) :
+    Agent(x, y, 90, collidable, sprite, health)
 {
     this->detectionRange = detectionRange;
 }
