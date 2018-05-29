@@ -2,7 +2,7 @@
 
 #include <math.h>
 
-#include "../../graphics/ui/TextElement.h"
+#include "../../graphics/ui/RectangleElement.h"
 #include "../../managers/GameManager.h"
 #include "../../managers/LogicManager.h"
 #include "../../managers/ResourceManager.h"
@@ -10,6 +10,11 @@
 
 GameView::GameView()
 {
+    ALLEGRO_COLOR red = al_map_rgb(255 ,0, 0);
+    ALLEGRO_COLOR yellow = al_map_rgb(200, 200, 0);
+
+    elements.push_back(new RectangleElement(20, 20, 110, 30, yellow));
+    elements.push_back(new RectangleElement(25, 25, 0, 20, red));
 }
 
 void GameView::draw()
@@ -23,6 +28,16 @@ void GameView::draw()
 void GameView::update()
 {
     GameState* gameState = GameState::instance;
+
+    //Update Health Bar
+    double percentHP = 
+        gameState->player->getHealth() / gameState->player->maxHealth;
+
+    if(RectangleElement* recElement = 
+            dynamic_cast<RectangleElement*>(elements[1]))
+    {
+        recElement->width = 100 * percentHP;
+    }
 }
 
 void GameView::processInput(ALLEGRO_EVENT event)

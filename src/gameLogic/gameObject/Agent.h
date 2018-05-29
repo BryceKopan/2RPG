@@ -9,7 +9,7 @@ class Agent : public GameObject
 {
     public:
         Vector2 velocity;
-        double speed;
+        double speed, maxHealth;
 
         Agent(double x, double y, double speed , bool collidable, 
                 Sprite spritei, int health);
@@ -22,7 +22,7 @@ class Agent : public GameObject
         void changeHealth(int dHealth);
 
     private:
-        int health, maxHealth;
+        int health;
 
         void move(Vector2 vector);
         void move(double dX, double dY);

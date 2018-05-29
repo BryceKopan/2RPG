@@ -10,5 +10,5 @@ RectangleElement::RectangleElement(int x, int y, int width, int height, ALLEGRO_
 
 void RectangleElement::draw()
 {
-    al_draw_filled_rectangle(x, y, width, height, color);
+    al_draw_filled_rectangle(x, y, x + width, y + height, color);
 }
