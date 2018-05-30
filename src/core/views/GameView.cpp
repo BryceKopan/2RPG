@@ -62,7 +62,7 @@ void GameView::processInput(ALLEGRO_EVENT event)
         switch(event.mouse.button)
         {
             case 1:
-                player->action->useAction(player->facingAngle);
+                player->ability->useAbility(player->facingAngle);
                 break;
         }
     }

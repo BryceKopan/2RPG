@@ -1,14 +1,14 @@
-#include "TestAction.h"
+#include "TestAbility.h"
 
 #include "../GameState.h"
 #include "../../gameLogic/gameObject/attack/Attack.h"
 
-TestAction::TestAction(GameObject* user) :
-    Action(user, 2)
+TestAbility::TestAbility(GameObject* user) :
+        Ability(user, 2)
 {
 }
 
-void TestAction::doAction(int angle)
+void TestAbility::doAbility(int angle)
 {
     GameState* gameState = GameState::instance;
 

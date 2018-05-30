@@ -1,14 +1,14 @@
-#include "ProjectileTestAction.h"
+#include "ProjectileTestAbility.h"
 
 #include "../GameState.h"
 #include "../../gameLogic/gameObject/attack/Projectile.h"
 
-ProjectileTestAction::ProjectileTestAction(GameObject* user) :
-    Action(user, .1)
+ProjectileTestAbility::ProjectileTestAbility(GameObject* user) :
+    Ability(user, .1)
 {
 }
 
-void ProjectileTestAction::doAction(int angle)
+void ProjectileTestAbility::doAbility(int angle)
 {
     GameState* gameState = GameState::instance;
 

@@ -1,15 +1,15 @@
-#include "Action.h"
+#include "Ability.h"
 
 #include "../../util/Util.h"
 
-Action::Action(GameObject* user, double cooldown)
+Ability::Ability(GameObject* user, double cooldown)
 {
     this->user = user;
     this->cooldown = cooldown;
     timeLastUsed = 0;
 }
 
-void Action::useAction(int angle)
+void Ability::useAbility(int angle)
 {
     double currentTime = Util::getPreciseSecondTime();
 
@@ -17,6 +17,6 @@ void Action::useAction(int angle)
     {
         timeLastUsed = currentTime;
 
-        doAction(angle);
+        doAbility(angle);
     }
 }

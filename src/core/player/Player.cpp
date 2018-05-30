@@ -1,9 +1,9 @@
 #include "Player.h"
 
-#include "../actions/ProjectileTestAction.h"
+#include "../abilities/ProjectileTestAbility.h"
 
 Player::Player(double x, double y, Sprite sprite) :
     Agent(x, y, 105, true, sprite, 100)
 {
-    action = new ProjectileTestAction(this);
+    ability = new ProjectileTestAbility(this);
 }
