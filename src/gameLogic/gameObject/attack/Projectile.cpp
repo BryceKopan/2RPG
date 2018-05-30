@@ -1,8 +1,8 @@
 #include "Projectile.h"
 
-#include "../../core/GameState.h"
-#include "../gameObject/NPC.h"
-#include "../../core/player/Player.h"
+#include "../../../core/GameState.h"
+#include "../NPC.h"
+#include "../../../core/player/Player.h"
 
 Projectile::Projectile(double x, double y, Vector2 velocity, 
         double speed, Sprite sprite, bool playerFriendly, int lifeTime,

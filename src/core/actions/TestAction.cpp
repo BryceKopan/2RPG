@@ -1,7 +1,7 @@
 #include "TestAction.h"
 
 #include "../GameState.h"
-#include "../../gameLogic/action/Attack.h"
+#include "../../gameLogic/gameObject/attack/Attack.h"
 
 TestAction::TestAction(GameObject* user) :
     Action(user, 2)

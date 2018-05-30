@@ -3,7 +3,7 @@
 
 #include "Attack.h"
 
-#include "../../util/Vector2.h"
+#include "../../../util/Vector2.h"
 
 class Projectile : public Attack
 {

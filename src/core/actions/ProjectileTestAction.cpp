@@ -1,7 +1,7 @@
 #include "ProjectileTestAction.h"
 
 #include "../GameState.h"
-#include "../../gameLogic/action/Projectile.h"
+#include "../../gameLogic/gameObject/attack/Projectile.h"
 
 ProjectileTestAction::ProjectileTestAction(GameObject* user) :
     Action(user, .1)

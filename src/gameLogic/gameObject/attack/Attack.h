@@ -1,7 +1,7 @@
 #ifndef ATTACK_H
 #define ATTACK_H
 
-#include "../gameObject/GameObject.h"
+#include "../GameObject.h"
 
 class Attack : public GameObject
 {

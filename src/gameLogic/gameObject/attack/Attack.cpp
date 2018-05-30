@@ -1,8 +1,8 @@
 #include "Attack.h"
 
-#include "../../util/Util.h"
-#include "../gameObject/NPC.h"
-#include "../../core/GameState.h"
+#include "../../../util/Util.h"
+#include "../NPC.h"
+#include "../../../core/GameState.h"
 
 Attack::Attack(double x, double y, Sprite sprite, bool playerFriendly, 
         double lifeTime, int damage) :
