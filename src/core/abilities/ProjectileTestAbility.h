@@ -9,7 +9,7 @@ class ProjectileTestAbility : public Ability
         ProjectileTestAbility(GameObject* user);
 
     private:
-        void doAbility(int angle);
+        void doAbility(double mouseX, double mouseY);
 };
 
 #endif

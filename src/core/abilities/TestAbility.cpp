@@ -8,7 +8,7 @@ TestAbility::TestAbility(GameObject* user) :
 {
 }
 
-void TestAbility::doAbility(int angle)
+void TestAbility::doAbility(double mouseX, double mouseY)
 {
     GameState* gameState = GameState::instance;
 

@@ -5,11 +5,11 @@
 #include "../../../core/GameState.h"
 
 Attack::Attack(double x, double y, Sprite sprite, bool playerFriendly, 
-        double lifeTime, int damage) :
+        double lifetime, int damage) :
     GameObject(x, y, false, sprite)
 {
     this->playerFriendly = playerFriendly;
-    this->lifeTime = lifeTime;
+    this->lifetime = lifetime;
     this->damage = damage;
     creationTime = Util::getPreciseSecondTime();
 }
@@ -18,7 +18,7 @@ void Attack::update()
 {
     double currentTime = Util::getPreciseSecondTime();
 
-    if(currentTime - creationTime > lifeTime)
+    if(currentTime - creationTime > lifetime)
         kill();
 }
 

@@ -13,8 +13,8 @@ class Ability
 
         Ability(GameObject* user, double cooldown);
         
-        void useAbility(int angle);
-        virtual void doAbility(int angle) = 0;
+        virtual void useAbility(double mouseX, double mouseY);
+        virtual void doAbility(double mouseX, double mouseY) = 0;
 };
 
 #endif

@@ -4,10 +4,10 @@
 #include "../NPC.h"
 #include "../../../core/player/Player.h"
 
-Projectile::Projectile(double x, double y, Vector2 velocity, 
-        double speed, Sprite sprite, bool playerFriendly, int lifeTime,
-        int damage) :
-    Attack(x, y, sprite, playerFriendly, lifeTime, damage)
+Projectile::Projectile(double x, double y, Sprite sprite, 
+        bool playerFriendly, int lifetime, int damage, 
+        Vector2 velocity, double speed) :
+    Attack(x, y, sprite, playerFriendly, lifetime, damage)
 {
     this->velocity = velocity;
     this->speed = speed;
