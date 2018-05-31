@@ -10,7 +10,7 @@ class ProjectileAbility : public AttackAbility
     public:
         ProjectileAbility(GameObject* user, double cooldown, 
                 Sprite sprite, bool playerFriendly, double lifetime, 
-                int damage, Vector2 velocity, double speed);
+                int damage, double speed);
     private:
         Vector2 velocity;
         double speed;

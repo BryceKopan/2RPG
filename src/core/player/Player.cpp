@@ -1,9 +1,13 @@
 #include "Player.h"
 
-#include "../abilities/ProjectileTestAbility.h"
+#include "../../gameLogic/ability/ProjectileAbility.h"
 
 Player::Player(double x, double y, Sprite sprite) :
     Agent(x, y, 105, true, sprite, 100)
 {
-    ability = new ProjectileTestAbility(this);
+    Sprite abilitySprite("res/TestProjectile.png", 10, 10);
+    Vector2 velocity;
+    velocity.setPolarCoordinates(1, facingAngle);
+    ability = new ProjectileAbility(this, .1, abilitySprite, true, 2, 
+            40, 100);
 }

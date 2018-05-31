@@ -14,7 +14,7 @@ class Ability
         Ability(GameObject* user, double cooldown);
         
         virtual void useAbility(double mouseX, double mouseY);
-        virtual void doAbility(double mouseX, double mouseY) = 0;
+        virtual void doAbility(double mouseX, double mouseY){};
 };
 
 #endif

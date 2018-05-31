@@ -3,20 +3,21 @@
 #include "../gameObject/attack/Projectile.h"
 #include "../../core/GameState.h"
 
-ProjectileAbility::ProjectileAbility(GameObject* user, double cooldown,
-        Sprite sprite, bool playerFriendly, double lifetime,
-        int damage, Vector2 velocity, double speed) : 
+ProjectileAbility::ProjectileAbility(GameObject* user, 
+        double cooldown, Sprite sprite, bool playerFriendly, 
+        double lifetime, int damage, double speed) : 
     AttackAbility(user, cooldown, sprite, playerFriendly, lifetime, 
             damage)
 {
-    this->velocity = velocity;
     this->speed = speed;
 }
 
 Location ProjectileAbility::getAttackLocation(double mouseX, double mouseY)
 {
     //TODO calculate actual position
-    return std::make_tuple(mouseX, mouseY);
+    velocity.setPolarCoordinates(1, 
+            GameState::instance->player->facingAngle);
+    return std::make_tuple(user->x, user->y);
 }
 
 void ProjectileAbility::createAttack(Location loc)
