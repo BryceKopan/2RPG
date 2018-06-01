@@ -12,6 +12,16 @@ class Point
             this->x = x;
             this->y = y;
         };
+        
+        Point operator+(const Point& rhs)
+        {
+            return Point(x + rhs.x, y + rhs.y);
+        }
+
+        Point operator-(const Point& rhs)
+        {
+            return Point(x - rhs.x, y - rhs.y);
+        }
 };
 
 #endif

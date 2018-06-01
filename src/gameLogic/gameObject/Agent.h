@@ -20,7 +20,6 @@ class Agent : public GameObject
 
         int getHealth();
         void changeHealth(int dHealth);
-
     private:
         int health;
 

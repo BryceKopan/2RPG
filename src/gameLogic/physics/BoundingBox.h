@@ -12,6 +12,8 @@ class BoundingBox
 
         void update(double x, double y);
         bool intersects(BoundingBox bbox);
+
+        //TODO remove
         void draw();
 };
 

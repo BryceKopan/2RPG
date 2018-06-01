@@ -16,6 +16,9 @@ class Polygon
         Polygon(Point center, std::vector<Point> points);
 
         void rotate(int angle);
+
+        //TODO remove
+        void draw();
 };
 
 #endif

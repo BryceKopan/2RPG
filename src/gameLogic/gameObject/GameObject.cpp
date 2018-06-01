@@ -9,7 +9,19 @@ GameObject::GameObject(double x, double y, bool collidable,
     this->y = y;
     this->collidable = collidable;
     this->sprite = sprite;
-    hitBox = BoundingBox(x, y, sprite.spriteWidth, sprite.spriteHeight);
+    hitBox = BoundingBox(x, y, sprite.spriteWidth, 
+            sprite.spriteHeight);
+
+    double hWdith = sprite.spriteWidth/2;
+    double hHeight = sprite.spriteHeight/2;
+
+    std::vector<Point> pts;
+    pts.push_back(Point(-hWdith, hHeight));
+    pts.push_back(Point(hWdith, hHeight));
+    pts.push_back(Point(hWdith, -hHeight));
+    pts.push_back(Point(-hWdith, -hHeight));
+    Point center(x + hWdith, y + hHeight);
+    hitPoly = Polygon(center, pts);
 }
 
 void GameObject::kill()
@@ -44,7 +56,8 @@ void GameObject::draw()
 
     if(GameState::instance->drawHitBoxes)
     {
-        getHitBox().draw();
+        //getHitBox().draw();
+        getHitPoly().draw();
     }
 }
 
@@ -52,4 +65,11 @@ BoundingBox GameObject::getHitBox()
 {
     hitBox.update(x, y);
     return hitBox;
+}
+
+Polygon GameObject::getHitPoly()
+{
+    hitPoly.center.x = x + sprite.spriteWidth/2;
+    hitPoly.center.y = y + sprite.spriteHeight/2;
+    return hitPoly;
 }
