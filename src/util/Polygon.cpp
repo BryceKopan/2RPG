@@ -3,10 +3,10 @@
 //TODO remove
 #include <allegro5/allegro_primitives.h>
 
-Polygon::Polygon(Point center, std::vector<Point> points)
+Polygon::Polygon(Point center, std::vector<Point> vertices)
 {
     this->center = center;
-    this->points = points;
+    this->vertices = vertices;
 }
 
 void Polygon::rotate(int angle)
@@ -14,25 +14,25 @@ void Polygon::rotate(int angle)
     double cs = cos(angle * M_PI/180);
     double sn = sin(angle * M_PI/180);
 
-    for(int i = 0; i < points.size(); i++)
+    for(int i = 0; i < vertices.size(); i++)
     {
-        double tempX = points[i].x * cs - points[i].y * sn;
-        double tempY = points[i].x * sn + points[i].y * cs;
+        double tempX = vertices[i].x * cs - vertices[i].y * sn;
+        double tempY = vertices[i].x * sn + vertices[i].y * cs;
 
-        points[i].x = tempX;
-        points[i].y = tempY;
+        vertices[i].x = tempX;
+        vertices[i].y = tempY;
     }
 }
 
 //TODO remove
 void Polygon::draw()
 {
-    Point p1 = points[points.size() - 1] + center;
+    Point p1 = vertices[vertices.size() - 1] + center;
     ALLEGRO_COLOR red = al_map_rgb(255, 0, 0);
 
-    for(int i = 0; i < points.size(); i++)
+    for(int i = 0; i < vertices.size(); i++)
     {
-        Point p2 = points[i] + center;
+        Point p2 = vertices[i] + center;
 
         al_draw_line(p1.x, p1.y, p2.x, p2.y, red, 1);
 

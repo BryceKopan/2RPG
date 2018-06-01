@@ -10,10 +10,10 @@ class Polygon
 {
     public:
         Point center;
-        std::vector<Point> points;
+        std::vector<Point> vertices;
 
         Polygon(){};
-        Polygon(Point center, std::vector<Point> points);
+        Polygon(Point center, std::vector<Point> vertices);
 
         void rotate(int angle);
 

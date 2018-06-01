@@ -15,13 +15,13 @@ GameObject::GameObject(double x, double y, bool collidable,
     double hWdith = sprite.spriteWidth/2;
     double hHeight = sprite.spriteHeight/2;
 
-    std::vector<Point> pts;
-    pts.push_back(Point(-hWdith, hHeight));
-    pts.push_back(Point(hWdith, hHeight));
-    pts.push_back(Point(hWdith, -hHeight));
-    pts.push_back(Point(-hWdith, -hHeight));
+    std::vector<Point> vertices;
+    vertices.push_back(Point(-hWdith, hHeight));
+    vertices.push_back(Point(hWdith, hHeight));
+    vertices.push_back(Point(hWdith, -hHeight));
+    vertices.push_back(Point(-hWdith, -hHeight));
     Point center(x + hWdith, y + hHeight);
-    hitPoly = Polygon(center, pts);
+    hitPoly = Polygon(center, vertices);
 }
 
 void GameObject::kill()
