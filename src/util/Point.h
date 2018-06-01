@@ -22,6 +22,20 @@ class Point
         {
             return Point(x - rhs.x, y - rhs.y);
         }
+        
+        Point operator+=(const Point& rhs)
+        {
+            this->x += rhs.x;
+            this->y += rhs.y;
+            return *this;
+        }
+
+        Point operator-=(const Point& rhs)
+        {
+            this->x -= rhs.x;
+            this->y -= rhs.y;
+            return *this;
+        }
 };
 
 #endif

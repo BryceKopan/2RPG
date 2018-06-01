@@ -27,8 +27,9 @@ void Agent::onObjectCollision(ObjectVector gameObjects)
     {
         move(-velocity);
 
-        double dX = velocity.getNormalX() * speed * gameState->deltaTime;
-        double dY = velocity.getNormalY() * speed * gameState->deltaTime;
+        Vector2 unit = velocity.getUnitVector();
+        double dX = unit.x * speed * gameState->deltaTime;
+        double dY = unit.y * speed * gameState->deltaTime;
 
         int dx, dy;
         dX != 0 ? dX > 0 ? dx = 1 : dx = -1 : dx = 0;
@@ -64,8 +65,9 @@ void Agent::onTileCollision()
 
     move(-velocity);
 
-    double dX = velocity.getNormalX() * speed * gameState->deltaTime;
-    double dY = velocity.getNormalY() * speed * gameState->deltaTime;
+    Vector2 unit = velocity.getUnitVector();
+    double dX = unit.x * speed * gameState->deltaTime;
+    double dY = unit.y * speed * gameState->deltaTime;
     
     int dx, dy;
     dX != 0 ? dX > 0 ? dx = 1 : dx = -1 : dx = 0;
@@ -112,10 +114,10 @@ void Agent::move(Vector2 vector)
 {
     GameState* gameState = GameState::instance;
 
-    vector.normalize();
+    Vector2 unit = vector.getUnitVector();
 
-    x += vector.x * speed * gameState->deltaTime;
-    y += vector.y * speed * gameState->deltaTime;
+    x += unit.x * speed * gameState->deltaTime;
+    y += unit.y * speed * gameState->deltaTime;
 }
 
 void Agent::move(double dX, double dY)

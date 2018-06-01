@@ -3,6 +3,12 @@
 #include <cmath>
 #include <stdio.h>
 
+Vector2::Vector2(Point p)
+{
+    this->x = p.x;
+    this->y = p.y;
+}
+
 Vector2::Vector2(double x, double y)
 {
     this->x = x;
@@ -15,40 +21,29 @@ void Vector2::setPolarCoordinates(double magnitude, int angle)
     y = magnitude * sin(angle * M_PI / 180);
 }
 
-void Vector2::normalize()
-{
-    double magnitude = getMagnitude();
-
-    if(magnitude != 0)
-    {
-        x = x / magnitude;
-        y = y / magnitude;
-    }
-}
-
 double Vector2::getMagnitude()
 {
     return sqrtf(x * x + y * y);
 }
 
-double Vector2::getNormalX()
+Vector2 Vector2::getUnitVector()
 {
     double magnitude = getMagnitude();
 
-    if(magnitude = 0)
-        return 0;
+    if(magnitude != 0)
+        return Vector2(x / magnitude, y / magnitude);
     else
-        return x / getMagnitude();
+        return Vector2(0, 0);
 }
 
-double Vector2::getNormalY()
+Vector2 Vector2::getLeftNormalVector()
 {
-    double magnitude = getMagnitude();
+    return Vector2(-x, y);
+}
 
-    if(magnitude = 0)
-        return 0;
-    else
-        return y / getMagnitude();
+Vector2 Vector2::getRightNormalVector()
+{
+    return Vector2(x, -y);
 }
 
 Vector2 Vector2::operator+(const Vector2& rhs)

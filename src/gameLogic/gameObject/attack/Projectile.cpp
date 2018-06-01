@@ -43,9 +43,8 @@ void Projectile::onTileCollision()
 void Projectile::move()
 {
     GameState* gameState = GameState::instance;
-
-    velocity.normalize();
-
-    x += velocity.x * speed * gameState->deltaTime;
-    y += velocity.y * speed * gameState->deltaTime;
+    
+    Vector2 unit = velocity.getUnitVector();
+    x += unit.x * speed * gameState->deltaTime;
+    y += unit.y * speed * gameState->deltaTime;
 }

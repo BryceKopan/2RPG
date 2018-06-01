@@ -27,15 +27,15 @@ void Polygon::rotate(int angle)
 //TODO remove
 void Polygon::draw()
 {
-    Point p1 = vertices[vertices.size() - 1] + center;
     ALLEGRO_COLOR red = al_map_rgb(255, 0, 0);
 
     for(int i = 0; i < vertices.size(); i++)
     {
-        Point p2 = vertices[i] + center;
+        Point p1 = vertices[i];
+        Point p2 = vertices[i + 1 == vertices.size() ? 0 : i + 1];
+        p1 += center;
+        p2 += center;
 
         al_draw_line(p1.x, p1.y, p2.x, p2.y, red, 1);
-
-        p1 = p2;
     }
 }
