@@ -46,6 +46,11 @@ Vector2 Vector2::getRightNormalVector()
     return Vector2(x, -y);
 }
 
+double Vector2::dotProduct(Vector2 vector)
+{
+    return (x * vector.x) + (y * vector.y);
+}
+
 Vector2 Vector2::operator+(const Vector2& rhs)
 {
     return Vector2(x + rhs.x, y + rhs.y);

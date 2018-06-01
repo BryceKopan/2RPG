@@ -18,6 +18,7 @@ class Vector2
         Vector2 getLeftNormalVector();
         Vector2 getRightNormalVector();
 
+        double dotProduct(Vector2 vector);
         Vector2 operator+(const Vector2& rhs);
         Vector2 operator-(const Vector2& rhs);
         Vector2 operator-();

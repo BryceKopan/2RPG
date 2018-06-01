@@ -79,3 +79,4 @@ ObjectVector CollisionDetector::getCollidedObjects(GameObject* object,
 
     return collidedObjects;
 }
+
