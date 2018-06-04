@@ -59,17 +59,9 @@ bool CollisionDetector::detectTileCollision(GameObject* object)
 
             if(tile.collidable)
             {
-                double hWidth = tileWidth / 2;
-                double hHeight = tileHeight / 2;
-
-                std::vector<Point> vertices;
-                vertices.push_back(Point(-hWidth, hHeight));
-                vertices.push_back(Point(hWidth, hHeight));
-                vertices.push_back(Point(hWidth, -hHeight));
-                vertices.push_back(Point(-hWidth, -hHeight));
-                Point center(x * tileWidth + hWidth, 
-                        y * tileHeight + hHeight);
-                Polygon tilePoly(center, vertices);
+                double tX = x * tileWidth + tileWidth / 2;
+                double tY = y * tileHeight + tileHeight / 2;
+                Polygon tilePoly = tileMap->getTileHitPoly(tX, tY);
 
                 if(SATCollision::intersect(hitPoly, tilePoly))
                     return true;

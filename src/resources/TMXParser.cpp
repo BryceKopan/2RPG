@@ -34,8 +34,7 @@ void TMXParser::parseTMXFile(std::string xmlFilePath)
         printf("%sWarning: Tiles aren't square\n", debugID.c_str());
     }
 
-    gameState->tileMap.tileWidth = tileWidth;
-    gameState->tileMap.tileHeight = tileHeight;
+    TileMap tileMap(tileWidth, tileHeight);
 
     pugi::xml_node currentNode = root.child("tileset");
 
@@ -64,7 +63,7 @@ void TMXParser::parseTMXFile(std::string xmlFilePath)
                 pngFilePath, spriteX, spriteY, tileWidth, tileHeight);
 
         Tile tile(collidable, sprite);
-        gameState->tileMap.tileSet[spriteID] = tile;
+        tileMap.tileSet[spriteID] = tile;
 
         currentNode = currentNode.next_sibling("tile");
     }
@@ -81,11 +80,11 @@ void TMXParser::parseTMXFile(std::string xmlFilePath)
 
             if(t == 0)//All empty spots are set to tile 0
             {
-                gameState->tileMap.map[x][y] = 31;
+                tileMap.map[x][y] = 31;
             }
             else
             {
-                gameState->tileMap.map[x][y] = t - 1;
+                tileMap.map[x][y] = t - 1;
             }
 
             currentNode = currentNode.next_sibling();
@@ -131,5 +130,6 @@ void TMXParser::parseTMXFile(std::string xmlFilePath)
         }
     }
 
+    gameState->tileMap = tileMap;
     printf("%sTMX parsing finished\n", debugID.c_str());
 }

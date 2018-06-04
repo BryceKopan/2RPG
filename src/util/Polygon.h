@@ -13,6 +13,7 @@ class Polygon
         std::vector<Point> vertices;
 
         Polygon(){};
+        Polygon(std::vector<Point> vertices);
         Polygon(Point center, std::vector<Point> vertices);
 
         void rotate(int angle);

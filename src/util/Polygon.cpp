@@ -3,6 +3,12 @@
 //TODO remove
 #include <allegro5/allegro_primitives.h>
 
+Polygon::Polygon(std::vector<Point> vertices)
+{
+    this->center = Point(0, 0);
+    this->vertices = vertices;
+}
+
 Polygon::Polygon(Point center, std::vector<Point> vertices)
 {
     this->center = center;

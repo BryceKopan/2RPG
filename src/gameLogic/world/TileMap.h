@@ -5,6 +5,7 @@
 
 #include "../CONSTANTS.h"
 #include "Tile.h"
+#include "../../util/Polygon.h"
 
 class TileMap
 {
@@ -19,6 +20,9 @@ class TileMap
         void draw();
         void draw(int x, int y);
         Tile getTile(int x, int y);
+        Polygon getTileHitPoly(double x, double y);
+    private:
+        Polygon tileHitPoly;
 };
 
 #endif
