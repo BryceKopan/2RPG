@@ -35,13 +35,21 @@ bool CollisionDetector::detectObjectCollision(GameObject* object,
 bool CollisionDetector::detectTileCollision(GameObject* object)
 {
     GameState* gameState = GameState::instance;
-    TileMap* tileMap = &gameState->tileMap;
-    BoundingBox hitBox = object->getHitBox();
 
-    int leftTile = hitBox.x / tileMap->tileWidth;
-    int rightTile = hitBox.xMax / tileMap->tileWidth;
-    int topTile = hitBox.y / tileMap->tileHeight;
-    int bottomTile = hitBox.yMax / tileMap->tileHeight;
+    Polygon hitPoly = object->getHitPoly();
+    Vector2 xAxis = Vector2(1, 0);
+    Vector2 yAxis = Vector2(0 ,1);
+    Projection pX = SATCollision::getProjection(hitPoly, xAxis);
+    Projection pY = SATCollision::getProjection(hitPoly, yAxis);
+
+    TileMap* tileMap = &gameState->tileMap;
+    int tileWidth = tileMap->tileWidth;
+    int tileHeight = tileMap->tileHeight;
+
+    int leftTile = std::get<0>(pX) / tileWidth;
+    int rightTile = std::get<1>(pX) / tileWidth;
+    int topTile = std::get<0>(pY) / tileHeight;
+    int bottomTile = std::get<1>(pY) / tileHeight;
 
     for(int x = leftTile; x <= rightTile; x++)
     {
@@ -51,7 +59,20 @@ bool CollisionDetector::detectTileCollision(GameObject* object)
 
             if(tile.collidable)
             {
-                return true;
+                double hWidth = tileWidth / 2;
+                double hHeight = tileHeight / 2;
+
+                std::vector<Point> vertices;
+                vertices.push_back(Point(-hWidth, hHeight));
+                vertices.push_back(Point(hWidth, hHeight));
+                vertices.push_back(Point(hWidth, -hHeight));
+                vertices.push_back(Point(-hWidth, -hHeight));
+                Point center(x * tileWidth + hWidth, 
+                        y * tileHeight + hHeight);
+                Polygon tilePoly(center, vertices);
+
+                if(SATCollision::intersect(hitPoly, tilePoly))
+                    return true;
             }
         }
     }

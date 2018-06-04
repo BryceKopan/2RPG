@@ -14,9 +14,9 @@ class SATCollision
 {
     public:
         static bool intersect(Polygon poly1, Polygon poly2);
+        static Projection getProjection(Polygon poly, Vector2 axis);
     private:
         static VectorVector getAxes(Polygon poly);
-        static Projection getProjection(Polygon poly, Vector2 axis);
         static VectorVector removeParallels(VectorVector axes);
 };
 

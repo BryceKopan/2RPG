@@ -4,7 +4,6 @@
 #include <string>
 #include <vector>
 
-#include "../physics/BoundingBox.h"
 #include "../../util/Polygon.h"
 #include "../../graphics/Sprite.h"
 
@@ -28,7 +27,6 @@ class GameObject
         void death();
 
         virtual void draw();
-        BoundingBox getHitBox();
         Polygon getHitPoly();
 
         virtual void onObjectCollision(ObjectVector gameObjects){};
@@ -37,7 +35,6 @@ class GameObject
     private:
         bool isAlive = true;
 
-        BoundingBox hitBox;
         Polygon hitPoly;
 };
 #endif
