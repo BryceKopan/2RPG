@@ -1,5 +1,6 @@
 #include "CollisionDetector.h"
 
+#include "SATCollision.h"
 #include "../../core/GameState.h"
 
 void CollisionDetector::resolveCollisions(GameObject* object)
@@ -61,16 +62,16 @@ bool CollisionDetector::detectTileCollision(GameObject* object)
 ObjectVector CollisionDetector::getCollidedObjects(GameObject* object,
         ObjectVector gameObjects)
 {
-    BoundingBox currentObjectHitBox = object->getHitBox();
+    Polygon currentHitPoly = object->getHitPoly();
     ObjectVector collidedObjects;
 
     for(int i = 0; i < gameObjects.size(); i++)
     {
-        BoundingBox objectHitBox = gameObjects[i]->getHitBox();
+        Polygon objectHitPoly = gameObjects[i]->getHitPoly();
 
         if(object != gameObjects[i])
         {
-            if(currentObjectHitBox.intersects(objectHitBox))
+            if(SATCollision::intersect(currentHitPoly, objectHitPoly))
             {
                 collidedObjects.push_back(gameObjects[i]);
             }
