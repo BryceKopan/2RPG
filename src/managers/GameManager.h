@@ -2,6 +2,7 @@
 #define GAME_MANAGER_H
 
 #include <allegro5/allegro5.h>
+#include <vector>
 
 class GameManager
 {
@@ -20,6 +21,11 @@ class GameManager
         static ALLEGRO_EVENT_QUEUE* eventQueue;
         static ALLEGRO_TIMER* timer;
         static ALLEGRO_DISPLAY* display;
+
+        //TODO move
+        static std::vector<double> deltaFrameTimes;
+        static double lastTime;
+        static void updateAvgDeltaFrameTime();
 };
 
 #endif

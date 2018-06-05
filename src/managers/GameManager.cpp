@@ -4,16 +4,23 @@
 #include <allegro5/allegro_ttf.h>
 #include <allegro5/allegro_image.h>
 #include <allegro5/allegro_primitives.h>
+#include <numeric>
 
 #include "InputManager.h"
 #include "LogicManager.h"
 #include "DrawManager.h"
 #include "../resources/TMXParser.h"
 
+#include "../util/Util.h"
+
 bool GameManager::isRunning = true;
 ALLEGRO_EVENT_QUEUE* GameManager::eventQueue;
 ALLEGRO_TIMER* GameManager::timer;
 ALLEGRO_DISPLAY* GameManager::display;
+
+//TODO move
+double GameManager::lastTime;
+std::vector<double> GameManager::deltaFrameTimes;
 
 void abortGame(const char* message)
 {
@@ -62,6 +69,8 @@ void GameManager::init()
     al_register_event_source(eventQueue, al_get_mouse_event_source());
     al_register_event_source(eventQueue, al_get_timer_event_source(timer)); 
 
+    //al_set_new_bitmap_flags(ALLEGRO_VIDEO_BITMAP);
+
     GameState::instance = new GameState();
 }
 
@@ -74,6 +83,7 @@ void GameManager::gameLoop()
 {
     bool redraw = true;
     al_start_timer(timer);
+    lastTime = Util::getPreciseSecondTime();
 
     while(isRunning)
     {
@@ -100,6 +110,8 @@ void GameManager::gameLoop()
 
         if (redraw && al_is_event_queue_empty(eventQueue))
         {
+            updateAvgDeltaFrameTime();
+
             redraw = false;
             al_clear_to_color(al_map_rgb(0, 0, 0));
 
@@ -120,4 +132,21 @@ void GameManager::shutdown()
 
     if (eventQueue)
         al_destroy_event_queue(eventQueue);
+}
+
+void GameManager::updateAvgDeltaFrameTime()
+{
+    GameState* gameState = GameState::instance;
+
+    double currentTime = Util::getPreciseSecondTime();
+
+    deltaFrameTimes.push_back(currentTime - lastTime);
+    lastTime = currentTime;
+
+    if(deltaFrameTimes.size() > 10)
+        deltaFrameTimes.erase(deltaFrameTimes.begin());
+
+    gameState->avgDeltaFrameTime = 
+        std::accumulate(deltaFrameTimes.begin(), 
+                deltaFrameTimes.end(), 0.0) / deltaFrameTimes.size();
 }

@@ -20,7 +20,7 @@ class AttackAbility : public Ability
                 Sprite sprite, bool playerFriendly, double lifetime,
                 int damage);
 
-        virtual void useAbility(double mouseX, double mouseY);
+        virtual void doAbility(double mouseX, double mouseY);
     private:
         virtual Location getAttackLocation(double x, double y) = 0;
 

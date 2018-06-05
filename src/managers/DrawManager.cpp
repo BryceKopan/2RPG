@@ -7,12 +7,14 @@
 #include "GameManager.h"
 #include "ResourceManager.h"
 
+#include "../util/Util.h"
+
 void DrawManager::draw()
 {
     /*ALLEGRO_FONT* font1 = ResourceManager::loadFont("res/fonts/merienda/Merienda-Regular.ttf", 72);
     ALLEGRO_FONT* font2 = ResourceManager::loadFont("res/fonts/merienda/Merienda-Regular.ttf", 20);
     ALLEGRO_FONT* font3 = ResourceManager::loadFont("res/fonts/merienda/Merienda-Regular.ttf", 40);*/
-
+    
     ALLEGRO_TRANSFORM transform;
 
     GameState* gameState = GameState::instance;
@@ -40,7 +42,9 @@ void DrawManager::draw()
     al_use_transform(&transform);
 
     //Draw TileMap
+    al_hold_bitmap_drawing(true);
     gameState->tileMap.draw();
+    al_hold_bitmap_drawing(false);
 
     //Draw Alive Objects
     for(int i = 0; i < gameState->aliveObjects.size(); i++)

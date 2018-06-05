@@ -3,6 +3,7 @@
 #include <math.h>
 
 #include "../../graphics/ui/RectangleElement.h"
+#include "../../graphics/ui/TextElement.h"
 #include "../../managers/GameManager.h"
 #include "../../managers/LogicManager.h"
 #include "../../managers/ResourceManager.h"
@@ -10,11 +11,15 @@
 
 GameView::GameView()
 {
+    ALLEGRO_FONT* font1 = ResourceManager::loadFont("res/fonts/merienda/Merienda-Regular.ttf", 20);
     ALLEGRO_COLOR red = al_map_rgb(255 ,0, 0);
-    ALLEGRO_COLOR yellow = al_map_rgb(200, 200, 0);
+    ALLEGRO_COLOR dirtyYellow = al_map_rgb(200, 200, 0);
+    ALLEGRO_COLOR green = al_map_rgb(0, 255, 0);
 
-    elements.push_back(new RectangleElement(20, 20, 110, 30, yellow));
+    elements.push_back(new RectangleElement(20, 20, 110, 30, dirtyYellow));
     elements.push_back(new RectangleElement(25, 25, 0, 20, red));
+    elements.push_back(new TextElement(GameManager::SCREEN_WIDTH - 25,
+                25, font1, green, ALLEGRO_ALIGN_RIGHT));
 }
 
 void GameView::draw()
@@ -28,6 +33,9 @@ void GameView::draw()
 void GameView::update()
 {
     GameState* gameState = GameState::instance;
+    ALLEGRO_COLOR red = al_map_rgb(255 ,0, 0);
+    ALLEGRO_COLOR yellow = al_map_rgb(255, 255, 0);
+    ALLEGRO_COLOR green = al_map_rgb(0, 255, 0);
 
     //Update Health Bar
     double percentHP = 
@@ -35,8 +43,23 @@ void GameView::update()
 
     if(RectangleElement* recElement = 
             dynamic_cast<RectangleElement*>(elements[1]))
-    {
         recElement->width = 100 * percentHP;
+
+    if(TextElement* textElement = 
+            dynamic_cast<TextElement*>(elements[2])) 
+    {
+        if(gameState->showDrawTime)
+        {
+            double avgDeltaFrameTime = gameState->avgDeltaFrameTime;
+            if(avgDeltaFrameTime <= .02)
+                textElement->color = green;
+            else if(avgDeltaFrameTime <= .033)
+                textElement->color = yellow;
+            else 
+                textElement->color = red;
+            textElement->text = 
+                std::to_string(avgDeltaFrameTime);
+        }
     }
 }
 

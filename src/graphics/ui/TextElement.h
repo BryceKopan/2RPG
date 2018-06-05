@@ -9,6 +9,7 @@
 class TextElement : public UIElement
 {
     public:
+        ALLEGRO_COLOR color;
         std::string text;
 
         TextElement(int x, int y, ALLEGRO_FONT* font, ALLEGRO_COLOR color, int flag);
@@ -16,7 +17,6 @@ class TextElement : public UIElement
         void draw();
     protected:
         ALLEGRO_FONT* font;
-        ALLEGRO_COLOR color;
         int flag;
 };
 

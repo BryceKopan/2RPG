@@ -13,7 +13,6 @@ class GameState
     public:
         static GameState* instance;
 
-        bool drawHitBoxes = true;
         double deltaTime = 0;
 
         TileMap tileMap;
@@ -25,6 +24,10 @@ class GameState
         //All Defualt Values set in constructor
         GameState();
         ~GameState();
+
+        //debug
+        bool drawHitBoxes = true, showDrawTime = true;
+        double avgDeltaFrameTime = 0;
 };
 
 #endif
