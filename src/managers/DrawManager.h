@@ -1,8 +1,6 @@
 #ifndef DRAWMANAGER_H
 #define DRAWMANAGER_H
 
-#include "../core/GameState.h"
-
 class DrawManager
 {
     public:

@@ -3,10 +3,10 @@
 
 #include <vector>
 
-#include "player/Player.h"
+#include "gameObject/Player.h"
+#include "gameObject/GameObject.h"
+#include "world/TileMap.h"
 #include "../graphics/ui/View.h"
-#include "../gameLogic/gameObject/GameObject.h"
-#include "../gameLogic/world/TileMap.h"
 
 class GameState
 {

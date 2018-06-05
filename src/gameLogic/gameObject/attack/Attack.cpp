@@ -2,7 +2,7 @@
 
 #include "../../../util/Util.h"
 #include "../NPC.h"
-#include "../../../core/GameState.h"
+#include "../../GameState.h"
 
 Attack::Attack(double x, double y, Sprite sprite, bool playerFriendly, 
         double lifetime, int damage) :

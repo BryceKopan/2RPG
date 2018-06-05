@@ -1,8 +1,7 @@
 #include "Projectile.h"
 
-#include "../../../core/GameState.h"
+#include "../../GameState.h"
 #include "../NPC.h"
-#include "../../../core/player/Player.h"
 
 Projectile::Projectile(double x, double y, Sprite sprite, 
         bool playerFriendly, int lifetime, int damage, 

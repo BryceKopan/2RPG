@@ -1,6 +1,6 @@
 #include "LogicManager.h"
 
-#include "../core/GameState.h"
+#include "../gameLogic/GameState.h"
 #include "../gameLogic/physics/CollisionDetector.h"
 #include "../util/Util.h"
 

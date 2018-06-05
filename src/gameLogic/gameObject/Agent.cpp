@@ -3,7 +3,7 @@
 #include <cmath>
 
 #include "../physics/CollisionDetector.h"
-#include "../../core/GameState.h"
+#include "../GameState.h"
 
 Agent::Agent(double x, double y, double speed, bool collidable, 
         Sprite sprite, int health) : 

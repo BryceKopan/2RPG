@@ -2,7 +2,7 @@
 
 #include <pugixml.hpp>
 
-#include "../core/GameState.h"
+#include "../gameLogic/GameState.h"
 #include "../gameLogic/CONSTANTS.h"
 #include "../gameLogic/gameObject/NPC.h"
 #include "../managers/ResourceManager.h"

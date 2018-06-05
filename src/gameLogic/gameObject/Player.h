@@ -1,8 +1,8 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
-#include "../../gameLogic/ability/Ability.h"
-#include "../../gameLogic/gameObject/Agent.h"
+#include "Agent.h"
+#include "../ability/Ability.h"
 
 class Player : public Agent
 {

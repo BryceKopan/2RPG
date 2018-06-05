@@ -2,7 +2,7 @@
 
 #include <math.h>
 
-#include "../../core/GameState.h"
+#include "../GameState.h"
 
 NPC::NPC(double x, double y, bool collidable, Sprite sprite, 
         int health, double detectionRange) :

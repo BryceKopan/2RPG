@@ -6,6 +6,7 @@
 
 #include "GameManager.h"
 #include "ResourceManager.h"
+#include "../gameLogic/GameState.h"
 
 #include "../util/Util.h"
 

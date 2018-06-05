@@ -1,7 +1,7 @@
 #include "MeleeAbility.h"
 
 #include "../gameObject/attack/MeleeAttack.h"
-#include "../../core/GameState.h"
+#include "../GameState.h"
 
 MeleeAbility::MeleeAbility(GameObject* user, double cooldown, 
         Sprite sprite, bool playerFriendly, double lifetime,

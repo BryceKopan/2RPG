@@ -1,6 +1,6 @@
 #include "Player.h"
 
-#include "../../gameLogic/ability/ProjectileAbility.h"
+#include "../ability/ProjectileAbility.h"
 
 Player::Player(double x, double y, Sprite sprite) :
     Agent(x, y, 105, true, sprite, 100)

@@ -1,7 +1,6 @@
 #include "GameState.h"
 
-#include "../gameLogic/gameObject/NPC.h"
-#include "views/GameView.h"
+#include "../core/views/GameView.h"
 
 GameState* GameState::instance;
 

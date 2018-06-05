@@ -1,6 +1,6 @@
 #include "GameObject.h"
 
-#include "../../core/GameState.h"
+#include "../GameState.h"
 
 GameObject::GameObject(double x, double y, bool collidable,
         Sprite sprite)

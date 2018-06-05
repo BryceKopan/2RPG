@@ -7,7 +7,7 @@
 #include "../../managers/GameManager.h"
 #include "../../managers/LogicManager.h"
 #include "../../managers/ResourceManager.h"
-#include "../GameState.h"
+#include "../../gameLogic/GameState.h"
 
 GameView::GameView()
 {

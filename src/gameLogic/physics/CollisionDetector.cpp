@@ -1,7 +1,7 @@
 #include "CollisionDetector.h"
 
 #include "SATCollision.h"
-#include "../../core/GameState.h"
+#include "../GameState.h"
 
 void CollisionDetector::resolveCollisions(GameObject* object)
 {

@@ -1,7 +1,7 @@
 #include "AOEAbility.h"
 
 #include "../gameObject/attack/Attack.h"
-#include "../../core/GameState.h"
+#include "../GameState.h"
 
 AOEAbility::AOEAbility(GameObject* user, double cooldown, 
         Sprite sprite, bool playerFriendly, double lifetime,

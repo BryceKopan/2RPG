@@ -1,6 +1,6 @@
 #include "InputManager.h"
 
-#include "../core/GameState.h"
+#include "../gameLogic/GameState.h"
 
 void InputManager::Process (ALLEGRO_EVENT event)
 {

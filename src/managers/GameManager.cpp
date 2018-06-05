@@ -10,6 +10,7 @@
 #include "LogicManager.h"
 #include "DrawManager.h"
 #include "../resources/TMXParser.h"
+#include "../gameLogic/GameState.h"
 
 #include "../util/Util.h"
 

@@ -1,7 +1,7 @@
 #include "ProjectileAbility.h"
 
 #include "../gameObject/attack/Projectile.h"
-#include "../../core/GameState.h"
+#include "../GameState.h"
 
 ProjectileAbility::ProjectileAbility(GameObject* user, 
         double cooldown, Sprite sprite, bool playerFriendly, 

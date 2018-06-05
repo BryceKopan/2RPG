@@ -1,6 +1,6 @@
 #include "TestAbility.h"
 
-#include "../GameState.h"
+#include "../../gameLogic/GameState.h"
 #include "../../gameLogic/gameObject/attack/Attack.h"
 
 TestAbility::TestAbility(GameObject* user) :

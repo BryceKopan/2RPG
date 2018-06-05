@@ -1,6 +1,6 @@
 #include "ProjectileTestAbility.h"
 
-#include "../GameState.h"
+#include "../../gameLogic/GameState.h"
 #include "../../gameLogic/gameObject/attack/Projectile.h"
 
 ProjectileTestAbility::ProjectileTestAbility(GameObject* user) :
