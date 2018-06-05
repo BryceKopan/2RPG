@@ -1,6 +1,7 @@
 #include "SATCollision.h"
 
-bool SATCollision::intersect(Polygon poly1, Polygon poly2)
+bool SATCollision::intersect(const Polygon* poly1, 
+        const Polygon* poly2)
 {
     VectorVector axes1 = getAxes(poly1);
     VectorVector axes2 = getAxes(poly2);
@@ -22,9 +23,9 @@ bool SATCollision::intersect(Polygon poly1, Polygon poly2)
     return true;
 }
 
-VectorVector SATCollision::getAxes(Polygon poly)
+VectorVector SATCollision::getAxes(const Polygon* poly)
 {
-    std::vector<Point> vertices = poly.vertices;
+    std::vector<Point> vertices = poly->vertices;
     VectorVector axes;
 
     for(int i = 0; i < vertices.size(); i++)
@@ -40,14 +41,15 @@ VectorVector SATCollision::getAxes(Polygon poly)
     return axes;
 }
 
-Projection SATCollision::getProjection(Polygon poly, Vector2 axis)
+Projection SATCollision::getProjection(const Polygon* poly, 
+        Vector2 axis)
 {
-    double min = axis.dotProduct(poly.vertices[0] + poly.center);
+    double min = axis.dotProduct(poly->vertices[0] + poly->center);
     double max = min;
 
-    for(int i = 0; i < poly.vertices.size(); i++)
+    for(int i = 0; i < poly->vertices.size(); i++)
     {
-        double p = axis.dotProduct(poly.vertices[i] + poly.center);
+        double p = axis.dotProduct(poly->vertices[i] + poly->center);
 
         if(p < min)
             min = p;

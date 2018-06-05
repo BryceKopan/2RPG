@@ -27,7 +27,7 @@ class GameObject
         void death();
 
         virtual void draw();
-        Polygon getHitPoly();
+        Polygon* getHitPoly();
 
         virtual void onObjectCollision(ObjectVector gameObjects){};
         virtual void onTileCollision(){};

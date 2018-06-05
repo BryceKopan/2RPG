@@ -54,13 +54,13 @@ void GameObject::draw()
 
     if(GameState::instance->drawHitBoxes)
     {
-        getHitPoly().draw();
+        getHitPoly()->draw();
     }
 }
 
-Polygon GameObject::getHitPoly()
+Polygon* GameObject::getHitPoly()
 {
     hitPoly.center.x = x + sprite.spriteWidth/2;
     hitPoly.center.y = y + sprite.spriteHeight/2;
-    return hitPoly;
+    return &hitPoly;
 }

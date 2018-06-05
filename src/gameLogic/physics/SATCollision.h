@@ -13,10 +13,12 @@ typedef std::vector<Vector2> VectorVector;
 class SATCollision
 {
     public:
-        static bool intersect(Polygon poly1, Polygon poly2);
-        static Projection getProjection(Polygon poly, Vector2 axis);
+        static bool intersect(const Polygon* poly1, 
+                const Polygon* poly2);
+        static Projection getProjection(const Polygon* poly, 
+                Vector2 axis);
     private:
-        static VectorVector getAxes(Polygon poly);
+        static VectorVector getAxes(const Polygon* poly);
         static VectorVector removeParallels(VectorVector axes);
 };
 

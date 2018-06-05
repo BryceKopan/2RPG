@@ -14,7 +14,7 @@ TileMap::TileMap(int tileWidth, int tileHeight)
     vertices.push_back(Point(hWidth, hHeight));
     vertices.push_back(Point(hWidth, -hHeight));
     vertices.push_back(Point(-hWidth, -hHeight));
-    tileHitPoly = Polygon(vertices);
+    hitPoly = Polygon(vertices);
 }
 
 void TileMap::draw()
@@ -38,9 +38,9 @@ Tile TileMap::getTile(int x, int y)
     return tileSet[map[x][y]];
 }
 
-Polygon TileMap::getTileHitPoly(double x, double y)
+Polygon* TileMap::getHitPoly(double x, double y)
 {
-    tileHitPoly.center.x = x;
-    tileHitPoly.center.y = y;
-    return tileHitPoly;
+    hitPoly.center.x = x;
+    hitPoly.center.y = y;
+    return &hitPoly;
 }

@@ -20,9 +20,9 @@ class TileMap
         void draw();
         void draw(int x, int y);
         Tile getTile(int x, int y);
-        Polygon getTileHitPoly(double x, double y);
+        Polygon* getHitPoly(double x, double y);
     private:
-        Polygon tileHitPoly;
+        Polygon hitPoly;
 };
 
 #endif

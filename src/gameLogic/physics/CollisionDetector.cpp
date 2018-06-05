@@ -36,7 +36,7 @@ bool CollisionDetector::detectTileCollision(GameObject* object)
 {
     GameState* gameState = GameState::instance;
 
-    Polygon hitPoly = object->getHitPoly();
+    const Polygon* hitPoly = object->getHitPoly();
     Vector2 xAxis = Vector2(1, 0);
     Vector2 yAxis = Vector2(0 ,1);
     Projection pX = SATCollision::getProjection(hitPoly, xAxis);
@@ -61,7 +61,7 @@ bool CollisionDetector::detectTileCollision(GameObject* object)
             {
                 double tX = x * tileWidth + tileWidth / 2;
                 double tY = y * tileHeight + tileHeight / 2;
-                Polygon tilePoly = tileMap->getTileHitPoly(tX, tY);
+                const Polygon* tilePoly = tileMap->getHitPoly(tX, tY);
 
                 if(SATCollision::intersect(hitPoly, tilePoly))
                     return true;
@@ -75,12 +75,12 @@ bool CollisionDetector::detectTileCollision(GameObject* object)
 ObjectVector CollisionDetector::getCollidedObjects(GameObject* object,
         ObjectVector gameObjects)
 {
-    Polygon currentHitPoly = object->getHitPoly();
+    const Polygon* currentHitPoly = object->getHitPoly();
     ObjectVector collidedObjects;
 
     for(int i = 0; i < gameObjects.size(); i++)
     {
-        Polygon objectHitPoly = gameObjects[i]->getHitPoly();
+        const Polygon* objectHitPoly = gameObjects[i]->getHitPoly();
 
         if(object != gameObjects[i])
         {
