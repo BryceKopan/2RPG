@@ -9,9 +9,8 @@ class AOEAbility : public AttackAbility
         AOEAbility(GameObject* user, double cooldown, Sprite sprite,
                 bool playerFriendly, double lifetime, int damage);
     private:
-        virtual std::tuple<double, double> 
-            getAttackLocation(double mouseX, double mouseY);
-        virtual void createAttack(std::tuple<double, double> loc);
+        virtual Point getAttackLocation(Point mousePoint);
+        virtual void createAttack(Point attackPoint);
 };
 
 #endif

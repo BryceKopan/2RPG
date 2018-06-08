@@ -15,9 +15,8 @@ class ProjectileAbility : public AttackAbility
         Vector2 velocity;
         double speed;
 
-        virtual std::tuple<double, double> 
-            getAttackLocation(double mouseX, double mouseY);
-        virtual void createAttack(std::tuple<double, double> loc);
+        virtual Point getAttackLocation(Point mousePoint);
+        virtual void createAttack(Point attackPoint);
 };
 
 #endif

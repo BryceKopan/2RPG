@@ -8,7 +8,6 @@ class GameView : public View
     public:
         GameView();
 
-        void draw();
         void update();
         void processInput(ALLEGRO_EVENT event);
     private:

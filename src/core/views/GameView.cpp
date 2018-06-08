@@ -22,14 +22,6 @@ GameView::GameView()
                 25, font1, green, ALLEGRO_ALIGN_RIGHT));
 }
 
-void GameView::draw()
-{
-    for(int i = 0; i < elements.size(); i++)
-    {
-        elements.at(i)->draw();
-    }
-}
-
 void GameView::update()
 {
     GameState* gameState = GameState::instance;
@@ -70,8 +62,8 @@ void GameView::processInput(ALLEGRO_EVENT event)
 
     if(event.type == ALLEGRO_EVENT_MOUSE_AXES)
     {
-        int tanY = (event.mouse.y - (GameManager::SCREEN_HEIGHT/2));
-        int tanX = (event.mouse.x - (GameManager::SCREEN_WIDTH/2));
+        int tanY = (mousePoint.y - (GameManager::SCREEN_HEIGHT/2));
+        int tanX = (mousePoint.x - (GameManager::SCREEN_WIDTH/2));
         int angle = atan2(tanY, tanX) * (180/M_PI);
 
         if(angle < 0)
@@ -85,9 +77,11 @@ void GameView::processInput(ALLEGRO_EVENT event)
         switch(event.mouse.button)
         {
             case 1:
-                player->ability->useAbility(event.mouse.x, 
-                        event.mouse.y);
+                player->abilities[0]->useAbility(mousePoint);
                 break;
+            
+            case 2:
+                player->abilities[1]->useAbility(mousePoint);
         }
     }
     else if(event.type == ALLEGRO_EVENT_KEY_DOWN)
@@ -109,6 +103,15 @@ void GameView::processInput(ALLEGRO_EVENT event)
 
             case ALLEGRO_KEY_D:
                 player->velocity += Vector2(1, 0);
+                break;
+
+            //Abilites
+            case ALLEGRO_KEY_Q:
+                player->abilities[2]->useAbility(mousePoint);
+                break;
+
+            case ALLEGRO_KEY_E:
+                player->abilities[3]->useAbility(mousePoint);
                 break;
 
             //Utility Input
@@ -149,4 +152,6 @@ void GameView::processInput(ALLEGRO_EVENT event)
                 break;
         }
     }
+
+    View::processInput(event);
 }

@@ -3,10 +3,7 @@
 
 #include "Ability.h"
 
-#include <tuple>
 #include "../../graphics/Sprite.h"
-
-typedef std::tuple<double, double> Location;
 
 class AttackAbility : public Ability
 {
@@ -20,11 +17,11 @@ class AttackAbility : public Ability
                 Sprite sprite, bool playerFriendly, double lifetime,
                 int damage);
 
-        virtual void doAbility(double mouseX, double mouseY);
+        virtual void doAbility(Point mousePoint);
     private:
-        virtual Location getAttackLocation(double x, double y) = 0;
+        virtual Point getAttackLocation(Point mousePoint) = 0;
 
-        virtual void createAttack(Location) = 0;
+        virtual void createAttack(Point attackPoint) = 0;
 }; 
 
 #endif

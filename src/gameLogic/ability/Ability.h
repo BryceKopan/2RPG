@@ -4,6 +4,7 @@
 #include <ctime>
 
 #include "../gameObject/GameObject.h"
+#include "../../util/Point.h"
 
 class Ability
 {
@@ -13,8 +14,8 @@ class Ability
 
         Ability(GameObject* user, double cooldown);
         
-        virtual void useAbility(double mouseX, double mouseY);
-        virtual void doAbility(double mouseX, double mouseY){};
+        virtual void useAbility(Point mousePoint);
+        virtual void doAbility(Point mousePoint){};
 };
 
 #endif

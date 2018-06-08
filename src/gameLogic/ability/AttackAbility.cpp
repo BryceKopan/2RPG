@@ -10,9 +10,9 @@ AttackAbility::AttackAbility(GameObject* user, double cooldown,
     this->damage = damage;
 }
 
-void AttackAbility::doAbility(double mouseX, double mouseY)
+void AttackAbility::doAbility(Point mousePoint)
 {
-    std::tuple<double, double> loc = getAttackLocation(mouseX, mouseY);
-    createAttack(loc);
-    Ability::useAbility(mouseX, mouseY);
+    Point attackPoint = getAttackLocation(mousePoint);
+    createAttack(attackPoint);
+    Ability::useAbility(mousePoint);
 }

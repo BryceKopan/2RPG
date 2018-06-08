@@ -9,7 +9,7 @@ Ability::Ability(GameObject* user, double cooldown)
     timeLastUsed = 0;
 }
 
-void Ability::useAbility(double mouseX, double mouseY)
+void Ability::useAbility(Point mousePoint)
 {
     double currentTime = Util::getPreciseSecondTime();
 
@@ -17,6 +17,6 @@ void Ability::useAbility(double mouseX, double mouseY)
     {
         timeLastUsed = currentTime;
 
-        doAbility(mouseX, mouseY);
+        doAbility(mousePoint);
     }
 }

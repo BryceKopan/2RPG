@@ -9,8 +9,8 @@ class MeleeAbility : public AttackAbility
         MeleeAbility(GameObject* user, double cooldown, Sprite sprite,
                 bool playerFriendly, double lifetime, int damage);
     private:
-        virtual Location getAttackLocation(double mouseX, double mouseY);
-        virtual void createAttack(Location loc);
+        virtual Point getAttackLocation(Point mousePoint);
+        virtual void createAttack(Point attackPoint);
 };
 
 #endif

@@ -8,7 +8,7 @@ class Player : public Agent
 {
     public:
         int facingAngle;
-        Ability* ability;
+        Ability* abilities[4];
 
         Player(double x, double y, Sprite sprite);
 };

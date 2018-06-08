@@ -12,21 +12,20 @@ ProjectileAbility::ProjectileAbility(GameObject* user,
     this->speed = speed;
 }
 
-Location ProjectileAbility::getAttackLocation(double mouseX, double mouseY)
+Point ProjectileAbility::getAttackLocation(Point mousePoint)
 {
     //TODO calculate actual position
     velocity.setPolarCoordinates(1, 
             GameState::instance->player->facingAngle);
-    return std::make_tuple(user->x, user->y);
+    return Point(user->x, user->y);
 }
 
-void ProjectileAbility::createAttack(Location loc)
+void ProjectileAbility::createAttack(Point attackPoint)
 {
     GameState* gameState = GameState::instance;
 
-    double x = std::get<0>(loc);
-    double y = std::get<1>(loc);
-    Projectile* attack = new Projectile(x, y, attackSprite, 
-            playerFriendly, lifetime, damage, velocity, speed);
+    Projectile* attack = new Projectile(attackPoint.x, attackPoint.y,
+            attackSprite, playerFriendly, lifetime, damage, velocity,
+            speed);
     gameState->aliveObjects.push_back(attack);
 }

@@ -11,19 +11,18 @@ MeleeAbility::MeleeAbility(GameObject* user, double cooldown,
 {
 }
 
-Location MeleeAbility::getAttackLocation(double mouseX, double mouseY)
+Point MeleeAbility::getAttackLocation(Point mousePoint)
 {
     //TODO calculate actual position
-    return std::make_tuple(mouseX, mouseY);
+    return mousePoint;
 }
 
-void MeleeAbility::createAttack(Location loc)
+void MeleeAbility::createAttack(Point attackPoint)
 {
     GameState* gameState = GameState::instance;
 
-    double x = std::get<0>(loc);
-    double y = std::get<1>(loc);
-    MeleeAttack* attack = new MeleeAttack(x, y, attackSprite, 
-            playerFriendly, lifetime, damage, user);
+    MeleeAttack* attack = new MeleeAttack(attackPoint.x, 
+            attackPoint.y, attackSprite, playerFriendly, lifetime, 
+            damage, user);
     gameState->aliveObjects.push_back(attack);
 }

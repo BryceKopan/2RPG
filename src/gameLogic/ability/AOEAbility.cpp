@@ -11,19 +11,17 @@ AOEAbility::AOEAbility(GameObject* user, double cooldown,
 {
 }
 
-Location AOEAbility::getAttackLocation(double mouseX, double mouseY)
+Point AOEAbility::getAttackLocation(Point mousePoint)
 {
     //TODO calculate actual position
-    return std::make_tuple(mouseX, mouseY);
+    return mousePoint;
 }
 
-void AOEAbility::createAttack(Location loc)
+void AOEAbility::createAttack(Point attackPoint)
 {
     GameState* gameState = GameState::instance;
 
-    double x = std::get<0>(loc);
-    double y = std::get<1>(loc);
-    Attack* attack = new Attack(x, y, attackSprite, playerFriendly, 
-            lifetime, damage);
+    Attack* attack = new Attack(attackPoint.x, attackPoint.y, 
+            attackSprite, playerFriendly, lifetime, damage);
     gameState->aliveObjects.push_back(attack);
 }
