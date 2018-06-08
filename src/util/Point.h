@@ -1,6 +1,10 @@
 #ifndef POINT_H
 #define POINT_H
 
+#include "Vector2.h"
+
+class Vector2;
+
 class Point
 {
     public:
@@ -9,29 +13,13 @@ class Point
         Point(){}
         Point(double x, double y) : x(x), y(y) {}
         
-        Point operator+(const Point& rhs) const
-        {
-            return Point(x + rhs.x, y + rhs.y);
-        }
+        Point operator+(const Point& rhs) const;
+        Point operator-(const Point& rhs) const;
+        Point operator+=(const Point& rhs);
+        Point operator-=(const Point& rhs);
 
-        Point operator-(const Point& rhs) const
-        {
-            return Point(x - rhs.x, y - rhs.y);
-        }
-        
-        Point operator+=(const Point& rhs)
-        {
-            this->x += rhs.x;
-            this->y += rhs.y;
-            return *this;
-        }
-
-        Point operator-=(const Point& rhs)
-        {
-            this->x -= rhs.x;
-            this->y -= rhs.y;
-            return *this;
-        }
+        Point operator+(const Vector2& rhs) const;
+        Point operator-(const Vector2& rhs) const;
 };
 
 #endif
