@@ -20,6 +20,8 @@ class Point
 
         Point operator+(const Vector2& rhs) const;
         Point operator-(const Vector2& rhs) const;
+        Point operator+=(const Vector2& rhs);
+        Point operator-=(const Vector2& rhs);
 };
 
 #endif

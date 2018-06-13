@@ -37,22 +37,22 @@ void Agent::onObjectCollision(ObjectVector gameObjects)
 
         for(int i = 0; i < dX * dx; i++)
         {
-            move(dx, 0);
+            moveDirect(Vector2(dx, 0));
 
             if(CollisionDetector::detectObjectCollision(this, gameObjects))
             {
-                move(-dx, 0);
+                moveDirect(Vector2(-dx, 0));
                 i = dX * dx;
             }
         }
 
         for(int i = 0; i < dY * dy; i++)
         {
-            move(0, dy);
+            moveDirect(Vector2(0, dy));
 
             if(CollisionDetector::detectObjectCollision(this, gameObjects))
             {
-                move(0, -dy);
+                moveDirect(Vector2(0, -dy));
                 i = dY * dy;
             }
         }
@@ -75,22 +75,22 @@ void Agent::onTileCollision()
 
     for(int i = 0; i < dX * dx; i++)
     {
-        move(dx, 0);
+        moveDirect(Vector2(dx, 0));
 
         if(CollisionDetector::detectTileCollision(this))
         {
-            move(-dx, 0);
+            moveDirect(Vector2(-dx, 0));
             i = dX * dx;
         }
     }
 
     for(int i = 0; i < dY * dy; i++)
     {
-        move(0, dy);
+        moveDirect(Vector2(0, dy));
 
         if(CollisionDetector::detectTileCollision(this))
         {
-            move(0, -dy);
+            moveDirect(Vector2(0, -dy));
             i = dY * dy;
         }
     }
@@ -110,6 +110,11 @@ void Agent::changeHealth(int dHealth)
         kill();
 }
 
+void Agent::moveDirect(Vector2 vector)
+{
+    location += vector;
+}
+
 void Agent::move(Vector2 vector)
 {
     GameState* gameState = GameState::instance;
@@ -118,10 +123,4 @@ void Agent::move(Vector2 vector)
 
     location.x += unit.x * speed * gameState->deltaTime;
     location.y += unit.y * speed * gameState->deltaTime;
-}
-
-void Agent::move(double dX, double dY)
-{
-    location.x += dX;
-    location.y += dY;
 }

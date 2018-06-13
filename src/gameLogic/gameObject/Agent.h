@@ -10,6 +10,7 @@ class Agent : public GameObject
     public:
         Vector2 velocity;
         double speed, maxHealth;
+        bool stealth = false;
 
         Agent(Point location, double speed , bool collidable, 
                 Sprite spritei, int health);
@@ -20,12 +21,12 @@ class Agent : public GameObject
 
         int getHealth();
         void changeHealth(int dHealth);
+
+        void moveDirect(Vector2 vector);
     private:
         int health;
 
         void move(Vector2 vector);
-        void move(double dX, double dY);
-        void correctPosition();
 };
 
 #endif

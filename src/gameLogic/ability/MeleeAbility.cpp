@@ -15,11 +15,11 @@ MeleeAbility::MeleeAbility(GameObject* user, double cooldown,
 Point MeleeAbility::getAttackLocation(Point mousePoint)
 {
     Vector2 vector;
-    Point point(GameManager::SCREEN_WIDTH/2, 
+    Point point(GameManager::SCREEN_WIDTH/2,
             GameManager::SCREEN_HEIGHT/2);
     int angle = getAngle(point, mousePoint);
     //TODO Unharcode distance from user
-    vector.setPolarCoordinates(32, angle);
+    vector.setPolarCoordinates(24, angle);
     return user->location + vector;
 }
 

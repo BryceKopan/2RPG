@@ -15,7 +15,7 @@ class Ability
         Ability(GameObject* user, double cooldown);
         
         virtual void useAbility(Point mousePoint);
-        virtual void doAbility(Point mousePoint){};
+        virtual void doAbility(Point mousePoint) = 0;
     
     protected:
         int getAngle(Point location1, Point location2);
