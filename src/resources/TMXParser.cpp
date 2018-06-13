@@ -7,6 +7,8 @@
 #include "../gameLogic/gameObject/NPC.h"
 #include "../managers/ResourceManager.h"
 
+#include "../core/characters/displacer/DisplacerBeast.h"
+
 const std::string TMXParser::debugID = "[TMXParser] ";
 
 void TMXParser::parseTMXFile(std::string xmlFilePath)
@@ -109,7 +111,7 @@ void TMXParser::parseTMXFile(std::string xmlFilePath)
                 case 64:
                     sprite = Sprite("res/dungeon1.png", Point(96, 192), 32, 32);
                     location = Point(x * tileWidth + 16, y * tileHeight + 16); 
-                    gameState->player = new Player(location, sprite);
+                    gameState->player = new DisplacerBeast(location, sprite);
                     gameState->aliveObjects.push_back(gameState->player);
                     break;
 

@@ -61,3 +61,9 @@ Polygon* GameObject::getHitPoly()
     hitPoly.center = location;
     return &hitPoly;
 }
+
+void GameObject::rotate(int angle)
+{
+    hitPoly.rotate(angle);
+    sprite.rotate(angle);
+}

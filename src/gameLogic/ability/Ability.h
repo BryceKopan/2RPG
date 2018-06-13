@@ -16,6 +16,9 @@ class Ability
         
         virtual void useAbility(Point mousePoint);
         virtual void doAbility(Point mousePoint){};
+    
+    protected:
+        int getAngle(Point location1, Point location2);
 };
 
 #endif

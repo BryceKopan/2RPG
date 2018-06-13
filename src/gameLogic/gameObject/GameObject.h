@@ -28,6 +28,7 @@ class GameObject
 
         virtual void draw();
         Polygon* getHitPoly();
+        virtual void rotate(int angle);
 
         virtual void onObjectCollision(ObjectVector gameObjects){};
         virtual void onTileCollision(){};

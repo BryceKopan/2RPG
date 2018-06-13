@@ -16,31 +16,20 @@ void DrawManager::draw()
     ALLEGRO_FONT* font2 = ResourceManager::loadFont("res/fonts/merienda/Merienda-Regular.ttf", 20);
     ALLEGRO_FONT* font3 = ResourceManager::loadFont("res/fonts/merienda/Merienda-Regular.ttf", 40);*/
     
-    ALLEGRO_TRANSFORM transform;
+    ALLEGRO_TRANSFORM trans;
 
     GameState* gameState = GameState::instance;
 
     Player* player = gameState->player;
 
-    //Screen Grid
-    /*al_draw_line(GameManager::SCREEN_WIDTH/2, 0, 
-            GameManager::SCREEN_WIDTH/2, GameManager::SCREEN_HEIGHT,
-            al_map_rgb(255, 0, 0), 1);
-    al_draw_line(0, GameManager::SCREEN_HEIGHT/2,
-            GameManager::SCREEN_WIDTH, GameManager::SCREEN_HEIGHT/2,
-            al_map_rgb(255, 0, 0), 1);*/ 
-
     //Set up transform to set camera over player
-    al_identity_transform(&transform);
-    al_translate_transform(&transform, 
+    al_identity_transform(&trans);
+    al_translate_transform(&trans, 
             (-(player->location.x + 1)) +
-            (GameManager::SCREEN_WIDTH / 2) - 
-            (player->sprite.spriteWidth / 2),
+            (GameManager::SCREEN_WIDTH / 2),
             (-(player->location.y + 1)) + 
-            (GameManager::SCREEN_HEIGHT / 2) - 
-            (player->sprite.spriteHeight / 2)
-            );
-    al_use_transform(&transform);
+            (GameManager::SCREEN_HEIGHT / 2));
+    al_use_transform(&trans);
 
     //Draw TileMap
     al_hold_bitmap_drawing(true);
@@ -69,9 +58,17 @@ void DrawManager::draw()
 
     //Remove transform
     //Everything after this point x and y limited to screen size
-    al_identity_transform(&transform);
-    al_use_transform(&transform);
+    al_identity_transform(&trans);
+    al_use_transform(&trans);
 
     //Draw UI
     gameState->currentView->draw();
+
+    //Screen Grid
+    /*al_draw_line(GameManager::SCREEN_WIDTH/2, 0, 
+            GameManager::SCREEN_WIDTH/2, GameManager::SCREEN_HEIGHT,
+            al_map_rgb(255, 0, 0), 1);
+    al_draw_line(0, GameManager::SCREEN_HEIGHT/2,
+            GameManager::SCREEN_WIDTH, GameManager::SCREEN_HEIGHT/2,
+            al_map_rgb(255, 0, 0), 1);*/ 
 }

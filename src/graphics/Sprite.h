@@ -11,7 +11,7 @@ class Sprite
     public:
         ALLEGRO_BITMAP* spriteSheet;
         Point spriteSheetLocation;
-        int spriteWidth, spriteHeight;
+        int spriteWidth, spriteHeight, rotationAngle;
 
         Sprite(){};
         Sprite(std::string imagePath, int spriteWidth, 
@@ -20,6 +20,7 @@ class Sprite
                 int spriteWidth, int spriteHeight);
 
         void draw(Point location);
+        void rotate(int angle);
 };
 
 #endif
