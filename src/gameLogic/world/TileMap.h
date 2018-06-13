@@ -20,7 +20,7 @@ class TileMap
         void draw();
         void draw(int x, int y);
         Tile getTile(int x, int y);
-        Polygon* getHitPoly(double x, double y);
+        Polygon* getHitPoly(Point location);
     private:
         Polygon hitPoly;
 };

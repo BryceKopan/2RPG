@@ -2,8 +2,8 @@
 
 #include "../ability/ProjectileAbility.h"
 
-Player::Player(double x, double y, Sprite sprite) :
-    Agent(x, y, 105, true, sprite, 100)
+Player::Player(Point location, Sprite sprite) :
+    Agent(location , 105, true, sprite, 100)
 {
     Sprite abilitySprite("res/TestProjectile.png", 10, 10);
     Vector2 velocity;

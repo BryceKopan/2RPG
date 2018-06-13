@@ -8,7 +8,7 @@
 class Projectile : public Attack
 {
     public:
-        Projectile(double x, double y, Sprite sprite, 
+        Projectile(Point location, Sprite sprite, 
                 bool playerFriendly, int lifetime, int damage, 
                 Vector2 velocity, double speed);
 

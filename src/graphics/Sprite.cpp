@@ -5,30 +5,29 @@
 Sprite::Sprite(std::string imagePath, int spriteWidth, int spriteHeight)
 {
     this->spriteSheet = ResourceManager::loadBitmap(imagePath);
-    spriteSheetX = 0;
-    spriteSheetY = 0;
+    this->spriteSheetLocation = Point(0, 0);
     this->spriteWidth = spriteWidth;
     this->spriteHeight = spriteHeight;
 }
 
-Sprite::Sprite(std::string imagePath, int spriteSheetX, int spriteSheetY, int spriteWidth, int spriteHeight)
+Sprite::Sprite(std::string imagePath, Point spriteSheetLocation, 
+        int spriteWidth, int spriteHeight)
 {
     this->spriteSheet = ResourceManager::loadBitmap(imagePath);
-    this->spriteSheetX = spriteSheetX;
-    this->spriteSheetY = spriteSheetY;
+    this->spriteSheetLocation = spriteSheetLocation;
     this->spriteWidth = spriteWidth;
     this->spriteHeight = spriteHeight;
 }
 
-void Sprite::draw(double x, double y)
+void Sprite::draw(Point location)
 {
     al_draw_bitmap_region(
             spriteSheet,
-            spriteSheetX,
-            spriteSheetY,
+            spriteSheetLocation.x,
+            spriteSheetLocation.y,
             spriteWidth,
             spriteHeight,
-            x,
-            y,
+            location.x - spriteWidth / 2,
+            location.y - spriteHeight / 2,
             0);
 }

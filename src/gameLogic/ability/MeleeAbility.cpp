@@ -21,8 +21,8 @@ void MeleeAbility::createAttack(Point attackPoint)
 {
     GameState* gameState = GameState::instance;
 
-    MeleeAttack* attack = new MeleeAttack(attackPoint.x, 
-            attackPoint.y, attackSprite, playerFriendly, lifetime, 
+    MeleeAttack* attack = new MeleeAttack(attackPoint, attackSprite, 
+            playerFriendly, lifetime, 
             damage, user);
     gameState->aliveObjects.push_back(attack);
 }

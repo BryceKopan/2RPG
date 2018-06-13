@@ -10,7 +10,7 @@ class Player : public Agent
         int facingAngle;
         Ability* abilities[4];
 
-        Player(double x, double y, Sprite sprite);
+        Player(Point location, Sprite sprite);
 };
 
 #endif

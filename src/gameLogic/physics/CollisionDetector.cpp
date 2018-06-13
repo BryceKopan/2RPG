@@ -59,9 +59,10 @@ bool CollisionDetector::detectTileCollision(GameObject* object)
 
             if(tile.collidable)
             {
-                double tX = x * tileWidth + tileWidth / 2;
-                double tY = y * tileHeight + tileHeight / 2;
-                const Polygon* tilePoly = tileMap->getHitPoly(tX, tY);
+                double tX = (x * tileWidth) + (tileWidth / 2);
+                double tY = (y * tileHeight) + (tileHeight / 2);
+                Point location = Point(tX, tY);
+                const Polygon* tilePoly = tileMap->getHitPoly(location);
 
                 if(SATCollision::intersect(hitPoly, tilePoly))
                     return true;

@@ -33,10 +33,10 @@ void DrawManager::draw()
     //Set up transform to set camera over player
     al_identity_transform(&transform);
     al_translate_transform(&transform, 
-            (-(player->x + 1)) +
+            (-(player->location.x + 1)) +
             (GameManager::SCREEN_WIDTH / 2) - 
             (player->sprite.spriteWidth / 2),
-            (-(player->y + 1)) + 
+            (-(player->location.y + 1)) + 
             (GameManager::SCREEN_HEIGHT / 2) - 
             (player->sprite.spriteHeight / 2)
             );

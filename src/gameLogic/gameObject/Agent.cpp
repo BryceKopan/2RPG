@@ -5,9 +5,9 @@
 #include "../physics/CollisionDetector.h"
 #include "../GameState.h"
 
-Agent::Agent(double x, double y, double speed, bool collidable, 
+Agent::Agent(Point location, double speed, bool collidable, 
         Sprite sprite, int health) : 
-    GameObject(x, y, collidable, sprite)
+    GameObject(location, collidable, sprite)
 {
     this->speed = speed;
     this->health = health; 
@@ -116,12 +116,12 @@ void Agent::move(Vector2 vector)
 
     Vector2 unit = vector.getUnitVector();
 
-    x += unit.x * speed * gameState->deltaTime;
-    y += unit.y * speed * gameState->deltaTime;
+    location.x += unit.x * speed * gameState->deltaTime;
+    location.y += unit.y * speed * gameState->deltaTime;
 }
 
 void Agent::move(double dX, double dY)
 {
-    x += dX;
-    y += dY;
+    location.x += dX;
+    location.y += dY;
 }

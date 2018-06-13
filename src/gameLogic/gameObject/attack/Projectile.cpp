@@ -3,10 +3,10 @@
 #include "../../GameState.h"
 #include "../NPC.h"
 
-Projectile::Projectile(double x, double y, Sprite sprite, 
+Projectile::Projectile(Point location, Sprite sprite, 
         bool playerFriendly, int lifetime, int damage, 
         Vector2 velocity, double speed) :
-    Attack(x, y, sprite, playerFriendly, lifetime, damage)
+    Attack(location, sprite, playerFriendly, lifetime, damage)
 {
     this->velocity = velocity;
     this->speed = speed;
@@ -44,6 +44,6 @@ void Projectile::move()
     GameState* gameState = GameState::instance;
     
     Vector2 unit = velocity.getUnitVector();
-    x += unit.x * speed * gameState->deltaTime;
-    y += unit.y * speed * gameState->deltaTime;
+    location.x += unit.x * speed * gameState->deltaTime;
+    location.y += unit.y * speed * gameState->deltaTime;
 }

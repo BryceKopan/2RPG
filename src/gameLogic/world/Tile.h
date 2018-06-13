@@ -14,7 +14,7 @@ class Tile
         Tile(){};
         Tile(bool collidable, Sprite sprite);
 
-        void draw(int x, int y);
+        void draw(Point location);
     private:
 };
 

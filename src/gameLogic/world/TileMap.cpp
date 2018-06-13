@@ -23,7 +23,8 @@ void TileMap::draw()
     {
         for(int x = 0; x < CHUNK_SIZE; x++)
         {
-            getTile(x, y).draw(x * tileWidth, y * tileHeight);
+            getTile(x, y).draw(Point(x * tileWidth + tileWidth / 2, 
+                        y * tileHeight + tileHeight / 2));
         }
     }
 }
@@ -38,9 +39,8 @@ Tile TileMap::getTile(int x, int y)
     return tileSet[map[x][y]];
 }
 
-Polygon* TileMap::getHitPoly(double x, double y)
+Polygon* TileMap::getHitPoly(Point location)
 {
-    hitPoly.center.x = x;
-    hitPoly.center.y = y;
+    hitPoly.center = location;
     return &hitPoly;
 }

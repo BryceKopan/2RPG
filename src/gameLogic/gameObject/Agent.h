@@ -11,7 +11,7 @@ class Agent : public GameObject
         Vector2 velocity;
         double speed, maxHealth;
 
-        Agent(double x, double y, double speed , bool collidable, 
+        Agent(Point location, double speed , bool collidable, 
                 Sprite spritei, int health);
 
         virtual void update();

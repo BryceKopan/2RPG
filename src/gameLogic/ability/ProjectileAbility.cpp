@@ -17,15 +17,15 @@ Point ProjectileAbility::getAttackLocation(Point mousePoint)
     //TODO calculate actual position
     velocity.setPolarCoordinates(1, 
             GameState::instance->player->facingAngle);
-    return Point(user->x, user->y);
+    return user->location;
 }
 
 void ProjectileAbility::createAttack(Point attackPoint)
 {
     GameState* gameState = GameState::instance;
 
-    Projectile* attack = new Projectile(attackPoint.x, attackPoint.y,
-            attackSprite, playerFriendly, lifetime, damage, velocity,
+    Projectile* attack = new Projectile(attackPoint, attackSprite, 
+            playerFriendly, lifetime, damage, velocity,
             speed);
     gameState->aliveObjects.push_back(attack);
 }

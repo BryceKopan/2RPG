@@ -2,11 +2,10 @@
 
 #include "../GameState.h"
 
-GameObject::GameObject(double x, double y, bool collidable,
+GameObject::GameObject(Point location, bool collidable,
         Sprite sprite)
 {
-    this->x = x;
-    this->y = y;
+    this->location = location;
     this->collidable = collidable;
     this->sprite = sprite;
 
@@ -18,8 +17,7 @@ GameObject::GameObject(double x, double y, bool collidable,
     vertices.push_back(Point(hWidth, hHeight));
     vertices.push_back(Point(hWidth, -hHeight));
     vertices.push_back(Point(-hWidth, -hHeight));
-    Point center(x + hWidth, y + hHeight);
-    hitPoly = Polygon(center, vertices);
+    hitPoly = Polygon(location, vertices);
 }
 
 void GameObject::kill()
@@ -50,7 +48,7 @@ void GameObject::death()
 
 void GameObject::draw()
 {
-    sprite.draw(x, y);
+    sprite.draw(location);
 
     if(GameState::instance->drawHitBoxes)
     {
@@ -60,7 +58,6 @@ void GameObject::draw()
 
 Polygon* GameObject::getHitPoly()
 {
-    hitPoly.center.x = x + sprite.spriteWidth/2;
-    hitPoly.center.y = y + sprite.spriteHeight/2;
+    hitPoly.center = location;
     return &hitPoly;
 }

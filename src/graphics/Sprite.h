@@ -4,17 +4,22 @@
 #include <string>
 #include <allegro5/allegro5.h>
 
+#include "../util/Point.h"
+
 class Sprite
 {
     public:
         ALLEGRO_BITMAP* spriteSheet;
-        int spriteSheetX, spriteSheetY, spriteWidth, spriteHeight;
+        Point spriteSheetLocation;
+        int spriteWidth, spriteHeight;
 
         Sprite(){};
-        Sprite(std::string imagePath, int spriteWidth, int spriteHeight);
-        Sprite(std::string imagePath, int spriteSheetX, int spriteSheetY, int spriteWidth, int spriteHeight);
+        Sprite(std::string imagePath, int spriteWidth, 
+                int spriteHeight);
+        Sprite(std::string imagePath, Point spriteSheetLocation, 
+                int spriteWidth, int spriteHeight);
 
-        void draw(double x, double y);
+        void draw(Point location);
 };
 
 #endif

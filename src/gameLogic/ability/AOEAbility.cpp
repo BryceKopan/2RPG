@@ -21,7 +21,7 @@ void AOEAbility::createAttack(Point attackPoint)
 {
     GameState* gameState = GameState::instance;
 
-    Attack* attack = new Attack(attackPoint.x, attackPoint.y, 
-            attackSprite, playerFriendly, lifetime, damage);
+    Attack* attack = new Attack(attackPoint, attackSprite, 
+            playerFriendly, lifetime, damage);
     gameState->aliveObjects.push_back(attack);
 }

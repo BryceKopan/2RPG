@@ -4,9 +4,9 @@
 
 #include "../GameState.h"
 
-NPC::NPC(double x, double y, bool collidable, Sprite sprite, 
+NPC::NPC(Point location, bool collidable, Sprite sprite, 
         int health, double detectionRange) :
-    Agent(x, y, 90, collidable, sprite, health)
+    Agent(location, 90, collidable, sprite, health)
 {
     this->detectionRange = detectionRange;
 }
@@ -29,7 +29,7 @@ void NPC::setMovement()
 {
     Agent player = *GameState::instance->player;
 
-    Vector2 vectorToPlayer(player.x - x, player.y - y);
+    Vector2 vectorToPlayer(player.location - location);
 
     if(vectorToPlayer.getMagnitude() <= detectionRange)
     {

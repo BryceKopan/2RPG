@@ -15,11 +15,11 @@ class GameObject
 {
     public:
         Sprite sprite;
-        double x = 0, y = 0;
+        Point location;
         bool collidable;
 
         GameObject(){};
-        GameObject(double x, double y, bool collidable, Sprite sprite);
+        GameObject(Point location, bool collidable, Sprite sprite);
 
         virtual void update() = 0;
 

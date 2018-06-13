@@ -6,14 +6,14 @@
 class MeleeAttack : public Attack
 {
     public:
-        MeleeAttack(double x, double y, Sprite sprite, 
+        MeleeAttack(Point location, Sprite sprite, 
                 bool playerFriendly, double lifetime, int damage, 
                 GameObject* user);
 
         virtual void update();
     private:
         GameObject* user;
-        double xOffSet, yOffSet;
+        Point locationOffSet;
 };
 
 #endif

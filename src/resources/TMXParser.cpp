@@ -59,8 +59,7 @@ void TMXParser::parseTMXFile(std::string xmlFilePath)
         int spriteX = (spriteID % spriteSheetWidth) * tileWidth;
         int spriteY = (spriteID / spriteSheetWidth) * tileHeight;
 
-        Sprite sprite(
-                pngFilePath, spriteX, spriteY, tileWidth, tileHeight);
+        Sprite sprite(pngFilePath, Point(spriteX, spriteY), tileWidth, tileHeight);
 
         Tile tile(collidable, sprite);
         tileMap.tileSet[spriteID] = tile;
@@ -94,6 +93,7 @@ void TMXParser::parseTMXFile(std::string xmlFilePath)
     currentNode = root.child("layer").next_sibling().child("data").child("tile");
 
     Sprite sprite;
+    Point location;
 
     for(int y = 0; y < CHUNK_SIZE; y++)
     {
@@ -107,18 +107,16 @@ void TMXParser::parseTMXFile(std::string xmlFilePath)
                     break;
 
                 case 64:
-                    sprite = Sprite("res/dungeon1.png", 96, 192, 32, 32);
-                    gameState->player = 
-                        new Player(x * tileWidth, y * tileHeight, 
-                                sprite);
+                    sprite = Sprite("res/dungeon1.png", Point(96, 192), 32, 32);
+                    location = Point(x * tileWidth + 16, y * tileHeight + 16); 
+                    gameState->player = new Player(location, sprite);
                     gameState->aliveObjects.push_back(gameState->player);
                     break;
 
                 case 63:
-                    sprite = Sprite("res/dungeon1.png", 64, 192, 32, 32);
-                    gameState->aliveObjects.push_back(
-                            new NPC(x * tileWidth, y * tileHeight, 
-                                true, sprite, 100, 100)); 
+                    sprite = Sprite("res/dungeon1.png", Point(64, 192), 32, 32);
+                    location = Point(x * tileWidth + 16, y * tileHeight + 16); 
+                    gameState->aliveObjects.push_back(new NPC(location, true, sprite, 100, 100)); 
                     break;    
 
                 defualt:

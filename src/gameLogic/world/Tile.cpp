@@ -6,7 +6,7 @@ Tile::Tile(bool collidable, Sprite sprite)
     this->sprite = sprite;
 }
 
-void Tile::draw(int x, int y)
+void Tile::draw(Point location)
 {
-    sprite.draw(x, y);   
+    sprite.draw(location);   
 }

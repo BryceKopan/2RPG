@@ -10,7 +10,7 @@ class Attack : public GameObject
         int damage;
         bool playerFriendly;
 
-        Attack(double x, double y, Sprite sprite, bool playerFriendly, 
+        Attack(Point location, Sprite sprite, bool playerFriendly, 
                 double lifetime, int damage);
 
         virtual void update();
