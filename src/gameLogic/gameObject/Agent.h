@@ -4,13 +4,19 @@
 #include "GameObject.h"
 
 #include "../../util/Vector2.h"
+#include "../ability/effects/StatusEffect.h"
+#include "../ability/Ability.h"
+
+class StatusEffect;
 
 class Agent : public GameObject
 {
     public:
+        std::vector<StatusEffect*> statusEffects;
+        std::vector<Ability*> abilities;
         Vector2 velocity;
-        double speed, maxHealth;
-        bool stealth = false;
+        double speed, maxHealth, timeLastActed, timeLastDamaged;
+        bool invisible = false;
 
         Agent(Point location, double speed , bool collidable, 
                 Sprite spritei, int health);
@@ -21,6 +27,8 @@ class Agent : public GameObject
 
         int getHealth();
         void changeHealth(int dHealth);
+
+        void useAbility(int i, Point mousePoint);
 
         void moveDirect(Vector2 vector);
     private:

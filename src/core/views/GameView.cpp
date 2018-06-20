@@ -77,11 +77,11 @@ void GameView::processInput(ALLEGRO_EVENT event)
         switch(event.mouse.button)
         {
             case 1:
-                player->abilities[0]->useAbility(mousePoint);
+                player->useAbility(0, mousePoint);
                 break;
             
             case 2:
-                player->abilities[1]->useAbility(mousePoint);
+                player->useAbility(1, mousePoint);
         }
     }
     else if(event.type == ALLEGRO_EVENT_KEY_DOWN)
@@ -107,11 +107,11 @@ void GameView::processInput(ALLEGRO_EVENT event)
 
             //Abilites
             case ALLEGRO_KEY_Q:
-                player->abilities[2]->useAbility(mousePoint);
+                player->useAbility(2, mousePoint);
                 break;
 
             case ALLEGRO_KEY_E:
-                player->abilities[3]->useAbility(mousePoint);
+                player->useAbility(3, mousePoint);
                 break;
 
             //Utility Input

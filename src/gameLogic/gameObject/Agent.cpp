@@ -4,6 +4,7 @@
 
 #include "../physics/CollisionDetector.h"
 #include "../GameState.h"
+#include "../../util/Util.h"
 
 Agent::Agent(Point location, double speed, bool collidable, 
         Sprite sprite, int health) : 
@@ -16,6 +17,11 @@ Agent::Agent(Point location, double speed, bool collidable,
 
 void Agent::update()
 {
+    for(StatusEffect* effect : statusEffects)
+    {
+        effect->update();
+    }
+
     move(velocity);
 }
 
@@ -104,10 +110,18 @@ int Agent::getHealth()
 void Agent::changeHealth(int dHealth)
 {
     health += dHealth;
+    if(dHealth < 0)
+        timeLastDamaged = Util::getPreciseSecondTime();
     if(health > maxHealth)
         health = maxHealth;
     else if(health <= 0)
         kill();
+}
+
+void Agent::useAbility(int i, Point mousePoint)
+{
+    abilities[i]->useAbility(mousePoint);
+    timeLastActed = Util::getPreciseSecondTime();
 }
 
 void Agent::moveDirect(Vector2 vector)

@@ -3,6 +3,8 @@
 
 #include "../../../gameLogic/ability/Ability.h"
 
+#include "../../../gameLogic/ability/effects/Invisible.h"
+
 class Stalk : public Ability
 {
     public:
@@ -12,6 +14,10 @@ class Stalk : public Ability
         virtual void doAbility(Point mousePoint)
         {
             if(Agent* agent = dynamic_cast<Agent*>(user))
+            {
+                StatusEffect* effect = new Invisible(agent, 2);
+                effect->start();
+            }
         }
 
     private:

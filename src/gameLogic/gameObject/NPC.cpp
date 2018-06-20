@@ -31,7 +31,8 @@ void NPC::setMovement()
 
     Vector2 vectorToPlayer(player.location - location);
 
-    if(vectorToPlayer.getMagnitude() <= detectionRange)
+    if(vectorToPlayer.getMagnitude() <= detectionRange 
+            && !player.invisible)
     {
         velocity = vectorToPlayer;
     }
