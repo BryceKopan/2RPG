@@ -36,6 +36,10 @@ void Sprite::draw(Point location)
     al_compose_transform(&trans, &prevTrans);
     al_use_transform(&trans);
     
+    //set blender
+    //al_set_blender(ALLEGRO_ALPHA, ALLEGRO_INVERSE_ALPHA, 
+    //        al_map_rgba_f(1, 1, 1, alpha));
+
     al_draw_bitmap_region(
             spriteSheet,
             spriteSheetLocation.x,
@@ -53,4 +57,9 @@ void Sprite::draw(Point location)
 void Sprite::rotate(int angle)
 {
     rotationAngle = angle;
+}
+
+void Sprite::setTransparency(double t)
+{
+    alpha = t;
 }
