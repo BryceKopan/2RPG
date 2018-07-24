@@ -35,6 +35,8 @@ class Agent : public GameObject
         int health;
 
         void move(Vector2 vector);
+        
+        Vector2 getAdjustedVelocity(Vector2 velocity);
 };
 
 #endif

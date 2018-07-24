@@ -22,7 +22,7 @@ void Agent::update()
         effect->update();
     }
 
-    move(velocity);
+    move(getAdjustedVelocity(velocity));
 }
 
 void Agent::onObjectCollision(ObjectVector gameObjects)
@@ -31,7 +31,7 @@ void Agent::onObjectCollision(ObjectVector gameObjects)
 
     if(CollisionDetector::detectObjectCollision(this, gameObjects))
     {
-        move(-velocity);
+        move(getAdjustedVelocity(-velocity));
 
         Vector2 unit = velocity.getUnitVector();
         double dX = unit.x * speed * gameState->deltaTime;
@@ -69,7 +69,7 @@ void Agent::onTileCollision()
 {
     GameState* gameState = GameState::instance;
 
-    move(-velocity);
+    move(getAdjustedVelocity(-velocity));
 
     Vector2 unit = velocity.getUnitVector();
     double dX = unit.x * speed * gameState->deltaTime;
@@ -131,10 +131,18 @@ void Agent::moveDirect(Vector2 vector)
 
 void Agent::move(Vector2 vector)
 {
+    location += vector;
+}
+    
+Vector2 Agent::getAdjustedVelocity(Vector2 velocity)
+{
     GameState* gameState = GameState::instance;
+    Vector2 adjustedVelocity;
 
-    Vector2 unit = vector.getUnitVector();
+    Vector2 unit = velocity.getUnitVector();
 
-    location.x += unit.x * speed * gameState->deltaTime;
-    location.y += unit.y * speed * gameState->deltaTime;
+    adjustedVelocity.x = unit.x * speed * gameState->deltaTime;
+    adjustedVelocity.y = unit.y * speed * gameState->deltaTime;
+
+    return adjustedVelocity;
 }
