@@ -43,22 +43,22 @@ void Agent::onObjectCollision(ObjectVector gameObjects)
 
         for(int i = 0; i < dX * dx; i++)
         {
-            moveDirect(Vector2(dx, 0));
+            move(Vector2(dx, 0));
 
             if(CollisionDetector::detectObjectCollision(this, gameObjects))
             {
-                moveDirect(Vector2(-dx, 0));
+                move(Vector2(-dx, 0));
                 i = dX * dx;
             }
         }
 
         for(int i = 0; i < dY * dy; i++)
         {
-            moveDirect(Vector2(0, dy));
+            move(Vector2(0, dy));
 
             if(CollisionDetector::detectObjectCollision(this, gameObjects))
             {
-                moveDirect(Vector2(0, -dy));
+                move(Vector2(0, -dy));
                 i = dY * dy;
             }
         }
@@ -81,22 +81,22 @@ void Agent::onTileCollision()
 
     for(int i = 0; i < dX * dx; i++)
     {
-        moveDirect(Vector2(dx, 0));
+        move(Vector2(dx, 0));
 
         if(CollisionDetector::detectTileCollision(this))
         {
-            moveDirect(Vector2(-dx, 0));
+            move(Vector2(-dx, 0));
             i = dX * dx;
         }
     }
 
     for(int i = 0; i < dY * dy; i++)
     {
-        moveDirect(Vector2(0, dy));
+        move(Vector2(0, dy));
 
         if(CollisionDetector::detectTileCollision(this))
         {
-            moveDirect(Vector2(0, -dy));
+            move(Vector2(0, -dy));
             i = dY * dy;
         }
     }
@@ -126,7 +126,14 @@ void Agent::useAbility(int i, Point mousePoint)
 
 void Agent::moveDirect(Vector2 vector)
 {
-    location += vector;
+    GameState* gameState = GameState::instance;
+    ObjectVector gameObjects = gameState->aliveObjects;
+
+    move(vector);
+    
+    if(CollisionDetector::detectObjectCollision(this, gameObjects) || 
+            CollisionDetector::detectTileCollision(this))
+        location -= vector;
 }
 
 void Agent::move(Vector2 vector)
