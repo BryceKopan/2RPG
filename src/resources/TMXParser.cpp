@@ -3,7 +3,6 @@
 #include <pugixml.hpp>
 
 #include "../gameLogic/GameState.h"
-#include "../gameLogic/CONSTANTS.h"
 #include "../gameLogic/gameObject/NPC.h"
 #include "../managers/ResourceManager.h"
 
@@ -22,12 +21,8 @@ void TMXParser::parseTMXFile(std::string xmlFilePath)
 
     pugi::xml_node root = doc.document_element();
 
-    if(root.attribute("width").as_int() != CHUNK_SIZE || 
-            root.attribute("height").as_int() != CHUNK_SIZE)
-    {
-        printf("%sTMX map is not 64 x 64\n", debugID.c_str());
-    }
-
+    int mapWidth = root.attribute("width").as_int();
+    int mapHeight = root.attribute("height").as_int();
     int tileWidth = root.attribute("tilewidth").as_int();
     int tileHeight = root.attribute("tileheight").as_int();
 
@@ -36,7 +31,10 @@ void TMXParser::parseTMXFile(std::string xmlFilePath)
         printf("%sWarning: Tiles aren't square\n", debugID.c_str());
     }
 
-    TileMap tileMap(tileWidth, tileHeight);
+    TileMap tileMap(mapWidth, mapHeight, tileWidth, tileHeight);
+
+    printf("%sLoading %d x %d map\n", debugID.c_str(), 
+            mapWidth, mapHeight);
 
     pugi::xml_node currentNode = root.child("tileset");
 
@@ -73,9 +71,9 @@ void TMXParser::parseTMXFile(std::string xmlFilePath)
 
     int t;
 
-    for(int y = 0; y < CHUNK_SIZE; y++)
+    for(int y = 0; y < mapHeight; y++)
     {
-        for(int x = 0; x < CHUNK_SIZE; x++)
+        for(int x = 0; x < mapWidth; x++)
         {
             t = currentNode.attribute("gid").as_int();
 
@@ -97,9 +95,9 @@ void TMXParser::parseTMXFile(std::string xmlFilePath)
     Sprite sprite;
     Point location;
 
-    for(int y = 0; y < CHUNK_SIZE; y++)
+    for(int y = 0; y < mapHeight; y++)
     {
-        for(int x = 0; x < CHUNK_SIZE; x++)
+        for(int x = 0; x < mapWidth; x++)
         {
             t = currentNode.attribute("gid").as_int();
 
