@@ -1,8 +1,5 @@
 #include "TMXParser.h"
 
-#include <pugixml.hpp>
-
-#include "../gameLogic/GameState.h"
 #include "../gameLogic/gameObject/NPC.h"
 #include "../managers/ResourceManager.h"
 
@@ -12,8 +9,8 @@ const std::string TMXParser::debugID = "[TMXParser] ";
 
 void TMXParser::parseTMXFile(std::string xmlFilePath)
 {
-    GameState* gameState = GameState::instance;
 
+    //Load XML Doc
     pugi::xml_document doc;
     pugi::xml_parse_result result = doc.load_file(xmlFilePath.c_str());
 
@@ -21,6 +18,25 @@ void TMXParser::parseTMXFile(std::string xmlFilePath)
 
     pugi::xml_node root = doc.document_element();
 
+    //Load TileMap
+    TileMap tileMap = loadTileMap(root);
+
+    //Load TileSet
+    tileMap.tileSet = loadTileSet(root, 
+            tileMap.tileWidth, tileMap.tileHeight);
+
+    //Load Objects
+    loadObjects(root, tileMap.mapWidth, tileMap.mapHeight, 
+            tileMap.tileWidth, tileMap.tileHeight);
+
+    GameState* gameState = GameState::instance;
+    gameState->tileMap = tileMap;
+    printf("%sTMX parsing finished\n", debugID.c_str());
+}
+
+TileMap TMXParser::loadTileMap(pugi::xml_node root)
+{
+    //Loading Map Meta Data
     int mapWidth = root.attribute("width").as_int();
     int mapHeight = root.attribute("height").as_int();
     int tileWidth = root.attribute("tilewidth").as_int();
@@ -31,10 +47,42 @@ void TMXParser::parseTMXFile(std::string xmlFilePath)
         printf("%sWarning: Tiles aren't square\n", debugID.c_str());
     }
 
-    TileMap tileMap(mapWidth, mapHeight, tileWidth, tileHeight);
-
     printf("%sLoading %d x %d map\n", debugID.c_str(), 
             mapWidth, mapHeight);
+
+    TileMap tileMap(mapWidth, mapHeight, tileWidth, tileHeight);
+
+    //Loading Map Data
+    pugi::xml_node currentNode = root.child("layer").child("data").child("tile");
+
+    int t;
+
+    for(int y = 0; y < tileMap.mapHeight; y++)
+    {
+        for(int x = 0; x < tileMap.mapWidth; x++)
+        {
+            t = currentNode.attribute("gid").as_int();
+
+            if(t == 0)//All empty spots are set to tile 0
+            {
+                tileMap.map[x][y] = 31;
+            }
+            else
+            {
+                tileMap.map[x][y] = t - 1;
+            }
+
+            currentNode = currentNode.next_sibling();
+        }
+    }
+
+    return tileMap;
+}
+
+std::unordered_map<int, Tile> TMXParser::loadTileSet(
+        pugi::xml_node root, int tileWidth, int tileHeight)
+{
+    std::unordered_map<int, Tile> tileSet;
 
     pugi::xml_node currentNode = root.child("tileset");
 
@@ -62,39 +110,23 @@ void TMXParser::parseTMXFile(std::string xmlFilePath)
         Sprite sprite(pngFilePath, Point(spriteX, spriteY), tileWidth, tileHeight);
 
         Tile tile(collidable, sprite);
-        tileMap.tileSet[spriteID] = tile;
+        tileSet[spriteID] = tile;
 
         currentNode = currentNode.next_sibling("tile");
     }
 
-    currentNode = root.child("layer").child("data").child("tile");
+    return tileSet;
+}
 
-    int t;
-
-    for(int y = 0; y < mapHeight; y++)
-    {
-        for(int x = 0; x < mapWidth; x++)
-        {
-            t = currentNode.attribute("gid").as_int();
-
-            if(t == 0)//All empty spots are set to tile 0
-            {
-                tileMap.map[x][y] = 31;
-            }
-            else
-            {
-                tileMap.map[x][y] = t - 1;
-            }
-
-            currentNode = currentNode.next_sibling();
-        }
-    }
-
-    currentNode = root.child("layer").next_sibling().child("data").child("tile");
-
+void TMXParser::loadObjects(pugi::xml_node root, 
+        int mapWidth, int mapHeight, int tileWidth, int tileHeight)
+{
+    GameState* gameState = GameState::instance;
     Sprite sprite;
     Point location;
 
+    int t;
+    pugi::xml_node currentNode = root.child("layer").next_sibling().child("data").child("tile");
     for(int y = 0; y < mapHeight; y++)
     {
         for(int x = 0; x < mapWidth; x++)
@@ -126,8 +158,5 @@ void TMXParser::parseTMXFile(std::string xmlFilePath)
 
             currentNode = currentNode.next_sibling();
         }
-    }
-
-    gameState->tileMap = tileMap;
-    printf("%sTMX parsing finished\n", debugID.c_str());
+    } 
 }
