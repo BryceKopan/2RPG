@@ -77,7 +77,7 @@ void GameManager::init()
 
 void GameManager::loadGameData()
 {
-    TMXParser::parseTMXFile("res/StartTemple2.tmx");
+    TMXParser::parseTMXFile("res/TestMap/JacobMap.tmx");
 } 
 
 void GameManager::gameLoop()

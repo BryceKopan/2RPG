@@ -65,12 +65,11 @@ TileMap TMXParser::loadTileMap(pugi::xml_node root)
 
             if(t == 0)//All empty spots are set to tile 0
             {
-                tileMap.map[x][y] = 31;
+                printf("%sWarning: Map has empty tile\n", 
+                        debugID.c_str()); 
             }
-            else
-            {
-                tileMap.map[x][y] = t - 1;
-            }
+            
+            tileMap.map[x][y] = t;
 
             currentNode = currentNode.next_sibling();
         }
@@ -86,33 +85,39 @@ std::unordered_map<int, Tile> TMXParser::loadTileSet(
 
     pugi::xml_node currentNode = root.child("tileset");
 
-    int tileSetSize = currentNode.attribute("tilecount").as_int();
-
-    currentNode = currentNode.child("image");
-
-    std::string pngFilePath = currentNode.attribute("source").value();
-
-    int spriteSheetWidth = currentNode.attribute("width").as_int() / 
-        tileWidth;
-
-    currentNode = currentNode.next_sibling("tile");
-
-    bool collidable;
-
-    for(int i = 0; i < tileSetSize; i++)
+    while(std::string(currentNode.name()) == "tileset")
     {
-        collidable = currentNode.child("properties").child("property").attribute("value").as_int();
+        int firstID = currentNode.attribute("firstgid").as_int();
+        std::string tileSetFilePath = "res/TestMap/";
+        tileSetFilePath += currentNode.attribute("source").value();
 
-        int spriteID = currentNode.attribute("id").as_int();
-        int spriteX = (spriteID % spriteSheetWidth) * tileWidth;
-        int spriteY = (spriteID / spriteSheetWidth) * tileHeight;
+        pugi::xml_document doc;
+        pugi::xml_parse_result result = doc.load_file(
+                tileSetFilePath.c_str());
 
-        Sprite sprite(pngFilePath, Point(spriteX, spriteY), tileWidth, tileHeight);
+        printf("%sDocument loading - %s\n", 
+                debugID.c_str(), result.description());
 
-        Tile tile(collidable, sprite);
-        tileSet[spriteID] = tile;
+        pugi::xml_node root = doc.document_element();
 
-        currentNode = currentNode.next_sibling("tile");
+        int columns = root.attribute("columns").as_int();
+        int tileCount = root.attribute("tilecount").as_int();
+        std::string pngFilePath = "res/TestMap/";
+        pngFilePath += root.first_child().attribute("source").value();
+
+        for(int i = 0; i < tileCount; i++)
+        {
+            int tileID = i + firstID;
+            int spriteX = (i % columns) * tileWidth;
+            int spriteY = (i / columns) * tileHeight;
+
+            Sprite sprite(pngFilePath, Point(spriteX, spriteY),
+                    tileWidth, tileHeight);
+            Tile tile(false, sprite);
+            tileSet[tileID] = tile;
+        }
+
+        currentNode = currentNode.next_sibling();
     }
 
     return tileSet;
@@ -122,41 +127,46 @@ void TMXParser::loadObjects(pugi::xml_node root,
         int mapWidth, int mapHeight, int tileWidth, int tileHeight)
 {
     GameState* gameState = GameState::instance;
-    Sprite sprite;
-    Point location;
+    
+    Sprite sprite = Sprite("res/dungeon1.png", Point(96, 192), 32, 32);
+    Point location = Point(90, 90); 
+    gameState->player = new DisplacerBeast(location, sprite);
+    gameState->aliveObjects.push_back(gameState->player);
+    /*Sprite sprite;
+      Point location;
 
-    int t;
-    pugi::xml_node currentNode = root.child("layer").next_sibling().child("data").child("tile");
-    for(int y = 0; y < mapHeight; y++)
-    {
-        for(int x = 0; x < mapWidth; x++)
-        {
-            t = currentNode.attribute("gid").as_int();
+      int t;
+      pugi::xml_node currentNode = root.child("layer").next_sibling().child("data").child("tile");
+      for(int y = 0; y < mapHeight; y++)
+      {
+      for(int x = 0; x < mapWidth; x++)
+      {
+      t = currentNode.attribute("gid").as_int();
 
-            switch(t)
-            {
-                case 0:
-                    break;
+      switch(t)
+      {
+      case 0:
+      break;
 
-                case 64:
-                    sprite = Sprite("res/dungeon1.png", Point(96, 192), 32, 32);
-                    location = Point(x * tileWidth + 16, y * tileHeight + 16); 
-                    gameState->player = new DisplacerBeast(location, sprite);
-                    gameState->aliveObjects.push_back(gameState->player);
-                    break;
+      case 64:
+      sprite = Sprite("res/dungeon1.png", Point(96, 192), 32, 32);
+      location = Point(x * tileWidth + 16, y * tileHeight + 16); 
+      gameState->player = new DisplacerBeast(location, sprite);
+      gameState->aliveObjects.push_back(gameState->player);
+      break;
 
-                case 63:
-                    sprite = Sprite("res/dungeon1.png", Point(64, 192), 32, 32);
-                    location = Point(x * tileWidth + 16, y * tileHeight + 16); 
-                    gameState->aliveObjects.push_back(new NPC(location, true, sprite, 100, 100)); 
-                    break;    
+      case 63:
+      sprite = Sprite("res/dungeon1.png", Point(64, 192), 32, 32);
+      location = Point(x * tileWidth + 16, y * tileHeight + 16); 
+      gameState->aliveObjects.push_back(new NPC(location, true, sprite, 100, 100)); 
+      break;    
 
-                defualt:
-                    printf("%sLogic object: %i has not been implemented\n", debugID.c_str(), t); 
-                    break;
-            }
-
-            currentNode = currentNode.next_sibling();
-        }
-    } 
+defualt:
+printf("%sLogic object: %i has not been implemented\n", debugID.c_str(), t); 
+break;
 }
+
+currentNode = currentNode.next_sibling();
+}
+}*/ 
+    }
