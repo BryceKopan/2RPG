@@ -84,6 +84,13 @@ std::unordered_map<int, Tile> TMXParser::loadTileSet(
     std::unordered_map<int, Tile> tileSet;
 
     pugi::xml_node currentNode = root.child("tileset");
+    pugi::xml_document tpDoc;
+    pugi::xml_parse_result tpResult = tpDoc.load_file(
+            "res/TestMap/TileProperties.xml");
+    printf("%sDocument loading - %s\n", 
+            debugID.c_str(), tpResult.description());
+    pugi::xml_node tpCurrentNode = 
+        tpDoc.document_element().first_child();
 
     while(std::string(currentNode.name()) == "tileset")
     {
@@ -104,20 +111,32 @@ std::unordered_map<int, Tile> TMXParser::loadTileSet(
         int tileCount = root.attribute("tilecount").as_int();
         std::string pngFilePath = "res/TestMap/";
         pngFilePath += root.first_child().attribute("source").value();
+        pugi::xml_node tpChildNode = tpCurrentNode.first_child();
 
         for(int i = 0; i < tileCount; i++)
         {
             int tileID = i + firstID;
             int spriteX = (i % columns) * tileWidth;
             int spriteY = (i / columns) * tileHeight;
+            int collidable = 
+                tpCurrentNode.attribute("collidable").as_int();
+
+            int id = tpChildNode.attribute("id").as_int();
+            if(id == i)
+            {
+                collidable = 
+                    tpChildNode.attribute("collidable").as_int();
+                tpChildNode = tpChildNode.next_sibling();
+            }
 
             Sprite sprite(pngFilePath, Point(spriteX, spriteY),
                     tileWidth, tileHeight);
-            Tile tile(false, sprite);
+            Tile tile(collidable, sprite);
             tileSet[tileID] = tile;
         }
 
         currentNode = currentNode.next_sibling();
+        tpCurrentNode = tpCurrentNode.next_sibling();
     }
 
     return tileSet;
@@ -129,7 +148,7 @@ void TMXParser::loadObjects(pugi::xml_node root,
     GameState* gameState = GameState::instance;
     
     Sprite sprite = Sprite("res/dungeon1.png", Point(96, 192), 32, 32);
-    Point location = Point(90, 90); 
+    Point location = Point(900, 900); 
     gameState->player = new DisplacerBeast(location, sprite);
     gameState->aliveObjects.push_back(gameState->player);
     /*Sprite sprite;
