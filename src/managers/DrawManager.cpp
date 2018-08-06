@@ -32,9 +32,9 @@ void DrawManager::draw()
     al_use_transform(&trans);
 
     //Draw TileMap
-    //al_hold_bitmap_drawing(true);
+    al_hold_bitmap_drawing(true);
     gameState->tileMap.draw();
-    //al_hold_bitmap_drawing(false);
+    al_hold_bitmap_drawing(false);
 
     //Draw Alive Objects
     for(int i = 0; i < gameState->aliveObjects.size(); i++)

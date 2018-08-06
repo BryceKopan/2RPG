@@ -14,8 +14,6 @@
 
 #include "../util/Util.h"
 
-#include "../resources/generation/MapGenerator.h"
-
 bool GameManager::isRunning = true;
 ALLEGRO_EVENT_QUEUE* GameManager::eventQueue;
 ALLEGRO_TIMER* GameManager::timer;
@@ -80,7 +78,6 @@ void GameManager::init()
 void GameManager::loadGameData()
 {
     TMXParser::parseTMXFile("res/TestMap/JacobMap.tmx");
-    MapGenerator::populateMap();
 } 
 
 void GameManager::gameLoop()
